@@ -4,7 +4,7 @@
 	threads="50">
 
 	<package name="example1">
-		<filter>IPADDR != '0.0.0.0'</filter>	 
+		<filter>(IPADDR != '0.0.0.0') &amp; (nodeSysOID NOT LIKE '.1.3.6.1.4.1.10002.')</filter>	 
 		<include-range begin="1.1.1.1" end="254.254.254.254"/>
 		
 		<service name="SNMP" interval="300000" user-defined="false" status="on">
@@ -34,10 +34,34 @@
 			<parameter key="thresholding-enabled" value="true"/>
 		</service>
 	</package>
-	
+
+	<package name="ubiquiti-radios">
+		<filter>(IPADDR != '0.0.0.0') &amp; (nodeSysOID LIKE '.1.3.6.1.4.1.10002.%')</filter>
+		<include-range begin="1.1.1.1" end="254.254.254.254"/>
+		<service name="SNMP" interval="300000" user-defined="false" status="on">
+			<parameter key="collection" value="ubiquiti-optimized" />
+		</service>
+<!--
+		<service name="HTTP" interval="300000" user-defined="false" status="on">
+			<parameter key="collection" value="ubnt-rocket-radio" />
+		</service>
+-->
+	</package>
+
+<!--
+	<package name="ubiquiti-aggressive-radios">
+		<filter>(IPADDR != '0.0.0.0') &amp; (nodeSysOID LIKE '.1.3.6.1.4.1.10002.%')</filter>
+		<include-range begin="1.1.1.1" end="254.254.254.254"/>
+		<service name="SNMP" interval="300000" user-defined="false" status="off">
+			<parameter key="collection" value="ubiquiti-optimized" />
+		</service>
+	</package>
+-->
+
 	<collector service="SNMP" class-name="org.opennms.netmgt.collectd.SnmpCollector"/>
 	<collector service="WMI"  class-name="org.opennms.netmgt.collectd.WmiCollector"/>
 	<collector service="XMP"  class-name="org.opennms.netmgt.collectd.XmpCollector"/>
 	<collector service="OpenNMS-JVM" class-name="org.opennms.netmgt.collectd.Jsr160Collector"/>
+	<collector service="HTTP" class-name="org.opennms.netmgt.collectd.HttpCollector"/>
 </collectd-configuration>
 

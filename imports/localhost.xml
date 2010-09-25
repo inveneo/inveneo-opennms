@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model-import last-import="2010-05-20T00:00:00.553-04:00" foreign-source="localhost" date-stamp="2010-05-20T00:00:00.118-04:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
+    <node node-label="localhost." foreign-id="1311886075" building="localhost">
+        <interface status="1" snmp-primary="P" managed="true" ip-addr="127.0.0.1" descr="DNS-A">
+            <monitored-service service-name="SNMP"/>
+            <monitored-service service-name="ICMP"/>
+        </interface>
+    </node>
+</model-import>

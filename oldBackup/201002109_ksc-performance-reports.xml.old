@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportsList>
+    <Report id="4" title="CHFhqs Cisco ISP Interfaces"
+        show_timespan_button="true" show_graphtype_button="false" graphs_per_line="0">
+        <Graph title="Access Haiti"
+            resourceId="node[72].interfaceSnmp[Gi0_0]" timespan="1_day" graphtype="mib2.HCbits"/>
+        <Graph title="VSAT" resourceId="node[72].interfaceSnmp[Fa0_0_1]"
+            timespan="1_day" graphtype="mib2.HCbits"/>
+        <Graph title="Multilink"
+            resourceId="node[72].interfaceSnmp[Fa0_0_0]"
+            timespan="1_day" graphtype="mib2.HCbits"/>
+    </Report>
+    <Report id="5" title="CHFhqs Cisco Useful Stats"
+        show_timespan_button="true" show_graphtype_button="false" graphs_per_line="0">
+        <Graph title="ICMP Problems" resourceId="node[72].nodeSnmp[]"
+            timespan="1_day" graphtype="mib2.icmp.problems"/>
+        <Graph title="TCP Errors" resourceId="node[72].nodeSnmp[]"
+            timespan="1_day" graphtype="mib2.tcperrs"/>
+    </Report>
+    <Report id="7" title="Infacing Radios (from http)"
+        show_timespan_button="true" show_graphtype_button="false" graphs_per_line="0">
+        <Graph title="Concern-CHF" resourceId="node[13].nodeSnmp[]"
+            timespan="1_day" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="Care-Concern"
+            resourceId="node[11].interfaceSnmp[ath0-00156dd89829]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title="STChq-CHFhq" resourceId="node[3].nodeSnmp[]"
+            timespan="1_day" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="CRShq-STChq" resourceId="node[7].nodeSnmp[]"
+            timespan="1_day" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="CHFfield-STChq" resourceId="node[41].nodeSnmp[]"
+            timespan="1_day" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="plan-STCfield" resourceId="node[42].nodeSnmp[]"
+            timespan="1_day" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="profamil-chfhq" resourceId="node[36].nodeSnmp[]"
+            timespan="1_day" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="sos-chfhqs" resourceId="node[27].nodeSnmp[]"
+            timespan="1_day" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="oxo-sos" resourceId="node[49].nodeSnmp[]"
+            timespan="1_day" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="irc-sos" resourceId="node[28].nodeSnmp[]"
+            timespan="1_day" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="irc-james" resourceId="node[59].nodeSnmp[]"
+            timespan="1_day" graphtype="ubnt.web.bits.wlan"/>
+    </Report>
+    <Report id="8" title="Infacing Radios - Concern Leg, 1hr"
+        show_timespan_button="true" show_graphtype_button="false" graphs_per_line="0">
+        <Graph title="Concern-CHF" resourceId="node[13].nodeSnmp[]"
+            timespan="1_hour" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="Care-Concern"
+            resourceId="node[11].interfaceSnmp[ath0-00156de8ac93]"
+            timespan="1_hour" graphtype="mib2.bits"/>
+        <Graph title="Internews-Concern"
+            resourceId="node[105].interfaceSnmp[ath0-00156dd897f6]"
+            timespan="1_hour" graphtype="mib2.bits"/>
+    </Report>
+    <Report id="9" title="Infacing Radios - STC Leg, 1hr"
+        show_timespan_button="true" show_graphtype_button="false" graphs_per_line="0">
+        <Graph title="STChq-CHFhq" resourceId="node[3].nodeSnmp[]"
+            timespan="1_hour" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="CRShq-STChq" resourceId="node[7].nodeSnmp[]"
+            timespan="1_hour" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="CHFfield-STChq" resourceId="node[41].nodeSnmp[]"
+            timespan="1_hour" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="plan-STCfield" resourceId="node[42].nodeSnmp[]"
+            timespan="1_hour" graphtype="ubnt.web.bits.wlan"/>
+    </Report>
+    <Report id="3" title="Internet Bandwidth"
+        show_timespan_button="true" show_graphtype_button="false" graphs_per_line="0">
+        <Graph title="Access Haiti"
+            resourceId="node[72].interfaceSnmp[Gi0_0]" timespan="1_day" graphtype="mib2.HCbits"/>
+        <Graph title="Multilink"
+            resourceId="node[72].interfaceSnmp[Fa0_0_0]"
+            timespan="1_day" graphtype="mib2.HCbits"/>
+        <Graph title="ITC Global"
+            resourceId="node[72].interfaceSnmp[Fa0_0_1]"
+            timespan="1_day" graphtype="mib2.HCbits"/>
+    </Report>
+    <Report id="6" title="Internet Ping Times"
+        show_timespan_button="true" show_graphtype_button="false" graphs_per_line="0">
+        <Graph title="Access Haiti"
+            resourceId="node[78].responseTime[216.207.58.218]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="Multilink"
+            resourceId="node[79].responseTime[199.181.132.250]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="VSAT"
+            resourceId="node[81].responseTime[63.151.12.22]"
+            timespan="1_day" graphtype="strafeping"/>
+    </Report>
+    <Report id="2" title="Ping Response Times for Internet Gateways"
+        show_timespan_button="true" show_graphtype_button="false" graphs_per_line="0">
+        <Graph title=""
+            resourceId="node[45].responseTime[200.2.134.185]"
+            timespan="1_day" graphtype="icmp"/>
+        <Graph title=""
+            resourceId="node[47].responseTime[200.80.101.41]"
+            timespan="1_day" graphtype="icmp"/>
+        <Graph title="" resourceId="node[46].responseTime[10.70.46.1]"
+            timespan="1_day" graphtype="icmp"/>
+    </Report>
+    <Report id="1" title="Station Signal Strength"
+        show_timespan_button="true" show_graphtype_button="false" graphs_per_line="0">
+        <Graph title="" resourceId="node[11].mtxrWlStatIndex[16]"
+            timespan="12_hour" graphtype="mikrotik.wlstatrssi"/>
+        <Graph title="" resourceId="node[13].mtxrWlStatIndex[15]"
+            timespan="12_hour" graphtype="mikrotik.wlstatrssi"/>
+        <Graph title="" resourceId="node[3].mtxrWlStatIndex[15]"
+            timespan="12_hour" graphtype="mikrotik.wlstatrssi"/>
+        <Graph title="" resourceId="node[8].mtxrWlStatIndex[15]"
+            timespan="12_hour" graphtype="mikrotik.wlstatrssi"/>
+        <Graph title="" resourceId="node[7].mtxrWlStatIndex[19]"
+            timespan="12_hour" graphtype="mikrotik.wlstatrssi"/>
+    </Report>
+    <Report id="0" title="Traffic for all infacing radios"
+        show_timespan_button="true" show_graphtype_button="false" graphs_per_line="0">
+        <Graph title=""
+            resourceId="node[13].interfaceSnmp[ath0-00156de8ac93]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[11].interfaceSnmp[ath0-00156dd89829]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[3].interfaceSnmp[ath0-00156de42952]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[8].interfaceSnmp[ath0-00156de8ac36]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[7].interfaceSnmp[ath0-00156de8ad94]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[27].interfaceSnmp[ath0-00156dec307d]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[28].interfaceSnmp[ath0-00156dec302a]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[41].interfaceSnmp[ath0-00156de8ac34]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[42].interfaceSnmp[ath0-00156de4294f]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[49].interfaceSnmp[ath0-00156df0266b]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[36].interfaceSnmp[ath0-00156dec3136]"
+            timespan="1_day" graphtype="mib2.bits"/>
+    </Report>
+    <Report id="10" title="Infacing Radios - SOS Leg, 1hr"
+        show_timespan_button="true" show_graphtype_button="false" graphs_per_line="0">
+        <Graph title="sos-chfhqs" resourceId="node[27].nodeSnmp[]"
+            timespan="1_hour" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="oxo-sos" resourceId="node[49].nodeSnmp[]"
+            timespan="1_hour" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="irc-sos" resourceId="node[28].nodeSnmp[]"
+            timespan="1_hour" graphtype="ubnt.web.bits.wlan"/>
+        <Graph title="irc-james" resourceId="node[59].nodeSnmp[]"
+            timespan="1_hour" graphtype="ubnt.web.pkts.lan"/>
+    </Report>
+</ReportsList>

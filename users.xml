@@ -1,18 +1,122 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <userinfo xmlns="http://xmlns.opennms.org/xsd/users">
-  <header>
-    <rev>.9</rev>
-    <created>Wednesday, February 6, 2002 10:10:00 AM EST</created>
-    <mstation>master.nmanage.com</mstation>
-  </header>
-  <users>
-    <user>
-      <user-id>admin</user-id>
-      <full-name>Administrator</full-name>
-      <user-comments>
-        Default administrator, do not delete
-      </user-comments>
-      <password>21232F297A57A5A743894A0E4A801FC3</password>
-    </user>
-  </users>
+    <ns1:header xmlns:ns1="http://xmlns.opennms.org/xsd/types">
+        <rev xmlns="">.9</rev>
+        <created xmlns="">Thursday, July 15, 2010 9:21:09 PM GMT</created>
+        <mstation xmlns="">master.nmanage.com</mstation>
+    </ns1:header>
+    <users>
+        <user read-only="false">
+            <user-id xmlns="">andris</user-id>
+            <full-name xmlns="">Andris Bjornson</full-name>
+            <user-comments xmlns=""></user-comments>
+            <password xmlns="">3D498B340A5C2E05E29815AE21213035</password>
+            <contact type="email" info="andris@inveneo.org"/>
+            <contact type="pagerEmail" info=""/>
+            <contact type="xmppAddress" info=""/>
+            <contact type="numericPage" info="" serviceProvider=""/>
+            <contact type="textPage" info="" serviceProvider=""/>
+            <contact type="workPhone" info=""/>
+            <contact type="mobilePhone" info="+50936757912"/>
+            <contact type="homePhone" info=""/>
+        </user>
+        <user read-only="false">
+            <user-id xmlns="">picking</user-id>
+            <full-name xmlns="">Georges-Keny PAUL</full-name>
+            <user-comments xmlns=""></user-comments>
+            <password xmlns="">92E5D34DA44140CB8A59558F8CC415BD</password>
+            <contact type="email" info="paulgkeny@gmail.com"/>
+            <contact type="pagerEmail" info=""/>
+            <contact type="xmppAddress" info=""/>
+            <contact type="numericPage" info="" serviceProvider=""/>
+            <contact type="textPage" info="" serviceProvider=""/>
+            <contact type="workPhone" info=""/>
+            <contact type="mobilePhone" info="+(509)3446-3497"/>
+            <contact type="homePhone" info=""/>
+        </user>
+        <user read-only="false">
+            <user-id xmlns="">admin</user-id>
+            <full-name xmlns="">Administrator</full-name>
+            <user-comments xmlns="">Default administrator, do not delete</user-comments>
+            <password xmlns="">04C7CC31D8ED74BC058AA7924118BCDB</password>
+            <contact type="email" info=""/>
+            <contact type="pagerEmail" info=""/>
+            <contact type="xmppAddress" info=""/>
+            <contact type="numericPage" info="" serviceProvider=""/>
+            <contact type="textPage" info="" serviceProvider=""/>
+            <contact type="workPhone" info=""/>
+            <contact type="mobilePhone" info=""/>
+            <contact type="homePhone" info=""/>
+        </user>
+        <user read-only="false">
+            <user-id xmlns="">rohan</user-id>
+            <full-name xmlns="">Rohan Mahy</full-name>
+            <user-comments xmlns=""></user-comments>
+            <password xmlns="">CA9C9C6DC7A89A14C0501CC385E8CFE8</password>
+            <contact type="email" info="rohan@inveneo.org"/>
+            <contact type="pagerEmail" info="rohan@inveneo.org"/>
+            <contact type="xmppAddress" info=""/>
+            <contact type="numericPage" info="" serviceProvider=""/>
+            <contact type="textPage" info="" serviceProvider=""/>
+            <contact type="workPhone" info=""/>
+            <contact type="mobilePhone" info=""/>
+            <contact type="homePhone" info=""/>
+        </user>
+        <user read-only="true">
+            <user-id xmlns="">fran</user-id>
+            <full-name xmlns="">Fran Boon</full-name>
+            <user-comments xmlns=""></user-comments>
+            <password xmlns="">CA9C9C6DC7A89A14C0501CC385E8CFE8</password>
+            <contact type="email" info="francisboon@gmail.com"/>
+            <contact type="pagerEmail" info=""/>
+            <contact type="xmppAddress" info=""/>
+            <contact type="numericPage" info="" serviceProvider=""/>
+            <contact type="textPage" info="" serviceProvider=""/>
+            <contact type="workPhone" info=""/>
+            <contact type="mobilePhone" info="+447789746281"/>
+            <contact type="homePhone" info=""/>
+        </user>
+        <user read-only="false">
+            <user-id xmlns="">mark</user-id>
+            <full-name xmlns="">Mark Summer</full-name>
+            <user-comments xmlns=""></user-comments>
+            <password xmlns="">34541ADCBC9C83A4E543345F495C62C2</password>
+            <contact type="email" info="mark@inveneo.org"/>
+            <contact type="pagerEmail" info=""/>
+            <contact type="xmppAddress" info=""/>
+            <contact type="numericPage" info="" serviceProvider=""/>
+            <contact type="textPage" info="" serviceProvider=""/>
+            <contact type="workPhone" info=""/>
+            <contact type="mobilePhone" info="+50936757734"/>
+            <contact type="homePhone" info=""/>
+        </user>
+        <user read-only="false">
+            <user-id xmlns="">reygue</user-id>
+            <full-name xmlns="">Reynold GUERRIER</full-name>
+            <user-comments xmlns="">Haitian Technologies Group - CTO</user-comments>
+            <password xmlns="">04C7CC31D8ED74BC058AA7924118BCDB</password>
+            <contact type="email" info="reygue@gmail.com"/>
+            <contact type="pagerEmail" info=""/>
+            <contact type="xmppAddress" info=""/>
+            <contact type="numericPage" info="" serviceProvider=""/>
+            <contact type="textPage" info="" serviceProvider=""/>
+            <contact type="workPhone" info=""/>
+            <contact type="mobilePhone" info="(509) 34460099"/>
+            <contact type="homePhone" info=""/>
+        </user>
+        <user read-only="true">
+            <user-id xmlns="">public</user-id>
+            <full-name xmlns="">Public User</full-name>
+            <user-comments xmlns=""></user-comments>
+            <password xmlns="">4C9184F37CFF01BCDC32DC486EC36961</password>
+            <contact type="email" info=""/>
+            <contact type="pagerEmail" info=""/>
+            <contact type="xmppAddress" info=""/>
+            <contact type="numericPage" info="" serviceProvider=""/>
+            <contact type="textPage" info="" serviceProvider=""/>
+            <contact type="workPhone" info=""/>
+            <contact type="mobilePhone" info=""/>
+            <contact type="homePhone" info=""/>
+        </user>
+    </users>
 </userinfo>

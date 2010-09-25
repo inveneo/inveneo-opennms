@@ -1,92 +1,116 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <notifications xmlns="http://xmlns.opennms.org/xsd/notifications">
-    <header>
-        <rev>1.2</rev>
-        <created>Wednesday, February 6, 2002 10:10:00 AM EST</created>
-        <mstation>localhost</mstation>
-    </header>
-    <notification name="interfaceDown" status="on">
-        <uei>uei.opennms.org/nodes/interfaceDown</uei>
-        <rule>IPADDR != '0.0.0.0'</rule>
-        <destinationPath>Email-Admin</destinationPath>
-        <text-message>All services are down on interface %interfaceresolve% (%interface%) 
-on node %nodelabel%.  New Outage records have been created 
-and service level availability calculations will be impacted 
-until this outage is resolved.  
-	</text-message>
-        <subject>Notice #%noticeid%: %interfaceresolve% (%interface%) on node %nodelabel% down.</subject>
-        <numeric-message>111-%noticeid%</numeric-message>
+    <ns1:header xmlns:ns1="http://xmlns.opennms.org/xsd/types">
+        <rev xmlns="">1.2</rev>
+        <created xmlns="">Tuesday, June 1, 2010 7:18:11 PM GMT</created>
+        <mstation xmlns="">localhost</mstation>
+    </ns1:header>
+    <notification name="interfaceDown" status="off" writeable="yes">
+        <uei xmlns="">uei.opennms.org/nodes/interfaceDown</uei>
+        <rule xmlns="">IPADDR != '0.0.0.0'</rule>
+        <destinationPath xmlns="">Email-Admin</destinationPath>
+        <text-message xmlns="">All services are down on interface %interfaceresolve% (%interface%) on node %nodelabel%.  New Outage records have been created and service level availability calculations will be impacted until this outage is resolved.</text-message>
+        <subject xmlns="">Notice #%noticeid%: %interfaceresolve% (%interface%) on node %nodelabel% down.</subject>
+        <numeric-message xmlns="">111-%noticeid%</numeric-message>
     </notification>
-    <notification name="nodeDown" status="on">
-        <uei>uei.opennms.org/nodes/nodeDown</uei>
-        <rule>IPADDR != '0.0.0.0'</rule>
-        <destinationPath>Email-Admin</destinationPath>
-        <text-message>All services are down on node %nodelabel%.  New Outage records have 
-been created and service level availability calculations will 
-be impacted until this outage is resolved.  
-	</text-message>
-        <subject>Notice #%noticeid%: node %nodelabel% down.</subject>
-        <numeric-message>111-%noticeid%</numeric-message>
+    <notification name="nodeDown" status="off" writeable="yes">
+        <uei xmlns="">uei.opennms.org/nodes/nodeDown</uei>
+        <rule xmlns="">IPADDR != '0.0.0.0'</rule>
+        <destinationPath xmlns="">Email-Admin</destinationPath>
+        <text-message xmlns="">All services are down on node %nodelabel%.  New Outage records have been created and service level availability calculations will be impacted until this outage is resolved.</text-message>
+        <subject xmlns="">Notice #%noticeid%: node %nodelabel% down.</subject>
+        <numeric-message xmlns="">111-%noticeid%</numeric-message>
     </notification>
-    <notification name="nodeLostService" status="on">
-        <uei>uei.opennms.org/nodes/nodeLostService</uei>
-        <rule>IPADDR != '0.0.0.0'</rule>
-        <destinationPath>Email-Admin</destinationPath>
-        <text-message>The %service% service poll on interface %interfaceresolve% (%interface%) 
-on node %nodelabel% failed at %time%. 
-	</text-message>
-        <subject>Notice #%noticeid%: %service% down on %interfaceresolve% (%interface%) on node %nodelabel%.</subject>
-        <numeric-message>111-%noticeid%</numeric-message>
+    <notification name="nodeLostService" status="off" writeable="yes">
+        <uei xmlns="">uei.opennms.org/nodes/nodeLostService</uei>
+        <rule xmlns="">IPADDR != '0.0.0.0'</rule>
+        <destinationPath xmlns="">Email-Admin</destinationPath>
+        <text-message xmlns="">The %service% service poll on interface %interfaceresolve% (%interface%) on node %nodelabel% failed at %time%.</text-message>
+        <subject xmlns="">Notice #%noticeid%: %service% down on %interfaceresolve% (%interface%) on node %nodelabel%.</subject>
+        <numeric-message xmlns="">111-%noticeid%</numeric-message>
     </notification>
-    <notification name="nodeAdded" status="on">
-        <uei>uei.opennms.org/nodes/nodeAdded</uei>
-        <rule>IPADDR != '0.0.0.0'</rule>
-        <destinationPath>Email-Admin</destinationPath>
-        <text-message>OpenNMS has discovered a new node named
-%parm[nodelabel]%. Please be advised.</text-message>
-        <subject>Notice #%noticeid%: %parm[nodelabel]% discovered.</subject>
-        <numeric-message>111-%noticeid%</numeric-message>
+    <notification name="nodeAdded" status="off" writeable="yes">
+        <uei xmlns="">uei.opennms.org/nodes/nodeAdded</uei>
+        <rule xmlns="">IPADDR != '0.0.0.0'</rule>
+        <destinationPath xmlns="">Email-Admin</destinationPath>
+        <text-message xmlns="">OpenNMS has discovered a new node named %parm[nodelabel]%. Please be advised.</text-message>
+        <subject xmlns="">Notice #%noticeid%: %parm[nodelabel]% discovered.</subject>
+        <numeric-message xmlns="">111-%noticeid%</numeric-message>
     </notification>
-    <notification name="interfaceDeleted" status="on">
-        <uei>uei.opennms.org/nodes/interfaceDeleted</uei>
-        <rule>IPADDR != '0.0.0.0'</rule>
-        <destinationPath>Email-Admin</destinationPath>
-        <text-message>Due to extended downtime or operator action, the interface %interfaceresolve% (%interface%) 
-on node %nodelabel% has been deleted from OpenNMS&apos;s polling database.</text-message>
-        <subject>Notice #%noticeid%: [OpenNMS] %interfaceresolve% (%interface%) on node %nodelabel% deleted.</subject>
-        <numeric-message>111-%noticeid%</numeric-message>
+    <notification name="interfaceDeleted" status="off" writeable="yes">
+        <uei xmlns="">uei.opennms.org/nodes/interfaceDeleted</uei>
+        <rule xmlns="">IPADDR != '0.0.0.0'</rule>
+        <destinationPath xmlns="">Email-Admin</destinationPath>
+        <text-message xmlns="">Due to extended downtime or operator action, the interface %interfaceresolve% (%interface%) on node %nodelabel% has been deleted from OpenNMS's polling database.</text-message>
+        <subject xmlns="">Notice #%noticeid%: [OpenNMS] %interfaceresolve% (%interface%) on node %nodelabel% deleted.</subject>
+        <numeric-message xmlns="">111-%noticeid%</numeric-message>
     </notification>
-    <notification name="High Threshold" status="off">
-        <uei>uei.opennms.org/threshold/highThresholdExceeded</uei>
-        <description>A monitored device has hit a high threshold</description>
-        <rule>IPADDR != '0.0.0.0'</rule>
-        <destinationPath>Email-Admin</destinationPath>
-        <text-message>A Threshold has been exceeded on node: %nodelabel%, interface:%interface%. The parameter %parm[ds]% reached a value of %parm[value]% while the threshold is %parm[threshold]%. This alert will be rearmed when %parm[ds]% reaches %parm[rearm]%.</text-message>
-        <subject>Notice #%noticeid%: High Threshold for %parm[ds]% on node %nodelabel%.</subject>
+    <notification name="High Threshold" status="off" writeable="yes">
+        <uei xmlns="">uei.opennms.org/threshold/highThresholdExceeded</uei>
+        <description xmlns="">A monitored device has hit a high threshold</description>
+        <rule xmlns="">IPADDR != '0.0.0.0'</rule>
+        <destinationPath xmlns="">Email-Admin</destinationPath>
+        <text-message xmlns="">A Threshold has been exceeded on node: %nodelabel%, interface:%interface%. The parameter %parm[ds]% reached a value of %parm[value]% while the threshold is %parm[threshold]%. This alert will be rearmed when %parm[ds]% reaches %parm[rearm]%.</text-message>
+        <subject xmlns="">Notice #%noticeid%: High Threshold for %parm[ds]% on node %nodelabel%.</subject>
     </notification>
-    <notification name="Low Threshold" status="off">
-        <uei>uei.opennms.org/threshold/lowThresholdExceeded</uei>
-        <description>A monitored device has hit a low threshold</description>
-        <rule>IPADDR != '0.0.0.0'</rule>
-        <destinationPath>Email-Admin</destinationPath>
-        <text-message>A Threshold has been exceeded on node: %nodelabel%, interface:%interface%. The parameter %parm[ds]% reached a value of %parm[value]% while the threshold is %parm[threshold]%. This alert will be rearmed when %parm[ds]% reaches %parm[rearm]%.</text-message>
-        <subject>Notice #%noticeid%: Low Threshold for %parm[ds]% on node %nodelabel%.</subject>
+    <notification name="Low Threshold" status="off" writeable="yes">
+        <uei xmlns="">uei.opennms.org/threshold/lowThresholdExceeded</uei>
+        <description xmlns="">A monitored device has hit a low threshold</description>
+        <rule xmlns="">IPADDR != '0.0.0.0'</rule>
+        <destinationPath xmlns="">Email-Admin</destinationPath>
+        <text-message xmlns="">A Threshold has been exceeded on node: %nodelabel%, interface:%interface%. The parameter %parm[ds]% reached a value of %parm[value]% while the threshold is %parm[threshold]%. This alert will be rearmed when %parm[ds]% reaches %parm[rearm]%.</text-message>
+        <subject xmlns="">Notice #%noticeid%: Low Threshold for %parm[ds]% on node %nodelabel%.</subject>
     </notification>
-    <notification name="Low Threshold Rearmed" status="off">
-        <uei>uei.opennms.org/threshold/lowThresholdRearmed</uei>
-        <description>A monitored device has recovered from a low threshold</description>
-        <rule>IPADDR != '0.0.0.0'</rule>
-        <destinationPath>Email-Admin</destinationPath>
-        <text-message>A Threshold has returned to normal on node: %nodelabel%, interface:%interface%. The parameter %parm[ds]% reached a value of %parm[value]% with a rearm threshold of %parm[rearm]%. This threshold for this alert was %parm[threshold]%.</text-message>
-        <subject>Notice #%noticeid%: Low Threshold Rearmed for %parm[ds]% on node %nodelabel%.</subject>
+    <notification name="Low Threshold Rearmed" status="off" writeable="yes">
+        <uei xmlns="">uei.opennms.org/threshold/lowThresholdRearmed</uei>
+        <description xmlns="">A monitored device has recovered from a low threshold</description>
+        <rule xmlns="">IPADDR != '0.0.0.0'</rule>
+        <destinationPath xmlns="">Email-Admin</destinationPath>
+        <text-message xmlns="">A Threshold has returned to normal on node: %nodelabel%, interface:%interface%. The parameter %parm[ds]% reached a value of %parm[value]% with a rearm threshold of %parm[rearm]%. This threshold for this alert was %parm[threshold]%.</text-message>
+        <subject xmlns="">Notice #%noticeid%: Low Threshold Rearmed for %parm[ds]% on node %nodelabel%.</subject>
     </notification>
-    <notification name="High Threshold Rearmed" status="off">
-        <uei>uei.opennms.org/threshold/highThresholdRearmed</uei>
-        <description>A monitored device has recovered from a high threshold</description>
-        <rule>IPADDR != '0.0.0.0'</rule>
-        <destinationPath>Email-Admin</destinationPath>
-        <text-message>A Threshold has returned to normal on node: %nodelabel%, interface:%interface%. The parameter %parm[ds]% reached a value of %parm[value]% with a rearm threshold of %parm[rearm]%. This threshold for this alert was %parm[threshold]%.</text-message>
-        <subject>Notice #%noticeid%: High Threshold Rearmed for %parm[ds]% on node %nodelabel%.</subject>
+    <notification name="High Threshold Rearmed" status="off" writeable="yes">
+        <uei xmlns="">uei.opennms.org/threshold/highThresholdRearmed</uei>
+        <description xmlns="">A monitored device has recovered from a high threshold</description>
+        <rule xmlns="">IPADDR != '0.0.0.0'</rule>
+        <destinationPath xmlns="">Email-Admin</destinationPath>
+        <text-message xmlns="">A Threshold has returned to normal on node: %nodelabel%, interface:%interface%. The parameter %parm[ds]% reached a value of %parm[value]% with a rearm threshold of %parm[rearm]%. This threshold for this alert was %parm[threshold]%.</text-message>
+        <subject xmlns="">Notice #%noticeid%: High Threshold Rearmed for %parm[ds]% on node %nodelabel%.</subject>
     </notification>
-
+    <notification name="Backbone node added" status="on" writeable="yes">
+        <uei xmlns="">uei.opennms.org/nodes/nodeAdded</uei>
+        <description xmlns="">A new node has been detected in the 10.0.1.x space.</description>
+        <rule xmlns="">(IPADDR IPLIKE 10.0.1.1-254)</rule>
+        <destinationPath xmlns="">emailSupportStaff_Immediate</destinationPath>
+        <text-message xmlns="">OpenNMS Notice %noticeid%: New a new IP address in the 10.0.1.x space has been detected.   %nodelabel% is at IP address %interface%.  If this is something you are adding yourself, there's no need to worry.  If you don't know where this came from, you should probably figure out what it is.</text-message>
+        <subject xmlns="">INFORMATIONAL Haiti PaPNet OpenNMS notice #%noticeid%: New node %nodelabel% at IP address %interface%</subject>
+        <numeric-message xmlns="">111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="Critical Relay Location Down" status="on" writeable="yes">
+        <uei xmlns="">uei.opennms.org/nodes/nodeDown</uei>
+        <description xmlns="">A critical relay location is unreachable</description>
+        <rule xmlns="">(categoryName = 'Core Relay APs') &amp; (isICMP )</rule>
+        <destinationPath xmlns="">emailSupportStaff_60sDelay</destinationPath>
+        <text-message xmlns="">OpenNMS Notice %noticeid%: %nodelabel% (%interface%) is down at %time%! This is an urgent alert.  Node(s) are down that likely affect a large part of the network</text-message>
+        <subject xmlns="">URGENT Haiti PaPNet OpenNMS notice #%noticeid%: %nodelabel% (%interface%) is down!</subject>
+        <numeric-message xmlns="">111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="Minor Relay Location Down" status="on" writeable="yes">
+        <uei xmlns="">uei.opennms.org/nodes/nodeDown</uei>
+        <description xmlns="">A minor relay location that affects one or more downstream clients is down</description>
+        <rule xmlns="">(categoryName = 'Minor Relay Locations')</rule>
+        <destinationPath xmlns="">emailSupportStaff_60sDelay</destinationPath>
+        <text-message xmlns="">OpenNMS Notice %noticeid%: %nodelabel% (%interface%) is down at %time%! This is an warning.  A node is down that likely affects one or more downstream clients</text-message>
+        <subject xmlns="">WARNING Haiti PaPNet OpenNMS notice #%noticeid%: minor relay %nodelabel% (%interface%) is down!</subject>
+        <numeric-message xmlns="">111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="Watchlist node up" status="on" writeable="yes">
+        <uei xmlns="">uei.opennms.org/nodes/nodeUp</uei>
+        <description xmlns="">Add nodes to the watchlist surveillance category to notify when up and down</description>
+        <rule xmlns="">(categoryName = 'Watchlist')</rule>
+        <destinationPath xmlns="">Debug</destinationPath>
+        <text-message xmlns="">OpenNMS Notice %noticeid%: A node on the watchlist is up. If you are waiting to configure something on %nodelabel% (%interface%), now would be a good time to do it.</text-message>
+        <subject xmlns="">INFORMATIONAL Haiti PaPNet OpenNMS notice #%noticeid%: Watchlist node %nodelabel% (%interface%) is up.</subject>
+        <numeric-message xmlns="">111-%noticeid%</numeric-message>
+    </notification>
 </notifications>

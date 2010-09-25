@@ -1,14 +1,34 @@
-<?xml version="1.0"?>
-<destinationPaths>
-    <header>
-        <rev>1.2</rev>
-        <created>Wednesday, February 6, 2002 10:10:00 AM EST</created>
-        <mstation>localhost</mstation>
-    </header>
-    <path name="Email-Admin">
-        <target>
-                <name>Admin</name>
-                <command>javaEmail</command>
+<?xml version="1.0" encoding="UTF-8"?>
+<destinationPaths xmlns="http://xmlns.opennms.org/xsd/destinationPaths">
+    <ns1:header xmlns:ns1="http://xmlns.opennms.org/xsd/types">
+        <rev xmlns="">1.2</rev>
+        <created xmlns="">Tuesday, June 1, 2010 7:12:06 PM GMT</created>
+        <mstation xmlns="">localhost</mstation>
+    </ns1:header>
+    <path name="Debug" initial-delay="0s">
+        <target interval="0s">
+            <name xmlns="">andris</name>
+            <autoNotify xmlns="">on</autoNotify>
+            <command xmlns="">javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name xmlns="">mark</name>
+            <autoNotify xmlns="">on</autoNotify>
+            <command xmlns="">javaEmail</command>
+        </target>
+    </path>
+    <path name="emailSupportStaff_60sDelay" initial-delay="1m">
+        <target interval="0m">
+            <name xmlns="">SupportStaff</name>
+            <autoNotify xmlns="">on</autoNotify>
+            <command xmlns="">javaEmail</command>
+        </target>
+    </path>
+    <path name="emailSupportStaff_Immediate" initial-delay="0s">
+        <target interval="0m">
+            <name xmlns="">SupportStaff</name>
+            <autoNotify xmlns="">on</autoNotify>
+            <command xmlns="">javaEmail</command>
         </target>
     </path>
 </destinationPaths>

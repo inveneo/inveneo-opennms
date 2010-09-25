@@ -43,7 +43,7 @@ mib2.ups-powerfactor, mib2.ups-freq, mib2.ups-battvolt, mib2.ups-battamp, \
 mib2.ups-temp, \
 mib2printer.lifeCount, mib2printer.powerOnCount, \
 mib2printer.markersupply, \
-mib2.storage.usage, mib2.storage-non-unique.usage, \
+mib2.storage.usage, \
 aix.teaser, aix.cpuUtilization, aix.procNum, aix.subsystems, aix.subservers, aix.vg.bytes, \
 aix.vg.percent, aix.vg.components, aix.pv.bytes, aix.pv.percent, aix.paging.size, aix.pv.percent, \
 aix.printq.length, aix.fs.bytes, aix.fs.percent, aix.fs.inodes, aix.fs.inodepct, \
@@ -57,7 +57,6 @@ brocade.switch.frames, brocade.switch.words, \
 checkpoint.pktsAccepted, checkpoint.pktsDropped, checkpoint.pktsLogged, checkpoint.pktsRejected, \
 checkpoint.pktsEncrypted, checkpoint.pktsEncryptedErr, checkpoint.pktsOtherErr, checkpoint.connections, \
 cisco.aironet.clientsassociated, cisco.altigaactsess, cisco.altigacpu, cisco.altigafanspeed, cisco.altigatemp, \
-cisco.aironet2.activeclients, cisco.aironet2.association, cisco.aironet2.roaming, \
 cisco.altigatput, cisco.altigavoltage, cisco.altiga3volt, cisco.altiga5volt, \
 cisco.avgbusy5, cisco.pixcpu, cisco.pixcpurev, cisco.bufferfails, cisco.buffhits, cisco.buffmiss, \
 cisco.ccmcti, cisco.ccmgs, cisco.ccmgw, cisco.ccmmd, cisco.ccmphones, \
@@ -65,7 +64,6 @@ cisco.ccmps, cisco.ccmvm, \
 cisco.cike-bits, cisco.cike-dn, cisco.cike-fail, cisco.cike-init, cisco.cike-pkts, \
 cisco.cike-p2ex, cisco.cike-p2exinv, cisco.cike-p2exrej, cisco.cike-tunnels, \
 cisco.css.hits, cisco.css.bytes, cisco.css.redirects, cisco.css.sorries, \
-cisco.docs.ext, cisco.docs.macchan, cisco.docs.cabsnr, \
 cisco.dropsinout, cisco.freemem, \
 cisco.firewall, cisco.memory, \
 cisco.pkts, cisco.protoin, cisco.protoout, cisco.temp, cisco.volt, \
@@ -116,13 +114,12 @@ netapp.cpu, netapp.fspercent, netapp.fsfiles, \
 netapp.servercall, netapp.cifsrw, netapp.nfsv2rw, netapp.nfsv3rw, \
 netapp.fspercentkbyte, netapp.fskbyte, \
 netapp.fspercentinode, netapp.fsinode, netapp.fsfile, \
-netapp.sis, netapp.diskio, \
 netenforcer.neBytes, netenforcer.pipeBytes, netenforcer.vcBytes, \
 netenforcer.nePackets, netenforcer.pipePackets, netenforcer.vcPackets, \
 netenforcer.neConns, netenforcer.pipeConns, netenforcer.vcConns, \
 netscaler.NSresCpuUsage, netscaler.NSresMemUsage, \
 netsnmp.rawcontext, netsnmp.hrSystemProcesses, \
-netsnmp.disk, netsnmp.diskHighLow, netsnmp.diskpercent, netsnmp.diskpercentinode, \
+netsnmp.disk, netsnmp.diskpercent, \
 netsnmp.hrMemory, netsnmp.hrNumUsers, netsnmp.rawinterrupts, \
 netsnmp.hrSystemUptime, netsnmp.loadavg, netsnmp.swapinout, \
 netBotz.air, netBotz.humid, netBotz.temp, \
@@ -145,13 +142,11 @@ ainf.diskfree, ainf.net.bits, ainf.net.utilization, ainf.net.discards, ainf.net.
 ainf.net.packets, ainf.net.packettypes, \
 sun.cpuTime, sun.diskxfer, sun.interrupts, sun.packets, sun.paging, sun.procs, \
 sun.swap, sun.swapping, \
-netsnmp.memStatsNoShared, netsnmp.memStats, \
+netsnmp.memStats, \
 netsnmp.cpuUsage, netsnmp.cpuUsageFull, \
 netsnmp.cpuStats, netsnmp.cpuStatsFull, \
 netsnmp.diskio.bytes, netsnmp.diskio.ops, netsnmp.diskio.opsize, \
-onms.queued.updates, onms.queued.pending, \
-free.memory, jvm.thread.count, jvm.thread.daemon, jvm.thread.peak, \
-jboss.http.tp, jboss.defaultDS, \
+free.memory,jvm.thread.count,jvm.thread.daemon,jvm.thread.peak, jboss.http.tp, jboss.defaultDS, \
 jboss.servletstatus.time, jboss.servletstatus.cnt, jboss.grp.tp, jboss.grp.time, jboss.grp.cnt, \
 airport.numClients,iisTraffic,iisRequests,exchangeMessages,exchangeBytes, \
 exchangeRecipPartitions,dnsThroughput,mssqlmemory,mssqlusage,mssqlhitratios,mssqllockwaittime, \
@@ -172,8 +167,6 @@ mcast.cisco.igmpsnoop.leaves, mcast.cisco.igmpsnoop.packets, mcast.cisco.igmpsno
 mcast.cisco.igmpsnoop.currentstate, mcast.cisco.igmpsnoop.filterchange, \
 mcast.juniper.mroute.activeblocked, mcast.juniper.pim.messages, mcast.juniper.pim.ifmessages, \
 mcast.juniper.pim.ifmessages, mcast.juniper.igmp.ifgroups, mcast.juniper.igmp.wrongver, mcast.juniper.igmp.queries, \
-trango.trangolink45.rssi, \
-eql.vol.io, eql.vol.lat, eql.vol.op, eql.vol.size, \
 wmi.cpupctproctime, wmi.procinterrupts, wmi.proctime, wmi.processes, wmi.shmipc, \
 wmi.memory.available, wmi.memory.committedbytes, wmi.memory.committedpct, wmi.memory.faults, wmi.memory.poolalloc, \
 wmi.termsvc.sessions, wmi.server.sessions, wmi.server.errors, \
@@ -182,22 +175,10 @@ wmi.physdisk.time, wmi.physdisk.splitios, \
 wmi.logdisk.freepct, wmi.logdisk.freebytes, wmi.logdisk.time, wmi.logdisk.splitios, \
 xmp.xmpdrss,xmp.xmpdsz,xmp.memutil,xmp.loadavg,xmp.swaputil,\
 xmp.procs,xmp.filesys,xmp.xmpdstats,xmp.diskstats,xmp.diskkb, \
-riverbed.steelhead.versionUptime, riverbed.steelhead.systemTemperature, riverbed.steelhead.cpuLoad, \
-riverbed.steelhead.cpuUtilization, riverbed.steelhead.connections, riverbed.steelhead.aggBandwidth, \
-riverbed.steelhead.passthrough, riverbed.steelhead.dsHitsMisses, riverbed.steelhead.dsHitRate, \
-riverbed.steelhead.dsSegmentCost, riverbed.steelhead.cpuStats, riverbed.steelhead.portBandwidth, \
-sofaware.embeddedngx.storagePct, sofaware.embeddedngx.storageConfig, sofaware.embeddedngx.storageFirm, \
-sofaware.embeddedngx.storageCF, sofaware.embeddedngx.licenses, sofaware.embeddedngx.memoryPct, sofaware.embeddedngx.memoryFree, \
-servertech.sentry3.systemStats, servertech.sentry3.tower.status, \
-servertech.sentry3.envmon.temperatureNoScale, servertech.sentry3.envmon.temperature, servertech.sentry3.envmon.humidity, \
-servertech.sentry3.infeed.loadCapacity, servertech.sentry3.infeed.outlets, \
-servertech.sentry3.infeed.voltage, servertech.sentry3.infeed.power, \
 frogfoot.memory,frogfoot.load, \
 dot11.FailedCount, dot11.RetriedCount, \
 lmsensors.temp, lmsensors.fan, lmsensors.volt, \
-mib2.sysUpTime, ubnt.web.sysUpTime, \
-ubnt.web.bits.lan, ubnt.web.bits.wlan, ubnt.web.pkts.lan, ubnt.web.pkts.wlan, \
-mib2.bitsFast
+bwusage.siteAB \
 
 # values available to prefab reports:
 # {rrd1}, {rrd2}, {rrd3}, ...  must match the datasources exactly
@@ -942,38 +923,6 @@ report.mib2.storage.usage.command=--title="Storage Utilization on {hrStorageDesc
  GPRINT:usedBytes:MIN:"Min  \\: %8.2lf %s" \
  GPRINT:usedBytes:MAX:"Max  \\: %8.2lf %s\\n"
 
-report.mib2.storage-non-unique.usage.name=Storage Utilization (MIB-2 Host Resources, non-unique descriptions)
-report.mib2.storage-non-unique.usage.columns=hrStorageSize, hrStorageUsed, hrStorageAllocUnits
-report.mib2.storage-non-unique.usage.propertiesValues=hrStorageDescr
-report.mib2.storage-non-unique.usage.suppress=mib2.storage.usage
-report.mib2.storage-non-unique.usage.type=hrStorageNonUnique
-report.mib2.storage-non-unique.usage.command=--title="Storage Utilization on {hrStorageDescr}" \
- --vertical-label="Bytes" \
- --base=1024 \
- DEF:total={rrd1}:hrStorageSize:AVERAGE \
- DEF:minTotal={rrd1}:hrStorageSize:MIN \
- DEF:maxTotal={rrd1}:hrStorageSize:MAX \
- DEF:used={rrd2}:hrStorageUsed:AVERAGE \
- DEF:minUsed={rrd2}:hrStorageUsed:MIN \
- DEF:maxUsed={rrd2}:hrStorageUsed:MAX \
- DEF:units={rrd3}:hrStorageAllocUnits:AVERAGE \
- DEF:minUnits={rrd3}:hrStorageAllocUnits:MIN \
- DEF:maxUnits={rrd3}:hrStorageAllocUnits:MAX \
- CDEF:totalBytes=total,units,* \
- CDEF:minTotalBytes=minTotal,minUnits,* \
- CDEF:maxTotalBytes=maxTotal,maxUnits,* \
- CDEF:usedBytes=used,units,* \
- CDEF:minUsedBytes=minUsed,minUnits,* \
- CDEF:maxUsedBytes=maxUsed,maxUnits,* \
- LINE2:totalBytes#0000ff:"Total" \
- GPRINT:totalBytes:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:totalBytes:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:totalBytes:MAX:"Max  \\: %8.2lf %s\\n" \
- AREA:usedBytes#ff0000:"Used " \
- GPRINT:usedBytes:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:usedBytes:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:usedBytes:MAX:"Max  \\: %8.2lf %s\\n"
-
 report.mib2.icmp.msgs.name=ICMP Messages (MIB-2)
 report.mib2.icmp.msgs.columns=icmpInMsgs,icmpOutMsgs
 report.mib2.icmp.msgs.type=nodeSnmp
@@ -1151,13 +1100,13 @@ report.mib2.icmp.echoes.command=--title="ICMP Echoes (MIB-2)" \
  GPRINT:repOut:MAX:"Max \\: %8.2lf %s"
 
 report.mib2.powerethernet.name=Power Over Ethernet
-report.mib2.powerethernet.columns=pethMainPsePower, pethMainPseConPower
+report.mib2.powerethernet.columns=pethMainPsePower, pethMainPseConsumptionPower
 report.mib2.powerethernet.type=pethMainPseGroupIndex
 report.mib2.powerethernet.height=150
 report.mib2.powerethernet.width=600
 report.mib2.powerethernet.command=--title="PSE Main Power (Watts)" --height 150 --width 600 --vertical-label="Watts" \
  DEF:main={rrd1}:pethMainPsePower:AVERAGE \
- DEF:consumed={rrd2}:pethMainPseConPower:AVERAGE \
+ DEF:consumed={rrd2}:pethMainPseConsumpt:AVERAGE \
  LINE2:main#438219:"nominal Watts" \
  GPRINT:main:AVERAGE:" Avg\\: %8.2lf %s" \
  GPRINT:main:MIN:"Min\\: %8.2lf %s" \
@@ -2016,82 +1965,6 @@ report.cisco.aironet.clientsassociated.command=--title="Cisco Aironet Clients As
  GPRINT:clients:MIN:"Min  \\: %8.2lf %s" \
  GPRINT:clients:MAX:"Max  \\: %8.2lf %s\\n"
 
-report.cisco.aironet2.activeclients.name=Cisco C1200 Active Clients
-report.cisco.aironet2.activeclients.columns=ciscoApActClients
-report.cisco.aironet2.activeclients.type=interfaceSnmp
-report.cisco.aironet2.activeclients.command=--title="Cisco AP Active Clients" \
- --vertical-label="Clients" \
- DEF:clients={rrd1}:ciscoApActClients:AVERAGE \
- DEF:minclients={rrd1}:ciscoApActClients:MIN \
- DEF:maxclients={rrd1}:ciscoApActClients:MAX \
- AREA:clients#12B3B5:"Active Clients" \
- GPRINT:clients:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:clients:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:clients:MAX:"Max  \\: %8.2lf %s\\n"
-
-report.cisco.aironet2.association.name=Cisco C1200 Association
-report.cisco.aironet2.association.columns=ciscoApAssociated,ciscoApDisassoc
-report.cisco.aironet2.association.type=interfaceSnmp
-report.cisco.aironet2.association.command=--title="Cisco AP Association" \
- --vertical-label="Clients" \
- DEF:assoc={rrd1}:ciscoApAssociated:AVERAGE \
- DEF:minassoc={rrd1}:ciscoApAssociated:MIN \
- DEF:maxassoc={rrd1}:ciscoApAssociated:MAX \
- DEF:disassoc={rrd2}:ciscoApDisassoc:AVERAGE \
- DEF:mindisassoc={rrd2}:ciscoApDisassoc:MIN \
- DEF:maxdisassoc={rrd2}:ciscoApDisassoc:MAX \
- CDEF:disassocInv=disassoc,-1,* \
- AREA:assoc#00ff00:"Associated   " \
- GPRINT:assoc:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:assoc:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:assoc:MAX:"Max  \\: %8.2lf %s\\n" \
- AREA:disassocInv#0000ff:"Disassociated" \
- GPRINT:disassoc:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:disassoc:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:disassoc:MAX:"Max  \\: %8.2lf %s\\n"
-
-report.cisco.aironet2.authentication.name=Cisco C1200 Authentication
-report.cisco.aironet2.authentication.columns=ciscoApAuthen,ciscoApDeauthen
-report.cisco.aironet2.authentication.type=interfaceSnmp
-report.cisco.aironet2.authentication.command=--title="Cisco AP Authentication" \
- --vertical-label="Clients" \
- DEF:authen={rrd1}:ciscoApAuthen:AVERAGE \
- DEF:minauthen={rrd1}:ciscoApAuthen:MIN \
- DEF:maxauthen={rrd1}:ciscoApAuthen:MAX \
- DEF:deauthen={rrd2}:ciscoApDeauthen:AVERAGE \
- DEF:mindeauthen={rrd2}:ciscoApDeauthen:MIN \
- DEF:maxdeauthen={rrd2}:ciscoApDeauthen:MAX \
- CDEF:deauthenInv=disassoc,-1,* \
- AREA:authen#00ff00:"Authenticated  " \
- GPRINT:authen:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:authen:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:authen:MAX:"Max  \\: %8.2lf %s\\n" \
- AREA:deauthenInv#0000ff:"Deauthenticated" \
- GPRINT:deauthen:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:deauthen:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:deauthen:MAX:"Max  \\: %8.2lf %s\\n"
-
-report.cisco.aironet2.roaming.name=Cisco C1200 Roaming
-report.cisco.aironet2.roaming.columns=ciscoApRoamedIn,ciscoApRoamedAway
-report.cisco.aironet2.roaming.type=interfaceSnmp
-report.cisco.aironet2.roaming.command=--title="Cisco AP Roaming" \
- --vertical-label="Clients" \
- DEF:in={rrd1}:ciscoApRoamedIn:AVERAGE \
- DEF:minin={rrd1}:ciscoApRoamedIn:MIN \
- DEF:maxin={rrd1}:ciscoApRoamedIn:MAX \
- DEF:away={rrd2}:ciscoApRoamedAway:AVERAGE \
- DEF:minaway={rrd2}:ciscoApRoamedAway:MIN \
- DEF:maxaway={rrd2}:ciscoApRoamedAway:MAX \
- CDEF:awayInv=away,-1,* \
- AREA:in#00ff00:"Roamed In  " \
- GPRINT:in:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:in:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:in:MAX:"Max  \\: %8.2lf %s\\n" \
- AREA:awayInv#0000ff:"Roamed Away" \
- GPRINT:away:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:away:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:away:MAX:"Max  \\: %8.2lf %s\\n"
-
 report.cisco.altigaactsess.name=Cisco VPN Active Sessions
 report.cisco.altigaactsess.columns=altigaActSess
 report.cisco.altigaactsess.type=nodeSnmp
@@ -2743,9 +2616,9 @@ report.cisco.css.hits.command=--title="Hits per Second" --height 150 --width 600
  DEF:Hits={rrd1}:ciscoApCntHits:AVERAGE \
  CDEF:fixedHits=Hits,1000000,GT,0,Hits,IF \
  LINE1:fixedHits#0000ff:"Hits  " \
- GPRINT:fixedHits:AVERAGE:"Avg\\: %8.2lf %s" \
- GPRINT:fixedHits:MIN:"Min\\: %8.2lf %s" \
- GPRINT:fixedHits:MAX:"Max\\: %8.2lf %s\\n" 
+ GPRINT:fixedHits:AVERAGE:"Avg: %8.2lf %s" \
+ GPRINT:fixedHits:MIN:"Min: %8.2lf %s" \
+ GPRINT:fixedHits:MAX:"Max: %8.2lf %s\\n" 
 
 report.cisco.css.bytes.name=CSS Bytes
 report.cisco.css.bytes.height=150
@@ -2757,9 +2630,9 @@ report.cisco.css.bytes.command=--title="Bytes per Second" --height 150 --width 6
  DEF:Bytes={rrd1}:ciscoApCntBytes:AVERAGE \
  CDEF:fixedBytes=Bytes,1000000,GT,0,Bytes,IF \
  LINE1:Bytes#0000ff:"Bytes/second  " \
- GPRINT:Bytes:AVERAGE:"Avg\\: %8.2lf %s" \
- GPRINT:Bytes:MIN:"Min\\: %8.2lf %s" \
- GPRINT:Bytes:MAX:"Max\\: %8.2lf %s\\n" 
+ GPRINT:Bytes:AVERAGE:"Avg: %8.2lf %s" \
+ GPRINT:Bytes:MIN:"Min: %8.2lf %s" \
+ GPRINT:Bytes:MAX:"Max: %8.2lf %s\\n" 
 
 report.cisco.css.redirects.name=CSS Redirects 
 report.cisco.css.redirects.height=150
@@ -2770,9 +2643,9 @@ report.cisco.css.redirects.command=--title="Redirects per Second" --height 150 -
  --vertical-label Redirects \
  DEF:Redirs={rrd1}:ciscoApCntRedirs:AVERAGE \
  LINE1:Redirs#0000ff:"Redirects  " \
- GPRINT:Redirs:AVERAGE:"Avg\\: %8.2lf %s" \
- GPRINT:Redirs:MIN:"Min\\: %8.2lf %s" \
- GPRINT:Redirs:MAX:"Max\\: %8.2lf %s\\n" 
+ GPRINT:Redirs:AVERAGE:"Avg: %8.2lf %s" \
+ GPRINT:Redirs:MIN:"Min: %8.2lf %s" \
+ GPRINT:Redirs:MAX:"Max: %8.2lf %s\\n" 
 
 report.cisco.css.sorries.name=CSS Sorries 
 report.cisco.css.sorries.height=150
@@ -2783,63 +2656,9 @@ report.cisco.css.sorries.command=--title="Sorries per Second" --height 150 --wid
  --vertical-label Sorries \
  DEF:Redirs={rrd1}:ciscoApCntSorry:AVERAGE \
  LINE1:Redirs#0000ff:"Sorries  " \
- GPRINT:Redirs:AVERAGE:"Avg\\: %8.2lf %s" \
- GPRINT:Redirs:MIN:"Min\\: %8.2lf %s" \
- GPRINT:Redirs:MAX:"Max\\: %8.2lf %s\\n" 
-
-report.cisco.docs.macchan.name=Cable Modem (MacChannel) Users
-report.cisco.docs.macchan.columns=MacCmTotal,MacCmActive,MacCmReg
-report.cisco.docs.macchan.type=interfaceSnmp
-report.cisco.docs.macchan.command=--title="Online Users" \
- --vertical-label="Cable Modems" \
- DEF:currCmTotal={rrd1}:MacCmTotal:AVERAGE \
- DEF:currCmActive={rrd2}:MacCmActive:AVERAGE \
- DEF:currCmReg={rrd3}:MacCmReg:AVERAGE \
- LINE2:currCmActive#00ff00:"Active " \
- GPRINT:currCmActive:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:currCmActive:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:currCmActive:MAX:"Max  \\: %8.2lf %s\\n" \
- LINE2:currCmTotal#0000ff:"Total " \
- GPRINT:currCmTotal:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:currCmTotal:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:currCmTotal:MAX:"Max  \\: %8.2lf %s\\n" \
- LINE2:currCmReg#ff0000:"Registered " \
- GPRINT:currCmReg:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:currCmReg:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:currCmReg:MAX:"Max  \\: %8.2lf %s\\n"
-
-report.cisco.docs.ext.name=Cable Modem Users
-report.cisco.docs.ext.columns=CmActive,CmRegistered,CmTotal
-report.cisco.docs.ext.type=interfaceSnmp
-report.cisco.docs.ext.command=--title="Online Users" \
- --vertical-label="Cable Modems" \
- DEF:currCmActive={rrd1}:CmActive:AVERAGE \
- DEF:currCmReg={rrd2}:CmRegistered:AVERAGE \
- DEF:currCmTotal={rrd3}:CmTotal:AVERAGE \
- LINE2:currCmActive#00ff00:"Active " \
- GPRINT:currCmActive:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:currCmActive:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:currCmActive:MAX:"Max  \\: %8.2lf %s\\n" \
- LINE2:currCmTotal#0000ff:"Total " \
- GPRINT:currCmTotal:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:currCmTotal:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:currCmTotal:MAX:"Max  \\: %8.2lf %s\\n" \
- LINE2:currCmReg#ff0000:"Registered " \
- GPRINT:currCmReg:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:currCmReg:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:currCmReg:MAX:"Max  \\: %8.2lf %s\\n"
-
-report.cisco.docs.cabsnr.name=Cable Modem SignalNoise
-report.cisco.docs.cabsnr.columns=intCabUpSNR
-report.cisco.docs.cabsnr.type=interfaceSnmp
-report.cisco.docs.cabsnr.command=--title="Upstream SNR" \
- --vertical-label="dBmv" \
- DEF:rawval={rrd1}:intCabUpSNR:AVERAGE \
- CDEF:dbm=rawval,10,/ \
- AREA:dbm#00FF00:"SNR" \
- GPRINT:dbm:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:dbm:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:dbm:MAX:"Max  \\: %8.2lf %s\\n"
+ GPRINT:Redirs:AVERAGE:"Avg: %8.2lf %s" \
+ GPRINT:Redirs:MIN:"Min: %8.2lf %s" \
+ GPRINT:Redirs:MAX:"Max: %8.2lf %s\\n" 
 
 report.cisco.dropsinout.name=Cisco Packets Dropped In/Out
 report.cisco.dropsinout.columns=locIfInQueueDrops, locIfOutQueueDrops
@@ -5951,42 +5770,6 @@ report.netapp.fsfile.command=--title="NetApp {naDfFileSys} files" \
  GPRINT:maxAvailFiles:MIN:"Min \\: %8.2lf %s" \
  GPRINT:maxAvailFiles:MAX:"Max \\: %8.2lf %s\\n"
 
-report.netapp.sis.name=Netapp SIS deduplication percentage savings
-report.netapp.sis.columns=naSisPercent
-report.netapp.sis.type=naDfIndex
-report.netapp.sis.propertiesValues=naDfFileSys
-report.netapp.sis.command=--title="NetApp {naDfFileSys} SIS percent savings" \
- --lower-limit 0 --upper-limit 100 --rigid \
- DEF:naSisPercent={rrd1}:naSisPercent:AVERAGE \
- DEF:minNaSisPercent={rrd1}:naSisPercent:MIN \
- DEF:maxNaSisPercent={rrd1}:naSisPercent:MAX \
- LINE2:naSisPercent#0000ff:"percent" \
- GPRINT:naSisPercent:AVERAGE:" Avg \\: %8.2lf %s" \
- GPRINT:naSisPercent:MIN:"Min \\: %8.2lf %s" \
- GPRINT:naSisPercent:MAX:"Max \\: %8.2lf %s\\n"
-
-report.netapp.diskio.name=NetApp Disk IO
-report.netapp.diskio.columns=naMiscLowDiskReadBytes, naMiscLowDiskWriteBytes
-report.netapp.diskio.type=nodeSnmp
-report.netapp.diskio.command=--title="NetApp Disk IO Bytes" \
- --vertical-label operations \
- DEF:naMiscLowDiskReadBytes={rrd1}:naMiscLowDiskReadBy:AVERAGE \
- DEF:minNaMiscLowDiskReadBytes={rrd1}:naMiscLowDiskReadBy:MIN \
- DEF:maxNaMiscLowDiskReadBytes={rrd1}:naMiscLowDiskReadBy:MAX \
- DEF:naMiscLowDiskWriteBytes={rrd2}:naMiscLowDiskWriteB:AVERAGE \
- DEF:minNaMiscLowDiskWriteBytes={rrd2}:naMiscLowDiskWriteB:MIN \
- DEF:maxNaMiscLowDiskWriteBytes={rrd2}:naMiscLowDiskWriteB:MAX \
- CDEF:naMiscLowDiskWriteBytesNeg=0,naMiscLowDiskWriteBytes,- \
- LINE1:naMiscLowDiskReadBytes#0000ff:"IO reads Bytes" \
- GPRINT:naMiscLowDiskReadBytes:AVERAGE:" Avg \\: %8.2lf %s" \
- GPRINT:naMiscLowDiskReadBytes:MIN:"Min \\: %8.2lf %s" \
- GPRINT:naMiscLowDiskReadBytes:MAX:"Max \\: %8.2lf %s\\n" \
- LINE1:naMiscLowDiskWriteBytes#ff0000:"IO writes Bytes" \
- GPRINT:naMiscLowDiskWriteBytes:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:naMiscLowDiskWriteBytes:MIN:"Min \\: %8.2lf %s" \
- GPRINT:naMiscLowDiskWriteBytes:MAX:"Max \\: %8.2lf %s\\n"
-
-
 ######
 ###### Reports Generated from NET-SNMP agents
 ######
@@ -6455,46 +6238,11 @@ report.netsnmp.disk.command=--title="Disk Space on {ns-dskPath}" \
  CDEF:dused=dusedk,1024,* \
  CDEF:minDused=minDusedk,1024,* \
  CDEF:maxDused=maxDusedk,1024,* \
- LINE2:dtotal#0000ff:"Total\\:" \
+ LINE2:dtotal#0000ff:"Total:" \
  GPRINT:dtotal:AVERAGE:" Avg  \\: %8.2lf %s" \
  GPRINT:dtotal:MIN:"Min  \\: %8.2lf %s" \
  GPRINT:dtotal:MAX:"Max  \\: %8.2lf %s\\n" \
- LINE2:dused#ff0000:"Used \\:" \
- GPRINT:dused:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:dused:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:dused:MAX:"Max  \\: %8.2lf %s\\n"
-
-report.netsnmp.diskHighLow.name=Net-SNMP Disk Space (high capacity)
-report.netsnmp.diskHighLow.columns=ns-dskTotalLow, ns-dskTotalHigh, ns-dskUsedLow, ns-dskUsedHigh
-report.netsnmp.diskHighLow.type=dskIndex
-report.netsnmp.diskHighLow.propertiesValues=ns-dskPath
-report.netsnmp.diskHighLow.suppress=netsnmp.disk
-report.netsnmp.diskHighLow.command=--title="Disk Space on {ns-dskPath} (high capacity)" \
- DEF:dtotalkLow={rrd1}:ns-dskTotalLow:AVERAGE \
- DEF:minDtotalkLow={rrd1}:ns-dskTotalLow:MIN \
- DEF:maxDtotalkLow={rrd1}:ns-dskTotalLow:MAX \
- DEF:dtotalkHigh={rrd2}:ns-dskTotalHigh:AVERAGE \
- DEF:minDtotalkLow={rrd2}:ns-dskTotalHigh:MIN \
- DEF:maxDtotalkLow={rrd2}:ns-dskTotalHigh:MAX \
- CDEF:dtotalk=dtotalkHigh,4294967296,*,dtotalkLow,+ \
- DEF:dusedkLow={rrd3}:ns-dskUsedLow:AVERAGE \
- DEF:minDusedkLow={rrd3}:ns-dskUsedLow:MIN \
- DEF:maxDusedkLow={rrd3}:ns-dskUsedLow:MAX \
- DEF:dusedkHigh={rrd4}:ns-dskUsedHigh:AVERAGE \
- DEF:minDusedkHigh={rrd4}:ns-dskUsedHigh:MIN \
- DEF:maxDusedkHigh={rrd4}:ns-dskUsedHigh:MAX \
- CDEF:dusedk=dusedkHigh,4294967296,*,dusedkLow,+ \
- CDEF:dtotal=dtotalk,1024,* \
- CDEF:minDtotal=minDtotalk,1024,* \
- CDEF:maxDtotal=maxDtotalk,1024,* \
- CDEF:dused=dusedk,1024,* \
- CDEF:minDused=minDusedk,1024,* \
- CDEF:maxDused=maxDusedk,1024,* \
- LINE2:dtotal#0000ff:"Total\\:" \
- GPRINT:dtotal:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:dtotal:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:dtotal:MAX:"Max  \\: %8.2lf %s\\n" \
- LINE2:dused#ff0000:"Used \\:" \
+ LINE2:dused#ff0000:"Used :" \
  GPRINT:dused:AVERAGE:" Avg  \\: %8.2lf %s" \
  GPRINT:dused:MIN:"Min  \\: %8.2lf %s" \
  GPRINT:dused:MAX:"Max  \\: %8.2lf %s\\n"
@@ -6507,23 +6255,10 @@ report.netsnmp.diskpercent.command=--title="Percent Space Used: {ns-dskPath}" \
  DEF:dpercent={rrd1}:ns-dskPercent:AVERAGE \
  DEF:minDpercent={rrd1}:ns-dskPercent:MIN \
  DEF:maxDpercent={rrd1}:ns-dskPercent:MAX \
- LINE2:dpercent#0000ff:"% Used\\:" \
+ LINE2:dpercent#0000ff:"% Used:" \
  GPRINT:dpercent:AVERAGE:"Avg  \\: %8.2lf %s" \
  GPRINT:dpercent:MIN:"Min  \\: %8.2lf %s" \
  GPRINT:dpercent:MAX:"Max  \\: %8.2lf %s\n"
-
-report.netsnmp.diskpercentinode.name=NetSNMP Percentage Inode Usage
-report.netsnmp.diskpercentinode.columns=ns-dskPercentNode
-report.netsnmp.diskpercentinode.type=dskIndex
-report.netsnmp.diskpercentinode.propertiesValues=ns-dskPath
-report.netsnmp.diskpercentinode.command=--title="Percent Inodes Used: {ns-dskPath}" \
- DEF:ipercent={rrd1}:ns-dskPercentNode:AVERAGE \
- DEF:minIpercent={rrd1}:ns-dskPercentNode:MIN \
- DEF:maxIpercent={rrd1}:ns-dskPercentNode:MAX \
- LINE2:ipercent#0000ff:"% Used\\:" \
- GPRINT:ipercent:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:ipercent:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:ipercent:MAX:"Max  \\: %8.2lf %s\n"
 
 report.netsnmp.hrMemory.name=Total Memory (Net-SNMP)
 report.netsnmp.hrMemory.columns=hrMemorySize
@@ -6649,10 +6384,57 @@ report.netsnmp.loadavg.command=--title="Load Average" --units-exponent=0 \
  GPRINT:float15:MIN:"Min \\: %10.2lf" \
  GPRINT:float15:MAX:"Max \\: %10.2lf\\n" \
 
+#report.netsnmp.memStats.name=System Memory Stats
+#report.netsnmp.memStats.columns=memAvailSwap,memTotalReal,memAvailReal,memBuffer,memCached,memShared
+#report.netsnmp.memStats.type=nodeSnmp
+#report.netsnmp.memStats.width=565
+#report.netsnmp.memStats.height=200
+#report.netsnmp.memStats.command=--title="System Memory Stats" \
+# --width 565 \
+# --height 200 \
+# --lower-limit 0 \
+# --base=1024 \
+# --vertical-label="Bytes" \
+# DEF:memavailswap={rrd1}:memAvailSwap:AVERAGE \
+# DEF:memtotalreal={rrd2}:memTotalReal:AVERAGE \
+# DEF:memavailreal={rrd3}:memAvailReal:AVERAGE \
+# DEF:membuffer={rrd4}:memBuffer:AVERAGE \
+# DEF:memcached={rrd5}:memCached:AVERAGE \
+# DEF:memshared={rrd6}:memShared:AVERAGE \
+# CDEF:memavailswapBytes=memavailswap,1024,* \
+# CDEF:memtotalrealBytes=memtotalreal,1024,* \
+# CDEF:memavailrealBytes=memavailreal,1024,* \
+# CDEF:membufferBytes=membuffer,1024,* \
+# CDEF:memcachedBytes=memcached,1024,* \
+# CDEF:memsharedBytes=memshared,1024,* \
+# LINE2:memavailswapBytes#ff0000:"Total Swap    " \
+# GPRINT:memavailswapBytes:AVERAGE:"  Avg  \\: %8.2lf %s" \
+# GPRINT:memavailswapBytes:MIN:"Min  \\: %8.2lf %s" \
+# GPRINT:memavailswapBytes:MAX:"Max  \\: %8.2lf %s\\n" \
+# LINE2:memtotalrealBytes#0000ff:"Total Real Mem" \
+# GPRINT:memtotalrealBytes:AVERAGE:"  Avg  \\: %8.2lf %s" \
+# GPRINT:memtotalrealBytes:MIN:"Min  \\: %8.2lf %s" \
+# GPRINT:memtotalrealBytes:MAX:"Max  \\: %8.2lf %s\\n" \
+# LINE2:memavailrealBytes#dd4400:"Avail Real Mem" \
+# GPRINT:memavailrealBytes:AVERAGE:"  Avg  \\: %8.2lf %s" \
+# GPRINT:memavailrealBytes:MIN:"Min  \\: %8.2lf %s" \
+# GPRINT:memavailrealBytes:MAX:"Max  \\: %8.2lf %s\\n" \
+# LINE1:membufferBytes#00aa00:"IO Buff Ram " \
+# GPRINT:membufferBytes:AVERAGE:"    Avg  \\: %8.2lf %s" \
+# GPRINT:membufferBytes:MIN:"Min  \\: %8.2lf %s" \
+# GPRINT:membufferBytes:MAX:"Max  \\: %8.2lf %s\\n" \
+# LINE1:memcachedBytes#00ffff:"Filesystem Cache" \
+# GPRINT:memcachedBytes:AVERAGE:"Avg  \\: %8.2lf %s" \
+# GPRINT:memcachedBytes:MIN:"Min  \\: %8.2lf %s" \
+# GPRINT:memcachedBytes:MAX:"Max  \\: %8.2lf %s\\n" \
+# LINE2:memsharedBytes#000a44:"Shared Mem    " \
+# GPRINT:memsharedBytes:AVERAGE:"  Avg  \\: %8.2lf %s" \
+# GPRINT:memsharedBytes:MIN:"Min  \\: %8.2lf %s" \
+# GPRINT:memsharedBytes:MAX:"Max  \\: %8.2lf %s\\n"
+
 report.netsnmp.memStats.name=System Memory Stats
 report.netsnmp.memStats.columns=memAvailSwap,memTotalReal,memAvailReal,memBuffer,memCached,memShared
 report.netsnmp.memStats.type=nodeSnmp
-report.netsnmp.memStats.suppress=netsnmp.memStatsNoShared
 report.netsnmp.memStats.width=565
 report.netsnmp.memStats.height=200
 report.netsnmp.memStats.command=--title="System Memory Stats" \
@@ -6694,9 +6476,9 @@ report.netsnmp.memStats.command=--title="System Memory Stats" \
  CDEF:memcachedBytes=memcached,1024,* \
  CDEF:minMemcachedBytes=minMemcached,1024,* \
  CDEF:maxMemcachedBytes=maxMemcached,1024,* \
- CDEF:memsharedBytes=memshared,UN,0,memshared,IF,1024,* \
- CDEF:minMemsharedBytes=minMemshared,UN,0,minMemshared,IF,1024,* \
- CDEF:maxMemsharedBytes=maxMemshared,UN,0,maxMemshared,IF,1024,* \
+ CDEF:memsharedBytes=memshared,1024,* \
+ CDEF:minMemsharedBytes=minMemshared,1024,* \
+ CDEF:maxMemsharedBytes=maxMemshared,1024,* \
  CDEF:usedBytes=memtotalrealBytes,membufferBytes,-,memcachedBytes,-,memsharedBytes,-,memavailrealBytes,- \
  CDEF:minUsedBytes=minMemtotalrealBytes,minMembufferBytes,-,minMemcachedBytes,-,minMemsharedBytes,-,minMemavailrealBytes,- \
  CDEF:maxUsedBytes=maxMemtotalrealBytes,maxMembufferBytes,-,maxMemcachedBytes,-,maxMemsharedBytes,-,maxMemavailrealBytes,- \
@@ -6712,75 +6494,6 @@ report.netsnmp.memStats.command=--title="System Memory Stats" \
  GPRINT:memsharedBytes:AVERAGE:"  Avg  \\: %8.2lf %s" \
  GPRINT:memsharedBytes:MIN:"Min  \\: %8.2lf %s" \
  GPRINT:memsharedBytes:MAX:"Max  \\: %8.2lf %s\\n" \
- STACK:memcachedBytes#00aa00:"Filesystem Cache" \
- GPRINT:memcachedBytes:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:memcachedBytes:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:memcachedBytes:MAX:"Max  \\: %8.2lf %s\\n" \
- STACK:memavailrealBytes#00ff00:"Avail Real Mem" \
- GPRINT:memavailrealBytes:AVERAGE:"  Avg  \\: %8.2lf %s" \
- GPRINT:memavailrealBytes:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:memavailrealBytes:MAX:"Max  \\: %8.2lf %s\\n" \
- STACK:memavailswapBytes#ff0000:"Total Swap    " \
- GPRINT:memavailswapBytes:AVERAGE:"  Avg  \\: %8.2lf %s" \
- GPRINT:memavailswapBytes:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:memavailswapBytes:MAX:"Max  \\: %8.2lf %s\\n" \
- LINE2:memtotalrealBytes#0000ff:"Total Real Mem" \
- GPRINT:memtotalrealBytes:AVERAGE:"  Avg  \\: %8.2lf %s" \
- GPRINT:memtotalrealBytes:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:memtotalrealBytes:MAX:"Max  \\: %8.2lf %s\\n" \
-
-report.netsnmp.memStatsNoShared.name=System Memory Stats (No sharedMem)
-report.netsnmp.memStatsNoShared.columns=memAvailSwap,memTotalReal,memAvailReal,memBuffer,memCached
-report.netsnmp.memStatsNoShared.type=nodeSnmp
-report.netsnmp.memStatsNoShared.width=565
-report.netsnmp.memStatsNoShared.height=200
-report.netsnmp.memStatsNoShared.command=--title="System Memory Stats" \
- --width 565 \
- --height 200 \
- --lower-limit 0 \
- --base=1024 \
- --vertical-label="Bytes" \
- DEF:memavailswap={rrd1}:memAvailSwap:AVERAGE \
- DEF:minMemavailswap={rrd1}:memAvailSwap:MIN \
- DEF:maxMemavailswap={rrd1}:memAvailSwap:MAX \
- DEF:memtotalreal={rrd2}:memTotalReal:AVERAGE \
- DEF:minMemtotalreal={rrd2}:memTotalReal:MIN \
- DEF:maxMemtotalreal={rrd2}:memTotalReal:MAX \
- DEF:memavailreal={rrd3}:memAvailReal:AVERAGE \
- DEF:minMemavailreal={rrd3}:memAvailReal:MIN \
- DEF:maxMemavailreal={rrd3}:memAvailReal:MAX \
- DEF:membuffer={rrd4}:memBuffer:AVERAGE \
- DEF:minMembuffer={rrd4}:memBuffer:MIN \
- DEF:maxMembuffer={rrd4}:memBuffer:MAX \
- DEF:memcached={rrd5}:memCached:AVERAGE \
- DEF:minMemcached={rrd5}:memCached:MIN \
- DEF:maxMemcached={rrd5}:memCached:MAX \
- CDEF:memavailswapBytes=memavailswap,1024,* \
- CDEF:minMemavailswapBytes=minMemavailswap,1024,* \
- CDEF:maxMemavailswapBytes=maxMemavailswap,1024,* \
- CDEF:memtotalrealBytes=memtotalreal,1024,* \
- CDEF:minMemtotalrealBytes=minMemtotalreal,1024,* \
- CDEF:maxMemtotalrealBytes=maxMemtotalreal,1024,* \
- CDEF:memavailrealBytes=memavailreal,1024,* \
- CDEF:minMemavailrealBytes=minMemavailreal,1024,* \
- CDEF:maxMemavailrealBytes=maxMemavailreal,1024,* \
- CDEF:membufferBytes=membuffer,1024,* \
- CDEF:minMembufferBytes=minMembuffer,1024,* \
- CDEF:maxMembufferBytes=maxMembuffer,1024,* \
- CDEF:memcachedBytes=memcached,1024,* \
- CDEF:minMemcachedBytes=minMemcached,1024,* \
- CDEF:maxMemcachedBytes=maxMemcached,1024,* \
- CDEF:usedBytes=memtotalrealBytes,membufferBytes,-,memcachedBytes,-,memavailrealBytes,- \
- CDEF:minUsedBytes=minMemtotalrealBytes,minMembufferBytes,-,minMemcachedBytes,-,minMemavailrealBytes,- \
- CDEF:maxUsedBytes=maxMemtotalrealBytes,maxMembufferBytes,-,maxMemcachedBytes,-,maxMemavailrealBytes,- \
- AREA:usedBytes#dd4400:"Used (Other)" \
- GPRINT:usedBytes:AVERAGE:"    Avg  \\: %8.2lf %s" \
- GPRINT:usedBytes:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:usedBytes:MAX:"Max  \\: %8.2lf %s\\n" \
- STACK:membufferBytes#00ffff:"IO Buff Ram " \
- GPRINT:membufferBytes:AVERAGE:"    Avg  \\: %8.2lf %s" \
- GPRINT:membufferBytes:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:membufferBytes:MAX:"Max  \\: %8.2lf %s\\n" \
  STACK:memcachedBytes#00aa00:"Filesystem Cache" \
  GPRINT:memcachedBytes:AVERAGE:"Avg  \\: %8.2lf %s" \
  GPRINT:memcachedBytes:MIN:"Min  \\: %8.2lf %s" \
@@ -7421,23 +7134,23 @@ report.sinf.exchange-mta.diskfile.command=--title="Exchange MTA Disk File Stats 
  DEF:mtafilewrites={rrd5}:mtaDiskFileWritesPS:AVERAGE \
  DEF:minMtafilewrites={rrd5}:mtaDiskFileWritesPS:MIN \
  DEF:maxMtafilewrites={rrd5}:mtaDiskFileWritesPS:MAX \
- LINE2:mtafilereads#0000ff:"File Reads   \\:" \
+ LINE2:mtafilereads#0000ff:"File Reads   :" \
  GPRINT:mtafilereads:AVERAGE:"Avg \\: %10.2lf %s" \
  GPRINT:mtafilereads:MIN:"Min \\: %10.2lf %s" \
  GPRINT:mtafilereads:MAX:"Max \\: %10.2lf %s\\n" \
- LINE2:mtafilewrites#00ff00:"File Writes  \\:" \
+ LINE2:mtafilewrites#00ff00:"File Writes  :" \
  GPRINT:mtafilewrites:AVERAGE:"Avg \\: %10.2lf %s" \
  GPRINT:mtafilewrites:MIN:"Min \\: %10.2lf %s" \
  GPRINT:mtafilewrites:MAX:"Max \\: %10.2lf %s\\n" \
- LINE2:mtafileopens#ffff00:"File Opens   \\:" \
+ LINE2:mtafileopens#ffff00:"File Opens   :" \
  GPRINT:mtafileopens:AVERAGE:"Avg \\: %10.2lf %s" \
  GPRINT:mtafileopens:MIN:"Min \\: %10.2lf %s" \
  GPRINT:mtafileopens:MAX:"Max \\: %10.2lf %s\\n" \
- LINE2:mtafilesyncs#00ffff:"File Syncs   \\:" \
+ LINE2:mtafilesyncs#00ffff:"File Syncs   :" \
  GPRINT:mtafilesyncs:AVERAGE:"Avg \\: %10.2lf %s" \
  GPRINT:mtafilesyncs:MIN:"Min \\: %10.2lf %s" \
  GPRINT:mtafilesyncs:MAX:"Max \\: %10.2lf %s\\n" \
- LINE2:mtafiledels#ff0000:"File Deletes \\:" \
+ LINE2:mtafiledels#ff0000:"File Deletes :" \
  GPRINT:mtafiledels:AVERAGE:"Avg \\: %10.2lf %s" \
  GPRINT:mtafiledels:MIN:"Min \\: %10.2lf %s" \
  GPRINT:mtafiledels:MAX:"Max \\: %10.2lf %s\\n"
@@ -7452,11 +7165,11 @@ report.sinf.exchange-is.vmfreeblks.command=--title="Exchange VM Free Blocks Stat
  DEF:free16mb={rrd2}:isVMTotal16MBFrBlk:AVERAGE \
  DEF:minFree16mb={rrd2}:isVMTotal16MBFrBlk:MIN \
  DEF:maxFree16mb={rrd2}:isVMTotal16MBFrBlk:MAX \
- LINE2:freeblocks#0000ff:"Free Blocks    \\:" \
+ LINE2:freeblocks#0000ff:"Free Blocks    :" \
  GPRINT:freeblocks:AVERAGE:"Avg \\: %10.2lf %s" \
  GPRINT:freeblocks:MIN:"Min \\: %10.2lf %s" \
  GPRINT:freeblocks:MAX:"Max \\: %10.2lf %s\\n" \
- LINE2:free16mb#ff0000:"Free 16MB Blocks \\:" \
+ LINE2:free16mb#ff0000:"Free 16MB Blocks :" \
  GPRINT:free16mb:AVERAGE:"Avg \\: %10.2lf %s" \
  GPRINT:free16mb:MIN:"Min \\: %10.2lf %s" \
  GPRINT:free16mb:MAX:"Max \\: %10.2lf %s\\n"
@@ -7477,19 +7190,19 @@ report.sinf.exchange-is.users.command=--title="Exchange User Stats (SNMP-Informa
  DEF:actanonusers={rrd4}:isActAnonUserCount:AVERAGE \
  DEF:minActanonusers={rrd4}:isActAnonUserCount:MIN \
  DEF:maxActanonusers={rrd4}:isActAnonUserCount:MAX \
- LINE2:users#0000ff:"Users \\:" \
+ LINE2:users#0000ff:"Users :" \
  GPRINT:users:AVERAGE:"Avg \\: %10.2lf %s" \
  GPRINT:users:MIN:"Min \\: %10.2lf %s" \
  GPRINT:users:MAX:"Max \\: %10.2lf %s\\n" \
- LINE2:actusers#00ffff:"Act. Users \\:" \
+ LINE2:actusers#00ffff:"Act. Users :" \
  GPRINT:actusers:AVERAGE:"Avg \\: %10.2lf %s" \
  GPRINT:actusers:MIN:"Min \\: %10.2lf %s" \
  GPRINT:actusers:MAX:"Max \\: %10.2lf %s\\n" \
- LINE2:anonusers#00ff00:"Anon. Users \\:" \
+ LINE2:anonusers#00ff00:"Anon. Users :" \
  GPRINT:anonusers:AVERAGE:"Avg \\: %10.2lf %s" \
  GPRINT:anonusers:MIN:"Min \\: %10.2lf %s" \
  GPRINT:anonusers:MAX:"Max \\: %10.2lf %s\\n" \
- LINE2:actanonusers#ffff00:"Act. Anon. Users \\:" \
+ LINE2:actanonusers#ffff00:"Act. Anon. Users :" \
  GPRINT:actanonusers:AVERAGE:"Avg \\: %10.2lf %s" \
  GPRINT:actanonusers:MIN:"Min \\: %10.2lf %s" \
  GPRINT:actanonusers:MAX:"Max \\: %10.2lf %s\\n"
@@ -8360,31 +8073,6 @@ report.sun.swapping.command=--title="Swapping" \
  GPRINT:swapout:MAX:"Max  \\: %8.2lf %s\\n"
 
 ###
-## OpenNMS Queued
-###
-report.onms.queued.updates.name=OpenNMS Queued Updates
-report.onms.queued.updates.columns=ONMSQueUpdates
-report.onms.queued.updates.type=interfaceSnmp
-report.onms.queued.updates.command=--title="OpenNMS Queued Updates" \
- --vertical-label="Updates" \
- DEF:updates={rrd1}:ONMSQueUpdates:AVERAGE \
- LINE1:updates#0000ff:"Completed Updates" \
- GPRINT:updates:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:updates:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:updates:MAX:"Max  \\: %8.2lf %s\\n"
-
-report.onms.queued.pending.name=OpenNMS Queued Updates
-report.onms.queued.pending.columns=ONMSQueOpsPend
-report.onms.queued.pending.type=interfaceSnmp
-report.onms.queued.pending.command=--title="OpenNMS Queued Operations Pending" \
- --vertical-label="Operations" \
- DEF:pending={rrd1}:ONMSQueOpsPend:AVERAGE \
- LINE1:pending#0000ff:"Total Pending" \
- GPRINT:pending:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:pending:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:pending:MAX:"Max  \\: %8.2lf %s\\n"
-
-###
 ## JVM
 ###
 report.free.memory.name=Free Memory
@@ -8691,21 +8379,21 @@ report.iisRequests.command=--title="IIS Requests" \
  DEF:minCgis={rrd4}:iiscgireq:MIN \
  DEF:maxCgis={rrd4}:iiscgireq:MAX \
  LINE1:gets#0000FF:"GETs " \
- GPRINT:gets:AVERAGE:"Avg\\:%4.2lf" \
- GPRINT:gets:MAX:"Max\\:%4.2lf" \
- GPRINT:gets:MIN:"Min\\:%4.2lf\\n" \
+ GPRINT:gets:AVERAGE:"Avg:%4.2lf" \
+ GPRINT:gets:MAX:"Max:%4.2lf" \
+ GPRINT:gets:MIN:"Min:%4.2lf\\n" \
  LINE1:posts#00FF00:"POSTs" \
- GPRINT:posts:AVERAGE:"Avg\\:%4.2lf" \
- GPRINT:posts:MAX:"Max\\:%4.2lf" \
- GPRINT:posts:MIN:"Min\\:%4.2lf \\n" \
+ GPRINT:posts:AVERAGE:"Avg:%4.2lf" \
+ GPRINT:posts:MAX:"Max:%4.2lf" \
+ GPRINT:posts:MIN:"Min:%4.2lf \\n" \
  LINE1:heads#FF0000:"HEADs" \
- GPRINT:heads:AVERAGE:"Avg\\:%4.2lf" \
- GPRINT:heads:MAX:"Max\\:%4.2lf" \
- GPRINT:heads:MIN:"Min\\:%4.2lf \\n" \
+ GPRINT:heads:AVERAGE:"Avg:%4.2lf" \
+ GPRINT:heads:MAX:"Max:%4.2lf" \
+ GPRINT:heads:MIN:"Min:%4.2lf \\n" \
  LINE1:cgis#000000:"CGIs " \
- GPRINT:cgis:AVERAGE:"Avg\\:%4.2lf" \
- GPRINT:cgis:MAX:"Max\\:%4.2lf" \
- GPRINT:cgis:MIN:"Min\\:%4.2lf"
+ GPRINT:cgis:AVERAGE:"Avg:%4.2lf" \
+ GPRINT:cgis:MAX:"Max:%4.2lf" \
+ GPRINT:cgis:MIN:"Min:%4.2lf"
 
 
 report.iisTraffic.name=IIS Traffic Stats
@@ -8718,9 +8406,9 @@ report.iisTraffic.command=--title="IIS Traffic Stats" \
  DEF:minBytesTrans={rrd1}:iisbytes:MIN \
  DEF:maxBytesTrans={rrd1}:iisbytes:MAX \
  LINE2:bytesTrans#0000FF:"Bytes " \
- GPRINT:bytesTrans:AVERAGE:"Avg\\: %3.2lf" \
- GPRINT:bytesTrans:MAX:"Max\\: %3.2lf" \
- GPRINT:bytesTrans:MIN:"Min\\: %3.2lf"
+ GPRINT:bytesTrans:AVERAGE:"Avg: %3.2lf" \
+ GPRINT:bytesTrans:MAX:"Max: %3.2lf" \
+ GPRINT:bytesTrans:MIN:"Min: %3.2lf"
 
 report.exchangeMessages.name=Exchange Message Transfer Volumes
 report.exchangeMessages.columns=exchangemsgsent,exchangemsgrecv,exchangemsgdeliv
@@ -8738,18 +8426,18 @@ report.exchangeMessages.command=--title="Exchange Message Transfer Volumes" \
  DEF:localdel={rrd3}:exchangemsgdeliv:AVERAGE \
  DEF:minLocaldel={rrd3}:exchangemsgdeliv:MIN \
  DEF:maxLocaldel={rrd3}:exchangemsgdeliv:MAX \
- LINE2:outmsgs#00FF00:"Out\\:" \
- GPRINT:outmsgs:AVERAGE:"Avg\\:%4.2lf" \
- GPRINT:outmsgs:MAX:"Max\\:%4.2lf" \
- GPRINT:outmsgs:MIN:"Min\\:%4.2lf\\n" \
- LINE2:inmsgs#0000FF:"In \\:" \
- GPRINT:inmsgs:AVERAGE:"Avg\\:%4.2lf" \
- GPRINT:inmsgs:MAX:"Max\\:%4.2lf" \
- GPRINT:inmsgs:MIN:"Min\\:%4.2lf\\n" \
- LINE2:localdel#FF0000:"Local \\:" \
- GPRINT:localdel:AVERAGE:"Avg\\:%4.2lf" \
- GPRINT:localdel:MAX:"Max\\:%4.2lf" \
- GPRINT:localdel:MIN:"Min\\:%4.2lf\\n"
+ LINE2:outmsgs#00FF00:"Out:" \
+ GPRINT:outmsgs:AVERAGE:"Avg:%4.2lf" \
+ GPRINT:outmsgs:MAX:"Max:%4.2lf" \
+ GPRINT:outmsgs:MIN:"Min:%4.2lf\\n" \
+ LINE2:inmsgs#0000FF:"In :" \
+ GPRINT:inmsgs:AVERAGE:"Avg:%4.2lf" \
+ GPRINT:inmsgs:MAX:"Max:%4.2lf" \
+ GPRINT:inmsgs:MIN:"Min:%4.2lf\\n" \
+ LINE2:localdel#FF0000:"Local :" \
+ GPRINT:localdel:AVERAGE:"Avg:%4.2lf" \
+ GPRINT:localdel:MAX:"Max:%4.2lf" \
+ GPRINT:localdel:MIN:"Min:%4.2lf\\n"
 
 report.exchangeBytes.name=Exchange Byte Volumes
 report.exchangeBytes.columns=exchangebytesrecv,exchangebytessent
@@ -8763,14 +8451,14 @@ report.exchangeBytes.command=--title="Exchange Byte Volumes" \
  DEF:outbytes={rrd2}:exchangebytessent:AVERAGE \
  DEF:minOutbytes={rrd2}:exchangebytessent:MIN \
  DEF:maxOutbytes={rrd2}:exchangebytessent:MAX \
- LINE2:inbytes#0000FF:"In\\: " \
- GPRINT:inbytes:AVERAGE:"Avg\\:%4.2lf" \
- GPRINT:inbytes:MAX:"Max\\: %4.2lf" \
- GPRINT:inbytes:MIN:"Min\\: %4.2lf \\n" \
- LINE2:outbytes#00FF00:"Out\\:" \
- GPRINT:outbytes:AVERAGE:"Avg\\:%4.2lf" \
- GPRINT:outbytes:MAX:"Max\\: %4.2lf" \
- GPRINT:outbytes:MIN:"Min\\: %4.2lf\\n"
+ LINE2:inbytes#0000FF:"In: " \
+ GPRINT:inbytes:AVERAGE:"Avg:%4.2lf" \
+ GPRINT:inbytes:MAX:"Max: %4.2lf" \
+ GPRINT:inbytes:MIN:"Min: %4.2lf \\n" \
+ LINE2:outbytes#00FF00:"Out:" \
+ GPRINT:outbytes:AVERAGE:"Avg:%4.2lf" \
+ GPRINT:outbytes:MAX:"Max: %4.2lf" \
+ GPRINT:outbytes:MIN:"Min: %4.2lf\\n"
 
 report.exchangeRecipPartitions.name=Exchange Recipient Partitions
 report.exchangeRecipPartitions.columns=exchangereciplocal,exchangerecipremote
@@ -8784,14 +8472,14 @@ report.exchangeRecipPartitions.command=--title="Exchange Recipients" \
  DEF:remote={rrd2}:exchangerecipremote:AVERAGE \
  DEF:minRemote={rrd2}:exchangerecipremote:MIN \
  DEF:maxRemote={rrd2}:exchangerecipremote:MAX \
- LINE2:local#0000FF:"Local\\: " \
- GPRINT:local:AVERAGE:"Avg\\:%4.1lf" \
- GPRINT:local:MAX:"Max\\:%4.1lf" \
- GPRINT:local:MIN:"Min\\:%4.1lf \\n" \
- LINE2:remote#00FF00:"Remote\\:" \
- GPRINT:remote:AVERAGE:"Avg\\:%4.1lf" \
- GPRINT:remote:MAX:"Max\\:%4.1lf" \
- GPRINT:remote:MIN:"Min\\:%4.1lf\\n"
+ LINE2:local#0000FF:"Local: " \
+ GPRINT:local:AVERAGE:"Avg:%4.1lf" \
+ GPRINT:local:MAX:"Max:%4.1lf" \
+ GPRINT:local:MIN:"Min:%4.1lf \\n" \
+ LINE2:remote#00FF00:"Remote:" \
+ GPRINT:remote:AVERAGE:"Avg:%4.1lf" \
+ GPRINT:remote:MAX:"Max:%4.1lf" \
+ GPRINT:remote:MIN:"Min:%4.1lf\\n"
 
 report.dnsThroughput.name=DNS Throughput
 report.dnsThroughput.columns=dnsqueryrecv,dnsresponsesent
@@ -8804,14 +8492,14 @@ report.dnsThroughput.command=--title="DNS Throughput" \
  DEF:response={rrd2}:dnsresponsesent:AVERAGE \
  DEF:minResponse={rrd2}:dnsresponsesent:MIN \
  DEF:maxResponse={rrd2}:dnsresponsesent:MAX \
- LINE2:query#0000FF:"Queries\\:  " \
- GPRINT:query:AVERAGE:"Avg\\:%4.1lf" \
- GPRINT:query:MAX:"Max\\: %4.1lf" \
- GPRINT:query:MIN:"Min\\: %4.1lf \\n" \
- LINE2:response#00FF00:"Responses\\:" \
- GPRINT:response:AVERAGE:"Avg\\:%4.1lf" \
- GPRINT:response:MAX:"Max\\: %4.1lf" \
- GPRINT:response:MIN:"Min\\: %4.1lf \\n"
+ LINE2:query#0000FF:"Queries:  " \
+ GPRINT:query:AVERAGE:"Avg:%4.1lf" \
+ GPRINT:query:MAX:"Max: %4.1lf" \
+ GPRINT:query:MIN:"Min: %4.1lf \\n" \
+ LINE2:response#00FF00:"Responses:" \
+ GPRINT:response:AVERAGE:"Avg:%4.1lf" \
+ GPRINT:response:MAX:"Max: %4.1lf" \
+ GPRINT:response:MIN:"Min: %4.1lf \\n"
 
 report.mssqlmemory.name=MSSQL Memory
 report.mssqlmemory.columns=sqlconnmemory,sqllockmemory,sqloptmemory,sqlsqlcachememory,sqltargetmemory,sqltotalmemory
@@ -8825,18 +8513,18 @@ report.mssqlmemory.command=--title="MSSQL Memory" \
  DEF:sqlcache={rrd4}:sqlsqlcachememory:AVERAGE \
  DEF:target={rrd5}:sqltargetmemory:AVERAGE \
  DEF:total={rrd6}:sqltotalmemory:AVERAGE \
- AREA:lock#00FF00:"Lock \\:" \
- GPRINT:lock:AVERAGE:"Avg\\:%4.1lf" \
- STACK:opt#0000FF:"Optimizer \\:" \
- GPRINT:opt:AVERAGE:"Avg\\:%4.1lf" \
- STACK:sqlcache#FFFF00:"SQL Cache \\:" \
- GPRINT:sqlcache:AVERAGE:"Avg\\:%4.1lf\\n" \
- STACK:conn#FF0000:"Conn \\:" \
- GPRINT:conn:AVERAGE:"Avg\\:%4.1lf" \
- LINE2:target#00FFFF:"Target \\:" \
- GPRINT:target:AVERAGE:"Avg\\:%4.1lf" \
- LINE2:total#000000:"Actual\\:" \
- GPRINT:total:AVERAGE:"Avg\\:%4.1lf\\n"
+ AREA:lock#00FF00:"Lock :" \
+ GPRINT:lock:AVERAGE:"Avg:%4.1lf" \
+ STACK:opt#0000FF:"Optimizer :" \
+ GPRINT:opt:AVERAGE:"Avg:%4.1lf" \
+ STACK:sqlcache#FFFF00:"SQL Cache :" \
+ GPRINT:sqlcache:AVERAGE:"Avg:%4.1lf\\n" \
+ STACK:conn#FF0000:"Conn :" \
+ GPRINT:conn:AVERAGE:"Avg:%4.1lf" \
+ LINE2:target#00FFFF:"Target :" \
+ GPRINT:target:AVERAGE:"Avg:%4.1lf" \
+ LINE2:total#000000:"Actual:" \
+ GPRINT:total:AVERAGE:"Avg:%4.1lf\\n"
 
 report.mssqlusage.name=MSSQL Usage
 report.mssqlusage.columns=sqluserconn,sqlactivetrans
@@ -8849,14 +8537,14 @@ report.mssqlusage.command=--title="MSSQL Usage" \
  DEF:trans={rrd2}:sqlactivetrans:AVERAGE \
  DEF:minTrans={rrd2}:sqlactivetrans:MIN \
  DEF:maxTrans={rrd2}:sqlactivetrans:MAX \
- LINE2:conns#0000FF:"Connections \\:" \
- GPRINT:conns:AVERAGE:"Avg\\:%4.1lf" \
- GPRINT:conns:MAX:"Max\\:%4.1lf" \
- GPRINT:conns:MIN:"Min\\:%4.1lf \\n" \
- LINE2:trans#00FF00:"Transactions \\:" \
- GPRINT:trans:AVERAGE:"Avg\\:%4.1lf" \
- GPRINT:trans:MAX:"Max\\:%4.1lf" \
- GPRINT:trans:MIN:"Min\\:%4.1lf"
+ LINE2:conns#0000FF:"Connections :" \
+ GPRINT:conns:AVERAGE:"Avg:%4.1lf" \
+ GPRINT:conns:MAX:"Max:%4.1lf" \
+ GPRINT:conns:MIN:"Min:%4.1lf \\n" \
+ LINE2:trans#00FF00:"Transactions :" \
+ GPRINT:trans:AVERAGE:"Avg:%4.1lf" \
+ GPRINT:trans:MAX:"Max:%4.1lf" \
+ GPRINT:trans:MIN:"Min:%4.1lf"
 
 report.mssqlhitratios.name=MSSQL Hit Ratios
 report.mssqlhitratios.columns=sqlbuffhitratio,sqlcachehitratio,sqllogcachehitratio
@@ -8873,18 +8561,18 @@ report.mssqlhitratios.command=--title="MSSQL Hit Ratios" \
  DEF:logcache={rrd3}:sqllogcachehitratio:AVERAGE \
  DEF:minLogcache={rrd3}:sqllogcachehitratio:MIN \
  DEF:maxLogcache={rrd3}:sqllogcachehitratio:MAX \
- LINE2:buff#0000FF:"Buffer \\:" \
- GPRINT:buff:AVERAGE:"Avg\\:%4.1lf" \
- GPRINT:buff:MAX:"Max\\:%4.1lf" \
- GPRINT:buff:MIN:"Min\\:%4.1lf" \
- LINE2:cache#00FF00:"Cache \\:" \
- GPRINT:cache:AVERAGE:"Avg\\:%4.1lf" \
- GPRINT:cache:MAX:"Max\\:%4.1lf" \
- GPRINT:cache:MIN:"Min\\:%4.1lf" \
- LINE2:logcache#FF0000:"Log Cache \\:" \
- GPRINT:logcache:AVERAGE:"Avg\\:%4.1lf" \
- GPRINT:logcache:MAX:"Max\\:%4.1lf" \
- GPRINT:logcache:MIN:"Min\\:%4.1lf" \
+ LINE2:buff#0000FF:"Buffer :" \
+ GPRINT:buff:AVERAGE:"Avg:%4.1lf" \
+ GPRINT:buff:MAX:"Max:%4.1lf" \
+ GPRINT:buff:MIN:"Min:%4.1lf" \
+ LINE2:cache#00FF00:"Cache :" \
+ GPRINT:cache:AVERAGE:"Avg:%4.1lf" \
+ GPRINT:cache:MAX:"Max:%4.1lf" \
+ GPRINT:cache:MIN:"Min:%4.1lf" \
+ LINE2:logcache#FF0000:"Log Cache :" \
+ GPRINT:logcache:AVERAGE:"Avg:%4.1lf" \
+ GPRINT:logcache:MAX:"Max:%4.1lf" \
+ GPRINT:logcache:MIN:"Min:%4.1lf" \
 
 report.mssqllockwaittime.name=MSSQL Lock Wait Time
 report.mssqllockwaittime.columns=sqllockavgwaittime
@@ -8892,8 +8580,8 @@ report.mssqllockwaittime.type=nodeSnmp
 report.mssqllockwaittime.command=--title="MSSQL Lock Avg Wait Time" \
  --vertical-label "Seconds" \
  DEF:wait={rrd1}:sqllockavgwaittime:AVERAGE \
- LINE2:wait#0000FF:"Lock Average Wait \\:" \
- GPRINT:wait:AVERAGE:"Avg\\:%4.1lf"
+ LINE2:wait#0000FF:"Lock Average Wait :" \
+ GPRINT:wait:AVERAGE:"Avg:%4.1lf"
 
 report.windowsCPU.name=Windows CPU stats
 report.windowsCPU.columns=cpuProcTime,cpuIntrTime,cpuPrivTime,cpuUserTime
@@ -8913,22 +8601,22 @@ report.windowsCPU.command=--title="Windows CPU stats" \
  DEF:user={rrd4}:cpuUserTime:AVERAGE \
  DEF:minUser={rrd4}:cpuUserTime:MIN \
  DEF:maxUser={rrd4}:cpuUserTime:MAX \
- LINE2:intr#FF00FF:"Interrupt \\:" \
- GPRINT:intr:AVERAGE:"Avg\\:%3.1lf" \
- GPRINT:intr:MAX:"Max\\:%3.1lf" \
- GPRINT:intr:MIN:"Min\\:%3.1lf \\n" \
- LINE2:priv#FF0000:"Privileged\\:" \
- GPRINT:priv:AVERAGE:"Avg\\:%3.1lf" \
- GPRINT:priv:MAX:"Max\\:%3.1lf" \
- GPRINT:priv:MIN:"Min\\:%3.1lf \\n" \
- LINE2:user#00FF00:"User      \\:" \
- GPRINT:user:AVERAGE:"Avg\\:%3.1lf" \
- GPRINT:user:MAX:"Max\\:%3.1lf" \
- GPRINT:user:MIN:"Min\\:%3.1lf \\n" \
- LINE1:proc#000000:"Total     \\:" \
- GPRINT:proc:AVERAGE:"Avg\\:%3.1lf" \
- GPRINT:proc:MAX:"Max\\:%3.1lf" \
- GPRINT:proc:MIN:"Min\\:%3.1lf"
+ LINE2:intr#FF00FF:"Interrupt :" \
+ GPRINT:intr:AVERAGE:"Avg:%3.1lf" \
+ GPRINT:intr:MAX:"Max:%3.1lf" \
+ GPRINT:intr:MIN:"Min:%3.1lf \\n" \
+ LINE2:priv#FF0000:"Privileged:" \
+ GPRINT:priv:AVERAGE:"Avg:%3.1lf" \
+ GPRINT:priv:MAX:"Max:%3.1lf" \
+ GPRINT:priv:MIN:"Min:%3.1lf \\n" \
+ LINE2:user#00FF00:"User      :" \
+ GPRINT:user:AVERAGE:"Avg:%3.1lf" \
+ GPRINT:user:MAX:"Max:%3.1lf" \
+ GPRINT:user:MIN:"Min:%3.1lf \\n" \
+ LINE1:proc#000000:"Total     :" \
+ GPRINT:proc:AVERAGE:"Avg:%3.1lf" \
+ GPRINT:proc:MAX:"Max:%3.1lf" \
+ GPRINT:proc:MIN:"Min:%3.1lf"
 
 report.windowsProc.name=Windows Procs and Threads
 report.windowsProc.columns=winProcQueueLength,winProcesses,winThreads
@@ -8947,18 +8635,18 @@ report.windowsProc.command=--title="Windows Processes & Threads" \
  DEF:maxThread={rrd3}:winThreads:MAX \
  CDEF:lqueue=lqueue,10,* \
  CDEF:sthread=thread,10,/ \
- LINE2:lqueue#0000FF:"Processor queue length\\:" \
- GPRINT:queue:AVERAGE:"Avg\\:%3.1lf" \
- GPRINT:queue:MAX:"Max\\:%3.1lf" \
- GPRINT:queue:MIN:"Min\\:%3.1lf" \
- LINE2:sthread#0000FF:"Threads\\:" \
- GPRINT:thread:AVERAGE:"Avg\\:%3.1lf" \
- GPRINT:thread:MAX:"Max\\:%3.1lf" \
- GPRINT:thread:MIN:"Min\\:%3.1lf" \
- LINE2:proc#0000FF:"Processes\\:" \
- GPRINT:proc:AVERAGE:"Avg\\:%3.1lf" \
- GPRINT:proc:MAX:"Max\\:%3.1lf" \
- GPRINT:proc:MIN:"Min\\:%3.1lf"
+ LINE2:lqueue#0000FF:"Processor queue length:" \
+ GPRINT:queue:AVERAGE:"Avg:%3.1lf" \
+ GPRINT:queue:MAX:"Max:%3.1lf" \
+ GPRINT:queue:MIN:"Min:%3.1lf" \
+ LINE2:sthread#0000FF:"Threads:" \
+ GPRINT:thread:AVERAGE:"Avg:%3.1lf" \
+ GPRINT:thread:MAX:"Max:%3.1lf" \
+ GPRINT:thread:MIN:"Min:%3.1lf" \
+ LINE2:proc#0000FF:"Processes:" \
+ GPRINT:proc:AVERAGE:"Avg:%3.1lf" \
+ GPRINT:proc:MAX:"Max:%3.1lf" \
+ GPRINT:proc:MIN:"Min:%3.1lf"
 
 report.livecommsusers.name=Live Communications Server Users
 report.livecommsusers.columns=lcsusers
@@ -8969,10 +8657,10 @@ report.livecommsusers.command=--title="Live Communications Server users" \
  DEF:users={rrd1}:lcsusers:AVERAGE \
  DEF:minUsers={rrd1}:lcsusers:MIN \
  DEF:maxUsers={rrd1}:lcsusers:MAX \
- LINE2:users#0000FF:"Connected\\:" \
- GPRINT:users:AVERAGE:"Avg\\:%3.0lf" \
- GPRINT:users:MAX:"Max\\:%3.0lf" \
- GPRINT:users:MIN:"Min\\:%3.0lf"
+ LINE2:users#0000FF:"Connected:" \
+ GPRINT:users:AVERAGE:"Avg:%3.0lf" \
+ GPRINT:users:MAX:"Max:%3.0lf" \
+ GPRINT:users:MIN:"Min:%3.0lf"
 
 report.livecommsmessages.name=Live Communications Server Messages
 report.livecommsmessages.columns=lcsmessages
@@ -8983,10 +8671,10 @@ report.livecommsmessages.command=--title="Live Communications Server Messages" \
  DEF:messages={rrd1}:lcsmessages:AVERAGE \
  DEF:minMessages={rrd1}:lcsmessages:MIN \
  DEF:maxMessages={rrd1}:lcsmessages:MAX \
- LINE2:messages#0000FF:"Messages\\:" \
- GPRINT:messages:AVERAGE:"Avg\\:%3.4lf" \
- GPRINT:messages:MAX:"Max\\:%3.4lf" \
- GPRINT:messages:MIN:"Min\\:%3.4lf"
+ LINE2:messages#0000FF:"Messages:" \
+ GPRINT:messages:AVERAGE:"Avg:%3.4lf" \
+ GPRINT:messages:MAX:"Max:%3.4lf" \
+ GPRINT:messages:MIN:"Min:%3.4lf"
 
 report.mailmarshal.name=Mail Marshal Stats
 report.mailmarshal.columns=mmruleimposed,mmvirusdetect,relayattempts
@@ -9003,18 +8691,18 @@ report.mailmarshal.command=--title="MailMarshal Stats" \
  DEF:relay={rrd3}:relayattempts:AVERAGE \
  DEF:minRelay={rrd3}:relayattempts:MIN \
  DEF:maxRelay={rrd3}:relayattempts:MAX \
- LINE2:blocked#0000FF:"Messages blocked\\:" \
- GPRINT:blocked:AVERAGE:"Avg\\:%3.2lf" \
- GPRINT:blocked:MAX:"Max\\:%3.2lf" \
- GPRINT:blocked:MIN:"Min\\:%3.2lf" \
- LINE2:virus#00FF00:"Viruses blocked\\:" \
- GPRINT:virus:AVERAGE:"Avg\\:%3.2lf" \
- GPRINT:virus:MAX:"Max\\:%3.2lf" \
- GPRINT:virus:MIN:"Min\\:%3.2lf" \
- LINE2:relay#FF0000:"Relay Attempts\\:" \
- GPRINT:relay:AVERAGE:"Avg\\:%3.2lf" \
- GPRINT:relay:MAX:"Max\\:%3.2lf" \
- GPRINT:relay:MIN:"Min\\:%3.2lf"
+ LINE2:blocked#0000FF:"Messages blocked:" \
+ GPRINT:blocked:AVERAGE:"Avg:%3.2lf" \
+ GPRINT:blocked:MAX:"Max:%3.2lf" \
+ GPRINT:blocked:MIN:"Min:%3.2lf" \
+ LINE2:virus#00FF00:"Viruses blocked:" \
+ GPRINT:virus:AVERAGE:"Avg:%3.2lf" \
+ GPRINT:virus:MAX:"Max:%3.2lf" \
+ GPRINT:virus:MIN:"Min:%3.2lf" \
+ LINE2:relay#FF0000:"Relay Attempts:" \
+ GPRINT:relay:AVERAGE:"Avg:%3.2lf" \
+ GPRINT:relay:MAX:"Max:%3.2lf" \
+ GPRINT:relay:MIN:"Min:%3.2lf"
 
 report.asterisk.activechan.name=Asterisk Active Channels
 report.asterisk.activechan.columns=astNumChannels
@@ -9024,10 +8712,10 @@ report.asterisk.activechan.command=--title="Asterisk Active Channels" \
  DEF:active={rrd1}:astNumChannels:AVERAGE \
  DEF:minActive={rrd1}:astNumChannels:MIN \
  DEF:maxActive={rrd1}:astNumChannels:MAX \
- AREA:active#0000ff:"Active\\:" \
- GPRINT:active:AVERAGE:"Avg\\:%3.2lf" \
- GPRINT:active:MAX:"Max\\:%3.2lf" \
- GPRINT:active:MIN:"Min\\:%3.2lf"
+ AREA:active#0000ff:"Active:" \
+ GPRINT:active:AVERAGE:"Avg:%3.2lf" \
+ GPRINT:active:MAX:"Max:%3.2lf" \
+ GPRINT:active:MIN:"Min:%3.2lf"
 
 report.asterisk.actbrchan.name=Asterisk Active & Bridged Channels
 report.asterisk.actbrchan.columns=astNumChannels,astNumChanBridge
@@ -9041,14 +8729,14 @@ report.asterisk.actbrchan.command=--title="Asterisk Active & Bridged Channels" \
  DEF:minBridged={rrd2}:astNumChanBridge:MIN \
  DEF:maxBridged={rrd2}:astNumChanBridge:MAX \
  CDEF:bridgedinv=bridged,-1,* \
- AREA:active#00ff00:"Active\\:" \
- GPRINT:active:AVERAGE:"Avg\\:%3.2lf" \
- GPRINT:active:MAX:"Max\\:%3.2lf" \
- GPRINT:active:MIN:"Min\\:%3.2lf\\n" \
- AREA:bridgedinv#0000ff:"Bridged\\:" \
- GPRINT:bridged:AVERAGE:"Avg\\:%3.2lf" \
- GPRINT:bridged:MAX:"Max\\:%3.2lf" \
- GPRINT:bridged:MIN:"Min\\:%3.2lf"
+ AREA:active#00ff00:"Active:" \
+ GPRINT:active:AVERAGE:"Avg:%3.2lf" \
+ GPRINT:active:MAX:"Max:%3.2lf" \
+ GPRINT:active:MIN:"Min:%3.2lf\\n" \
+ AREA:bridgedinv#0000ff:"Bridged:" \
+ GPRINT:bridged:AVERAGE:"Avg:%3.2lf" \
+ GPRINT:bridged:MAX:"Max:%3.2lf" \
+ GPRINT:bridged:MIN:"Min:%3.2lf"
 
 report.asterisk.callsactive.name=Asterisk Calls Active
 report.asterisk.callsactive.columns=astCfgCallsActive
@@ -9058,10 +8746,10 @@ report.asterisk.callsactive.command=--title="Asterisk Calls Active" \
  DEF:active={rrd1}:astCfgCallsActive:AVERAGE \
  DEF:minActive={rrd1}:astCfgCallsActive:MIN \
  DEF:maxActive={rrd1}:astCfgCallsActive:MAX \
- AREA:active#0000ff:"Active\\:" \
- GPRINT:active:AVERAGE:"Avg\\:%3.2lf" \
- GPRINT:active:MAX:"Max\\:%3.2lf" \
- GPRINT:active:MIN:"Min\\:%3.2lf"
+ AREA:active#0000ff:"Active:" \
+ GPRINT:active:AVERAGE:"Avg:%3.2lf" \
+ GPRINT:active:MAX:"Max:%3.2lf" \
+ GPRINT:active:MIN:"Min:%3.2lf"
 
 report.asterisk.callsprocessed.name=Asterisk Calls Processed
 report.asterisk.callsprocessed.columns=astCfgCallsPrcessed
@@ -9071,10 +8759,10 @@ report.asterisk.callsprocessed.command=--title="Asterisk Calls Processed" \
  DEF:active={rrd1}:astCfgCallsPrcessed:AVERAGE \
  DEF:minActive={rrd1}:astCfgCallsPrcessed:MIN \
  DEF:maxActive={rrd1}:astCfgCallsPrcessed:MAX \
- AREA:active#0000ff:"Processed\\:" \
- GPRINT:active:AVERAGE:"Avg\\:%3.2lf" \
- GPRINT:active:MAX:"Max\\:%3.2lf" \
- GPRINT:active:MIN:"Min\\:%3.2lf"
+ AREA:active#0000ff:"Processed:" \
+ GPRINT:active:AVERAGE:"Avg:%3.2lf" \
+ GPRINT:active:MAX:"Max:%3.2lf" \
+ GPRINT:active:MIN:"Min:%3.2lf"
 
 report.asterisk.chanbytype.name=Asterisk Channels by Type
 report.asterisk.chanbytype.columns=astChanTypeChannels
@@ -10158,7 +9846,7 @@ report.framerelay.frames.command=--title="Frames In/Out of DLCI {frDlci}" \
  AREA:fpsOutNeg#0000ff:"Out" \
  GPRINT:fpsOut:AVERAGE:"Avg  \\: %8.2lf %s" \
  GPRINT:fpsOut:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:fpsOut:MAX:"Max  \\: %8.2lf %s\\n"
+ GPRINT:fpsOut:MAX:"Max  \\: %8.2lf %s\\n" \
 
 report.framerelay.congestion.name=FECNs / BECNs
 report.framerelay.congestion.columns=frReceivedBECNs,frReceivedFECNs
@@ -10176,7 +9864,7 @@ report.framerelay.congestion.command=--title="FECNs/BECNs of DLCI {frDlci}" \
  AREA:fecnsNeg#0000ff:"FECNs" \
  GPRINT:fecns:AVERAGE:"Avg  \\: %8.2lf %s" \
  GPRINT:fecns:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:fecns:MAX:"Max  \\: %8.2lf %s\\n"
+ GPRINT:fecns:MAX:"Max  \\: %8.2lf %s\\n" \
 
 ##### Brocade Silkworm Reports
 
@@ -11302,140 +10990,6 @@ report.mcast.juniper.igmp.queries.command=--title="IGMP Proxy Interface Messages
  GPRINT:leave:MIN:"Min \\: %8.2lf %s" \
  GPRINT:leave:MAX:"Max \\: %8.2lf %s\\n"
 
-### Trango Reports
-
-report.trango.trangolink45.rssi.name=Trangolink45 RSSI
-report.trango.trangolink45.rssi.columns=trangoRssi
-report.trango.trangolink45.rssi.type=nodeSnmp
-report.trango.trangolink45.rssi.command=--title="TrangoLink45 RSSI" \
- --vertical-label="dBm" \
- DEF:rssi={rrd1}:trangoRssi:AVERAGE \
- DEF:rssimin={rrd1}:trangoRssi:MIN \
- DEF:rssimax={rrd1}:trangoRssi:MAX \
- LINE2:rssi#0000FF:"RSSI" \
- GPRINT:rssi:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:rssi:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:rssi:MAX:"Max  \\: %8.2lf %s\\n"
-
-### Equallogic Reports 
-
-report.eql.vol.io.name=Equallogic Volume IO
-report.eql.vol.io.columns=EqVolRx,EqVolTx
-report.eql.vol.io.type=EqVol
-report.eql.vol.io.propertiesValues=EqVolName
-report.eql.vol.io.command=--title="Volume iSCSI IO in Bytes" \
- --vertical-label Bytes \
- DEF:EqVolRx={rrd1}:EqVolRx:AVERAGE \
- DEF:minEqVolRx={rrd1}:EqVolRx:MIN \
- DEF:maxEqVolRx={rrd1}:EqVolRx:MAX \
- DEF:EqVolTx={rrd2}:EqVolTx:AVERAGE \
- DEF:minEqVolTx={rrd2}:EqVolTx:MIN \
- DEF:maxEqVolTx={rrd2}:EqVolTx:MAX \
- CDEF:EqVolRxNeg=0,EqVolRx,- \
- LINE1:EqVolRxNeg#0000ff:"IO Rx Bytes" \
- AREA:EqVolRxNeg#0000ff: \
- GPRINT:EqVolRx:AVERAGE:" Avg \\: %8.2lf %s" \
- GPRINT:EqVolRx:MIN:"Min \\: %8.2lf %s" \
- GPRINT:EqVolRx:MAX:"Max \\: %8.2lf %s\\n" \
- LINE1:EqVolTx#ff0000:"IO Tx Bytes" \
- AREA:EqVolTx#ff0000: \
- GPRINT:EqVolTx:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:EqVolTx:MIN:"Min \\: %8.2lf %s" \
- GPRINT:EqVolTx:MAX:"Max \\: %8.2lf %s\\n"
-
-report.eql.vol.lat.name=Equallogic Volume IO Latency
-report.eql.vol.lat.columns=EqVolReLat,EqVolWrLat
-report.eql.vol.lat.type=EqVol
-report.eql.vol.lat.propertiesValues=EqVolName
-report.eql.vol.lat.command=--title="Volume iSCSI Latency " \
- --vertical-label seconds \
- DEF:EqVolReLat={rrd1}:EqVolReLat:AVERAGE \
- DEF:minEqVolReLat={rrd1}:EqVolReLat:MIN \
- DEF:maxEqVolReLat={rrd1}:EqVolReLat:MAX \
- DEF:EqVolWrLat={rrd2}:EqVolWrLat:AVERAGE \
- DEF:minEqVolWrLat={rrd2}:EqVolWrLat:MIN \
- DEF:maxEqVolWrLat={rrd2}:EqVolWrLat:MAX \
- CDEF:SecEqVolReLat=EqVolReLat,1000,/ \
- CDEF:minSecEqVolReLat=EqVolReLat,1000,/ \
- CDEF:maxSecEqVolReLat=EqVolReLat,1000,/ \
- CDEF:SecEqVolWrLat=EqVolWrLat,1000,/ \
- CDEF:minSecEqVolWrLat=EqVolWrLat,1000,/ \
- CDEF:maxSecEqVolWrLat=EqVolWrLat,1000,/ \
- CDEF:NegSecEqVolWrLat=0,SecEqVolWrLat,- \
- LINE1:SecEqVolReLat#0000ff:"Read Latency" \
- AREA:SecEqVolReLat#0000ff: \
- GPRINT:EqVolReLat:AVERAGE:" Avg \\: %8.2lf %s" \
- GPRINT:EqVolReLat:MIN:"Min \\: %8.2lf %s" \
- GPRINT:EqVolReLat:MAX:"Max \\: %8.2lf %s\\n" \
- LINE1:NegSecEqVolWrLat#ff0000:"Write Latency" \
- AREA:NegSecEqVolWrLat#ff0000: \
- GPRINT:EqVolWrLat:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:EqVolWrLat:MIN:"Min \\: %8.2lf %s" \
- GPRINT:EqVolWrLat:MAX:"Max \\: %8.2lf %s\\n"
-
-report.eql.vol.op.name=Equallogic Volume IO Operations
-report.eql.vol.op.columns=EqVolReOp,EqVolWrOp
-report.eql.vol.op.type=EqVol
-report.eql.vol.op.propertiesValues=EqVolName
-report.eql.vol.op.command=--title="Volume IO Operations" \
- --vertical-label Ops \
- DEF:EqVolReOp={rrd1}:EqVolReOp:AVERAGE \
- DEF:minEqVolReOp={rrd1}:EqVolReOp:MIN \
- DEF:maxEqVolReOp={rrd1}:EqVolReOp:MAX \
- DEF:EqVolWrOp={rrd2}:EqVolWrOp:AVERAGE \
- DEF:minEqVolWrOp={rrd2}:EqVolWrOp:MIN \
- DEF:maxEqVolWrOp={rrd2}:EqVolWrOp:MAX \
- CDEF:EqVolReOpNeg=0,EqVolReOp,- \
- LINE1:EqVolReOpNeg#0000ff:"Read IO Ops" \
- AREA:EqVolReOpNeg#0000ff: \
- GPRINT:EqVolReOp:AVERAGE:" Avg \\: %8.2lf %s" \
- GPRINT:EqVolReOp:MIN:"Min \\: %8.2lf %s" \
- GPRINT:EqVolReOp:MAX:"Max \\: %8.2lf %s\\n" \
- LINE1:EqVolWrOp#ff0000:"Write IO Ops" \
- AREA:EqVolWrOp#ff0000: \
- GPRINT:EqVolWrOp:AVERAGE:" Avg  \\: %8.2lf %s" \
- GPRINT:EqVolWrOp:MIN:"Min \\: %8.2lf %s" \
- GPRINT:EqVolWrOp:MAX:"Max \\: %8.2lf %s\\n"
-
-
-report.eql.vol.size.name=Equallogic Volume Size
-report.eql.vol.size.columns=EqVolSize,EqVolAlloc,EqVolThnResPc
-report.eql.vol.size.type=EqVol
-report.eql.vol.size.propertiesValues=EqVolName
-report.eql.vol.size.command=--title="Volume Size" \
- --vertical-label Bytes \
- DEF:EqVolSize={rrd1}:EqVolSize:AVERAGE \
- DEF:minEqVolSize={rrd1}:EqVolSize:MIN \
- DEF:maxEqVolSize={rrd1}:EqVolSize:MAX \
- CDEF:EqVolSizeBytes=EqVolSize,1048576,* \
- CDEF:minEqVolSizeBytes=minEqVolSize,1048576,* \
- CDEF:maxEqVolSizeBytes=maxEqVolSize,1048576,* \
- LINE1:EqVolSizeBytes#0000ff:"Size Bytes" \
- GPRINT:EqVolSizeBytes:AVERAGE:" Avg \\: %8.2lf %s" \
- GPRINT:EqVolSizeBytes:MIN:"Min \\: %8.2lf %s" \
- GPRINT:EqVolSizeBytes:MAX:"Max \\: %8.2lf %s\\n" \
- DEF:EqVolAlloc={rrd2}:EqVolAlloc:AVERAGE \
- DEF:minEqVolAlloc={rrd2}:EqVolAlloc:MIN \
- DEF:maxEqVolAlloc={rrd2}:EqVolAlloc:MAX \
- CDEF:EqVolAllocBytes=EqVolAlloc,1048576,* \
- CDEF:minEqVolAllocBytes=minEqVolAlloc,1048576,* \
- CDEF:maxEqVolAllocBytes=maxEqVolAlloc,1048576,* \
- LINE1:EqVolAllocBytes#ff0000:"Allocated Bytes" \
- AREA:EqVolAllocBytes#ff0000: \
- GPRINT:EqVolAllocBytes:AVERAGE:" Avg \\: %8.2lf %s" \
- GPRINT:EqVolAllocBytes:MIN:"Min \\: %8.2lf %s" \
- GPRINT:EqVolAllocBytes:MAX:"Max \\: %8.2lf %s\\n" \
- DEF:EqVolThnResPc={rrd3}:EqVolThnResPc:AVERAGE \
- DEF:minEqVolThnResPc={rrd3}:EqVolThnResPc:MIN \
- DEF:maxEqVolThnResPc={rrd3}:EqVolThnResPc:MAX \
- CDEF:EqVolThnResBytes=EqVolThnResPc,100,/,EqVolSizeBytes,* \
- CDEF:minEqVolThnResBytes=minEqVolThnResPc,100,/,EqVolSizeBytes,* \
- CDEF:maxEqVolThnResBytes=maxEqVolThnResPc,100,/,EqVolSizeBytes,* \
- LINE1:EqVolThnResBytes#660066:"Thin Reserve Bytes" \
- GPRINT:EqVolThnResBytes:AVERAGE:" Avg \\: %8.2lf %s" \
- GPRINT:EqVolThnResBytes:MIN:"Min \\: %8.2lf %s" \
- GPRINT:EqVolThnResBytes:MAX:"Max \\: %8.2lf %s\\n"
-
 ##########################
 #                        #
 # WMI Graphs Definitions #
@@ -11942,646 +11496,6 @@ report.wmi.proctime.command=--title="CPU {wmiOSCpuName} Time Allocation (WMI)" \
  GPRINT:maxDpc:MAX:"Max \\: %10.2lf\\n"
 
 
-##### Riverbed Steelhead Reports
-
-report.riverbed.steelhead.versionUptime.name=Riverbed Steelhead System Version and Uptime
-report.riverbed.steelhead.versionUptime.columns=rbshServiceUptime
-report.riverbed.steelhead.versionUptime.propertiesValues=rbshSystemModel,rbshSystemVersion,rbshSystemSN
-report.riverbed.steelhead.versionUptime.type=nodeSnmp
-report.riverbed.steelhead.versionUptime.command=--title="Riverbed Steelhead System Stats" \
- --vertical-label=Days \
- --units-exponent=0 \
- DEF:ticks={rrd1}:rbshServiceUptime:AVERAGE \
- CDEF:days=ticks,8640000,/ \
- LINE2:days#0000ff:"Service Uptime" \
- GPRINT:days:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:days:MIN:"Min  \\: %8.2lf" \
- GPRINT:days:MAX:"Max  \\: %8.2lf\\n" \
- COMMENT:"\\n" \
- COMMENT:"System Information\\n" \
- COMMENT:"        Model \\: {rbshSystemModel}\\n" \
- COMMENT:"      Version \\: {rbshSystemVersion}\\n" \
- COMMENT:"Serial Number \\: {rbshSystemSN}\\n"
-
-report.riverbed.steelhead.systemTemperature.name=Riverbed Steelhead System Temperature
-report.riverbed.steelhead.systemTemperature.columns=rbshSystemTempr
-report.riverbed.steelhead.systemTemperature.type=nodeSnmp
-report.riverbed.steelhead.systemTemperature.command=--title="Riverbed Steelhead System Temperature" \
- --vertical-label=Degrees \
- --units-exponent=0 \
- DEF:celsius={rrd1}:rbshSystemTempr:AVERAGE \
- CDEF:fahrenheit=celsius,1.8,*,32,+ \
- CDEF:fahrenheitInv=fahrenheit,-1,* \
- AREA:celsius#00ff00:"Celsius   " \
- GPRINT:celsius:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:celsius:MIN:"Min  \\: %8.2lf" \
- GPRINT:celsius:MAX:"Max  \\: %8.2lf\\n" \
- AREA:fahrenheitInv#0000ff:"Fahrenheit" \
- GPRINT:fahrenheit:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:fahrenheit:MIN:"Min  \\: %8.2lf" \
- GPRINT:fahrenheit:MAX:"Max  \\: %8.2lf\\n"
-
-report.riverbed.steelhead.cpuLoad.name=Riverbed Steelhead CPU Load
-report.riverbed.steelhead.cpuLoad.columns=rbshCpuLoad1,rbshCpuLoad5,rbshCpuLoad15
-report.riverbed.steelhead.cpuLoad.type=nodeSnmp
-report.riverbed.steelhead.cpuLoad.command=--title="Riverbed Steelhead CPU Load" \
- --vertical-label="Load Average" \
- --units-exponent=0 \
- DEF:oneRaw={rrd1}:rbshCpuLoad1:AVERAGE \
- DEF:fiveRaw={rrd2}:rbshCpuLoad5:AVERAGE \
- DEF:fifteenRaw={rrd3}:rbshCpuLoad15:AVERAGE \
- CDEF:one=oneRaw,100,/ \
- CDEF:five=fiveRaw,100,/ \
- CDEF:fifteen=fifteenRaw,100,/ \
- LINE2:one#000000:"1 Minute " \
- GPRINT:one:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:one:MIN:"Min  \\: %8.2lf" \
- GPRINT:one:MAX:"Max  \\: %8.2lf\\n" \
- LINE2:five#00ff00:"5 Minute " \
- GPRINT:five:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:five:MIN:"Min  \\: %8.2lf" \
- GPRINT:five:MAX:"Max  \\: %8.2lf\\n" \
- LINE2:fifteen#0000ff:"15 Minute" \
- GPRINT:fifteen:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:fifteen:MIN:"Min  \\: %8.2lf" \
- GPRINT:fifteen:MAX:"Max  \\: %8.2lf\\n"
-
-report.riverbed.steelhead.cpuUtilization.name=Riverbed Steelhead CPU Utilization
-report.riverbed.steelhead.cpuUtilization.columns=rbshCpuUtil1
-report.riverbed.steelhead.cpuUtilization.type=nodeSnmp
-report.riverbed.steelhead.cpuUtilization.command=--title="Riverbed Steelhead CPU Utilization" \
- --vertical-label="Percent Utilization" \
- --units-exponent=0 \
- --upper-limit=100 --lower-limit=0 \
- DEF:util={rrd1}:rbshCpuUtil1:AVERAGE \
- AREA:util#0000ff:"1 Minute" \
- GPRINT:util:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:util:MIN:"Min  \\: %8.2lf" \
- GPRINT:util:MAX:"Max  \\: %8.2lf"
-
-report.riverbed.steelhead.connections.name=Riverbed Steelhead Connections
-report.riverbed.steelhead.connections.columns=rbshOptimizedConns,rbshPassthruConns,rbshHalfOpenConns,rbshHalfClsdConns,rbshEstabConns,rbshActiveConns,rbshTotalConns
-report.riverbed.steelhead.connections.type=nodeSnmp
-report.riverbed.steelhead.connections.command=--title="Riverbed Steelhead Connections" \
- --vertical-label=Connections \
- DEF:optimized={rrd1}:rbshOptimizedConns:AVERAGE \
- DEF:passthru={rrd2}:rbshPassthruConns:AVERAGE \
- DEF:halfopen={rrd3}:rbshHalfOpenConns:AVERAGE \
- DEF:halfclosed={rrd4}:rbshHalfClsdConns:AVERAGE \
- DEF:estab={rrd5}:rbshEstabConns:AVERAGE \
- DEF:active={rrd6}:rbshActiveConns:AVERAGE \
- DEF:total={rrd7}:rbshTotalConns:AVERAGE \
- AREA:optimized#0000ff:"Optimized  " \
- GPRINT:optimized:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:optimized:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:optimized:MAX:"Max  \\: %8.2lf %s\\n" \
- STACK:passthru#8080ff:"Passthrough" \
- GPRINT:passthru:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:passthru:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:passthru:MAX:"Max  \\: %8.2lf %s\\n" \
- STACK:halfopen#ff0000:"Half-Open  " \
- GPRINT:halfopen:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:halfopen:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:halfopen:MAX:"Max  \\: %8.2lf %s\\n" \
- STACK:halfclosed#8000ff:"Half-Closed" \
- GPRINT:halfclosed:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:halfclosed:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:halfclosed:MAX:"Max  \\: %8.2lf %s\\n" \
- STACK:estab#80ff80:"Established" \
- GPRINT:estab:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:estab:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:estab:MAX:"Max  \\: %8.2lf %s\\n" \
- STACK:active#000000:"Active     " \
- GPRINT:active:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:active:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:active:MAX:"Max  \\: %8.2lf %s\\n" \
- GPRINT:total:AVERAGE:"Total          Avg  \\: %8.2lf %s" \
- GPRINT:total:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:total:MAX:"Max  \\: %8.2lf %s"
-
-report.riverbed.steelhead.aggBandwidth.name=Riverbed Steelhead Aggregate Bandwidth
-report.riverbed.steelhead.aggBandwidth.columns=rbshBwAggInLan,rbshBwAggInWan,rbshBwAggOutLan,rbshBwAggOutWan
-report.riverbed.steelhead.aggBandwidth.type=nodeSnmp
-report.riverbed.steelhead.aggBandwidth.command=--title="Riverbed Steelhead Aggregate Bandwidth" \
- --vertical-label="Bits/sec" \
- DEF:inLanBytes={rrd1}:rbshBwAggInLan:AVERAGE \
- DEF:inWanBytes={rrd2}:rbshBwAggInWan:AVERAGE \
- DEF:outLanBytes={rrd3}:rbshBwAggOutLan:AVERAGE \
- DEF:outWanBytes={rrd4}:rbshBwAggOutWan:AVERAGE \
- CDEF:inLan=inLanBytes,8,* \
- CDEF:inWan=inWanBytes,8,* \
- CDEF:outLan=outLanBytes,8,* \
- CDEF:outWan=outWanBytes,8,* \
- CDEF:outLanInv=outLan,-1,* \
- CDEF:outWanInv=outWan,-1,* \
- COMMENT:"Inbound\\n" \
- AREA:inLan#0000ff:"LAN" \
- GPRINT:inLan:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:inLan:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:inLan:MAX:"Max  \\: %8.2lf %s\\n" \
- STACK:inWan#8080ff:"WAN" \
- GPRINT:inWan:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:inWan:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:inWan:MAX:"Max  \\: %8.2lf %s\\n" \
- COMMENT:"\\n" \
- COMMENT:"Outbound\\n" \
- AREA:outLanInv#00ff00:"LAN" \
- GPRINT:outLan:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:outLan:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:outLan:MAX:"Max  \\: %8.2lf %s\\n" \
- STACK:outWanInv#ffff00:"WAN" \
- GPRINT:outWan:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:outWan:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:outWan:MAX:"Max  \\: %8.2lf %s"
-
-report.riverbed.steelhead.passthrough.name=Riverbed Steelhead Passthrough Traffic
-report.riverbed.steelhead.passthrough.columns=rbshBwPassThruIn,rbshBwPassThruOut,rbshBwPassThruTotal
-report.riverbed.steelhead.passthrough.type=nodeSnmp
-report.riverbed.steelhead.passthrough.command=--title="Riverbed Steelhead Passthrough Traffic" \
- --vertical-label="Bits/sec" \
- DEF:inBytes={rrd1}:rbshBwPassThruIn:AVERAGE \
- DEF:outBytes={rrd2}:rbshBwPassThruOut:AVERAGE \
- DEF:totalBytes={rrd3}:rbshBwPassThruTotal:AVERAGE \
- CDEF:in=inBytes,8,* \
- CDEF:out=outBytes,8,* \
- CDEF:outInv=out,-1,* \
- CDEF:total=totalBytes,8,* \
- AREA:in#0000ff:"Inbound " \
- GPRINT:in:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:in:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:in:MAX:"Max  \\: %8.2lf %s\\n" \
- AREA:outInv#00ff00:"Outbound" \
- GPRINT:out:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:out:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:out:MAX:"Max  \\: %8.2lf %s\\n" \
- GPRINT:total:AVERAGE:"           Avg  \\: %8.2lf %s" \
- GPRINT:total:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:total:MAX:"Max  \\: %8.2lf %s"
-
-report.riverbed.steelhead.dsHitsMisses.name=Riverbed Steelhead DS Hits and Misses
-report.riverbed.steelhead.dsHitsMisses.columns=rbshDsHitsTotal,rbshDsMissTotal
-report.riverbed.steelhead.dsHitsMisses.type=nodeSnmp
-report.riverbed.steelhead.dsHitsMisses.command=--title="Riverbed Steelhead DS Hits and Misses" \
- --vertical-label=Requests \
- DEF:hits={rrd1}:rbshDsHitsTotal:AVERAGE \
- DEF:misses={rrd2}:rbshDsMissTotal:AVERAGE \
- CDEF:missesInv=misses,-1,* \
- AREA:hits#00ff00:"Hits  " \
- GPRINT:hits:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:hits:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:hits:MAX:"Max  \\: %8.2lf %s\\n" \
- AREA:missesInv#ff0000:"Misses" \
- GPRINT:misses:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:misses:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:misses:MAX:"Max  \\: %8.2lf %s"
-
-report.riverbed.steelhead.dsHitRate.name=Riverbed Steelhead DS Hit Rate
-report.riverbed.steelhead.dsHitRate.columns=rbshDsHitsTotal,rbshDsMissTotal
-report.riverbed.steelhead.dsHitRate.type=nodeSnmp
-report.riverbed.steelhead.dsHitRate.command=--title="Riverbed Steelhead DS Hit Rate" \
- --vertical-label=Percent \
- --units-exponent=0 \
- --lower-limit=0 --upper-limit=100 \
- DEF:hits={rrd1}:rbshDsHitsTotal:AVERAGE \
- DEF:misses={rrd2}:rbshDsMissTotal:AVERAGE \
- CDEF:hitrate=hits,hits,misses,+,/,100,* \
- AREA:hitrate#0000ff:"Hit Rate" \
- GPRINT:hitrate:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:hitrate:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:hitrate:MAX:"Max  \\: %8.2lf %s"
-
-report.riverbed.steelhead.dsSegmentCost.name=Riverbed Steelhead DS Cost per Segment
-report.riverbed.steelhead.dsSegmentCost.columns=rbshDsCostPerSeg
-report.riverbed.steelhead.dsSegmentCost.type=nodeSnmp
-report.riverbed.steelhead.dsSegmentCost.command=--title="Riverbed Steelhead DS Cost per Segment" \
- --vertical-label="Time (sec)" \
- DEF:costMicrosec={rrd1}:rbshDsCostPerSeg:AVERAGE \
- CDEF:costSec=costMicrosec,1000000,/ \
- AREA:costSec#0000ff:"Cost / Segment" \
- GPRINT:costSec:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:costSec:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:costSec:MAX:"Max  \\: %8.2lf %s"
-
-report.riverbed.steelhead.cpuStats.name=Riverbed Steelhead CPU Stats
-report.riverbed.steelhead.cpuStats.columns=rbshCpuIndivIdle,rbshCpuIndivSystem,rbshCpuIndivUser
-report.riverbed.steelhead.cpuStats.propertiesValues=rbshCpuIndivId
-report.riverbed.steelhead.cpuStats.type=rbshCpuIndivIndex
-report.riverbed.steelhead.cpuStats.command=--title="Riverbed Steelhead CPU Stats" \
- --vertical-label=Percent \
- --units-exponent=0 \
- --lower-limit=0 --upper-limit=100 \
- DEF:idle={rrd1}:rbshCpuIndivIdle:AVERAGE \
- DEF:system={rrd2}:rbshCpuIndivSystem:AVERAGE \
- DEF:user={rrd3}:rbshCpuIndivUser:AVERAGE \
- AREA:system#00ffff:"System" \
- GPRINT:system:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:system:MIN:"Min  \\: %8.2lf" \
- GPRINT:system:MAX:"Max  \\: %8.2lf\\n" \
- STACK:user#0000ff:"User  " \
- GPRINT:user:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:user:MIN:"Min  \\: %8.2lf" \
- GPRINT:user:MAX:"Max  \\: %8.2lf\\n" \
- STACK:idle#a0ffa0:"Idle  " \
- GPRINT:idle:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:idle:MIN:"Min  \\: %8.2lf" \
- GPRINT:idle:MAX:"Max  \\: %8.2lf" \
-
-report.riverbed.steelhead.portBandwidth.name=Riverbed Steelhead Port Bandwidth
-report.riverbed.steelhead.portBandwidth.columns=rbshBwPortInLan,rbshBwPortInWan,rbshBwPortOutLan,rbshBwPortOutWan
-report.riverbed.steelhead.portBandwidth.propertiesValues=rbshBwPortNumber
-report.riverbed.steelhead.portBandwidth.type=rbshBwPort
-report.riverbed.steelhead.portBandwidth.command=--title="Riverbed Steelhead Port Bandwidth" \
- --vertical-label="Bits/sec" \
- DEF:inLanBytes={rrd1}:rbshBwPortInLan:AVERAGE \
- DEF:inWanBytes={rrd2}:rbshBwPortInWan:AVERAGE \
- DEF:outLanBytes={rrd3}:rbshBwPortOutLan:AVERAGE \
- DEF:outWanBytes={rrd4}:rbshBwPortOutWan:AVERAGE \
- CDEF:inLan=inLanBytes,8,* \
- CDEF:inWan=inWanBytes,8,* \
- CDEF:outLan=outLanBytes,8,* \
- CDEF:outWan=outWanBytes,8,* \
- CDEF:outLanInv=outLan,-1,* \
- CDEF:outWanInv=outWan,-1,* \
- COMMENT:"Inbound\\n" \
- AREA:inLan#0000ff:"LAN" \
- GPRINT:inLan:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:inLan:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:inLan:MAX:"Max  \\: %8.2lf %s\\n" \
- STACK:inWan#ff00ff:"WAN" \
- GPRINT:inWan:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:inWan:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:inWan:MAX:"Max  \\: %8.2lf %s\\n" \
- COMMENT:"\\n" \
- COMMENT:"Outbound\\n" \
- AREA:outLanInv#00ff00:"LAN" \
- GPRINT:outLan:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:outLan:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:outLan:MAX:"Max  \\: %8.2lf %s\\n" \
- STACK:outWanInv#ffff00:"WAN" \
- GPRINT:outWan:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:outWan:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:outWan:MAX:"Max  \\: %8.2lf %s"
-
-
-##### SofaWare Embedded NGX Reports
-
-report.sofaware.embeddedngx.storagePct.name=SofaWare Embedded NGX Storage Utilization
-report.sofaware.embeddedngx.storagePct.columns=swStorageConfigTot,swStorageConfigFree,swStorageFirmTotal,swStorageFirmFree,swStorageCFTotal,swStorageCFFree
-report.sofaware.embeddedngx.storagePct.type=nodeSnmp
-report.sofaware.embeddedngx.storagePct.command=--title="SofaWare Embedded NGX Storage Utilization" \
- --vertical-label="Percent Used" \
- --units-exponent=0 \
- --lower-limit=0 --upper-limit=100 \
- DEF:confTot={rrd1}:swStorageConfigTot:AVERAGE \
- DEF:confFree={rrd2}:swStorageConfigFree:AVERAGE \
- CDEF:confPctUsed=confTot,confFree,-,confTot,/,100,* \
- DEF:firmTot={rrd3}:swStorageFirmTotal:AVERAGE \
- DEF:firmFree={rrd4}:swStorageFirmFree:AVERAGE \
- CDEF:firmPctUsed=firmTot,firmFree,-,firmTot,/,100,* \
- DEF:cfTot={rrd5}:swStorageCFTotal:AVERAGE \
- DEF:cfFree={rrd6}:swStorageCFFree:AVERAGE \
- CDEF:cfPctUsed=cfTot,cfFree,-,cfTot,/,100,* \
- LINE2:confPctUsed#ff0000:"Config  " \
- GPRINT:confPctUsed:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:confPctUsed:MIN:"Min  \\: %8.2lf" \
- GPRINT:confPctUsed:MAX:"Max  \\: %8.2lf\\n" \
- LINE2:firmPctUsed#00ff00:"Firmware" \
- GPRINT:firmPctUsed:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:firmPctUsed:MIN:"Min  \\: %8.2lf" \
- GPRINT:firmPctUsed:MAX:"Max  \\: %8.2lf\\n" \
- LINE2:cfPctUsed#0000ff:"CF      " \
- GPRINT:cfPctUsed:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:cfPctUsed:MIN:"Min  \\: %8.2lf" \
- GPRINT:cfPctUsed:MAX:"Max  \\: %8.2lf"
-
-report.sofaware.embeddedngx.storageConfig.name=SofaWare Embedded NGX Config Storage
-report.sofaware.embeddedngx.storageConfig.columns=swStorageConfigTot,swStorageConfigFree
-report.sofaware.embeddedngx.storageConfig.type=nodeSnmp
-report.sofaware.embeddedngx.storageConfig.command=--title="SofaWare Embedded NGX Config Storage" \
- --vertical-label="Bytes" \
- DEF:confTotMB={rrd1}:swStorageConfigTot:AVERAGE \
- CDEF:confTot=confTotMB,1024,*,1024,* \
- DEF:confFreeMB={rrd2}:swStorageConfigFree:AVERAGE \
- CDEF:confFree=confFreeMB,1024,*,1024,* \
- LINE2:confFree#00ff00:"Free " \
- GPRINT:confFree:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:confFree:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:confFree:MAX:"Max  \\: %8.2lf %s\\n" \
- LINE2:confTot#000000:"Total" \
- GPRINT:confTot:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:confTot:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:confTot:MAX:"Max  \\: %8.2lf %s"
-
-report.sofaware.embeddedngx.storageFirm.name=SofaWare Embedded NGX Firmware Storage
-report.sofaware.embeddedngx.storageFirm.columns=swStorageFirmTot,swStorageFirmFree
-report.sofaware.embeddedngx.storageFirm.type=nodeSnmp
-report.sofaware.embeddedngx.storageFirm.command=--title="SofaWare Embedded NGX Firmware Storage" \
- --vertical-label="Bytes" \
- DEF:firmTotMB={rrd1}:swStorageFirmTot:AVERAGE \
- CDEF:firmTot=firmTotMB,1024,*,1024,* \
- DEF:firmFreeMB={rrd2}:swStorageFirmFree:AVERAGE \
- CDEF:firmFree=firmFreeMB,1024,*,1024,* \
- LINE2:firmFree#00ff00:"Free " \
- GPRINT:firmFree:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:firmFree:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:firmFree:MAX:"Max  \\: %8.2lf %s\\n" \
- LINE2:firmTot#000000:"Total" \
- GPRINT:firmTot:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:firmTot:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:firmTot:MAX:"Max  \\: %8.2lf %s" 
-
-report.sofaware.embeddedngx.storageCF.name=SofaWare Embedded NGX CF Storage
-report.sofaware.embeddedngx.storageCF.columns=swStorageCFTot,swStorageCFFree
-report.sofaware.embeddedngx.storageCF.type=nodeSnmp
-report.sofaware.embeddedngx.storageCF.command=--title="SofaWare Embedded NGX CF Storage" \
- --vertical-label="Bytes" \
- DEF:cfTotMB={rrd1}:swStorageCFTot:AVERAGE \
- CDEF:cfTot=cfTotMB,1024,*,1024,,* \
- DEF:cfFreeMB={rrd2}:swStorageCFFree:AVERAGE \
- CDEF:cfFree=cfFreeMB,1000000,* \
- LINE2:cfFree#00ff00:"Free " \
- GPRINT:cfFree:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:cfFree:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:cfFree:MAX:"Max  \\: %8.2lf %s\\n" \
- LINE2:cfTot#000000:"Total" \
- GPRINT:cfTot:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:cfTot:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:cfTot:MAX:"Max  \\: %8.2lf %s" 
-
-report.sofaware.embeddedngx.licenses.name=SofaWare Embedded NGX Licenses
-report.sofaware.embeddedngx.licenses.columns=swLicenseUsedNodes
-report.sofaware.embeddedngx.licenses.type=nodeSnmp
-report.sofaware.embeddedngx.licenses.command=--title="SofaWare Embedded NGX Licenses" \
- --vertical-label="Node Licenses" \
- --units-exponent=0 \
- DEF:used={rrd1}:swLicenseUsedNodes:AVERAGE \
- AREA:used#0000ff:"Used" \
- GPRINT:used:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:used:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:used:MAX:"Max  \\: %8.2lf %s"
-
-report.sofaware.embeddedngx.memoryPct.name=SofaWare Embedded NGX Memory Utilization
-report.sofaware.embeddedngx.memoryPct.columns=swMemRamFree,swMemRamTotal,swMemDfaFree,swMemDfaTotal
-report.sofaware.embeddedngx.memoryPct.type=nodeSnmp
-report.sofaware.embeddedngx.memoryPct.command=--title="SofaWare Embedded NGX Storage Utilization" \
- --vertical-label="Percent Used" \
- --units-exponent=0 \
- --lower-limit=0 --upper-limit=100 \
- DEF:ramFree={rrd1}:swMemRamFree:AVERAGE \
- DEF:ramTot={rrd2}:swMemRamTotal:AVERAGE \
- CDEF:ramPctUsed=ramTot,ramFree,-,ramTot,/,100,* \
- DEF:dfaFree={rrd3}:swMemDfaFree:AVERAGE \
- DEF:dfaTot={rrd4}:swMemDfaTotal:AVERAGE \
- CDEF:dfaPctUsed=dfaTot,dfaFree,-,dfaTot,/,100,* \
- LINE2:ramPctUsed#ff0000:"RAM" \
- GPRINT:ramPctUsed:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:ramPctUsed:MIN:"Min  \\: %8.2lf" \
- GPRINT:ramPctUsed:MAX:"Max  \\: %8.2lf\\n" \
- LINE2:dfaPctUsed#00ff00:"DFA" \
- GPRINT:dfaPctUsed:AVERAGE:"Avg  \\: %8.2lf" \
- GPRINT:dfaPctUsed:MIN:"Min  \\: %8.2lf" \
- GPRINT:dfaPctUsed:MAX:"Max  \\: %8.2lf"
-
-report.sofaware.embeddedngx.memoryFree.name=SofaWare Embedded NGX Memory Free
-report.sofaware.embeddedngx.memoryFree.columns=swUserMemFree,swKernelMemFree,swFwMEMFree
-report.sofaware.embeddedngx.memoryFree.type=nodeSnmp
-report.sofaware.embeddedngx.memoryFree.command=--title="SofaWare Embedded NGX Memory Free" \
- --vertical-label="Bytes" \
- DEF:userKB={rrd1}:swUserMemFree:AVERAGE \
- CDEF:user=userKB,1024,* \
- DEF:kernelKB={rrd2}:swKernelMemFree:AVERAGE \
- CDEF:kernel=kernelKB,1024,* \
- DEF:fwKB={rrd3}:swFwMEMFree:AVERAGE \
- CDEF:fw=fwKB,1024,* \
- LINE2:user#0000ff:"User    " \
- GPRINT:user:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:user:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:user:MAX:"Max  \\: %8.2lf %s\\n" \
- LINE2:kernel#00ff00:"Kernel  " \
- GPRINT:kernel:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:kernel:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:kernel:MAX:"Max  \\: %8.2lf %s\\n" \
- LINE2:fw#ff0000:"Firewall" \
- GPRINT:fw:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:fw:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:fw:MAX:"Max  \\: %8.2lf %s"
-
-report.servertech.sentry3.systemStats.name=ServerTech Sentry System Stats (3rd Gen)
-report.servertech.sentry3.systemStats.columns=stSentry3NumTowers,stSentry3EnvMons,stSentry3TotalPower
-report.servertech.sentry3.systemStats.type=nodeSnmp
-report.servertech.sentry3.systemStats.command=--title="ServerTech Sentry System Stats (3rd Gen)" \
- --vertical-label="Watts" \
- DEF:towers={rrd1}:stSentry3NumTowers:AVERAGE \
- DEF:envmons={rrd2}:stSentry3EnvMons:AVERAGE \
- DEF:totalPower={rrd3}:stSentry3TotalPower:AVERAGE \
- AREA:totalPower#0000ff:"Total Power" \
- GPRINT:totalPower:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:totalPower:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:totalPower:MAX:"Max  \\: %8.2lf %s\\n" \
- COMMENT:"\\n" \
- GPRINT:towers:AVERAGE:"Number of towers\\:       %2.0lf\\n" \
- GPRINT:towers:AVERAGE:"Number of env monitors\\: %2.0lf"
-
-report.servertech.sentry3.envmon.temperatureNoScale.name=ServerTech Sentry EnvMon Temperature (3rd Gen)
-report.servertech.sentry3.envmon.temperatureNoScale.columns=envMonTemp
-report.servertech.sentry3.envmon.temperatureNoScale.propertiesValues=envMonName
-report.servertech.sentry3.envmon.temperatureNoScale.type=stSentry3EnvMon
-report.servertech.sentry3.envmon.temperatureNoScale.command=--title="ServerTech Sentry {envMonName} Temperature (3rd Gen)" \
- --lower-limit=0 \
- --vertical-label="Degrees C" \
- DEF:tempRaw={rrd1}:envMonTemp:AVERAGE \
- CDEF:temp=tempRaw,10,/ \
- AREA:temp#0000ff:"Temperature" \
- GPRINT:temp:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:temp:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:temp:MAX:"Max  \\: %8.2lf %s\\n" \
- COMMENT:" \\n" \
- COMMENT:"Note\\: A negative value indicates temperature could not be measured\\n" \
- COMMENT:" \\n" \
- COMMENT:"Note\\: If a Celsius reading seems improbably high, the sensor may be\\n" \
- COMMENT:"      lying about the temperature scale."
-
-report.servertech.sentry3.envmon.temperature.name=ServerTech Sentry EnvMon Temperature (3rd Gen)
-report.servertech.sentry3.envmon.temperature.columns=envMonTemp,envMonTempScale
-report.servertech.sentry3.envmon.temperature.propertiesValues=envMonName
-report.servertech.sentry3.envmon.temperature.suppress=servertech.sentry3.envmon.temperatureNoScale
-report.servertech.sentry3.envmon.temperature.type=stSentry3EnvMon
-report.servertech.sentry3.envmon.temperature.command=--title="ServerTech Sentry {envMonName} Temperature (3rd Gen)" \
- --lower-limit=0 \
- --vertical-label="Degrees" \
- DEF:tempRaw={rrd1}:envMonTemp:AVERAGE \
- DEF:scale={rrd2}:envMonTempScale:AVERAGE \
- CDEF:temp=tempRaw,10,/ \
- CDEF:tempC=0,scale,EQ,temp,0,IF \
- CDEF:tempF=0,scale,GT,temp,0,IF \
- COMMENT:"  Temperature Scale Color Legend\\:" \
- COMMENT:"\\n" \
- AREA:tempC#0000ff:"Celsius   " \
- COMMENT:"\\n" \
- AREA:tempF#ff0000:"Fahrenheit" \
- COMMENT:"\\n" \
- GPRINT:temp:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:temp:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:temp:MAX:"Max  \\: %8.2lf %s\\n" \
- COMMENT:" \\n" \
- COMMENT:"Note\\: A negative value indicates temperature could not be measured\\n" \
- COMMENT:" \\n" \
- COMMENT:"Note\\: If a Celsius reading seems improbably high, the sensor may be\\n" \
- COMMENT:"      lying about the temperature scale."
-
-report.servertech.sentry3.envmon.humidity.name=ServerTech Sentry EnvMon Humidity (3rd Gen)
-report.servertech.sentry3.envmon.humidity.columns=envMonHumid
-report.servertech.sentry3.envmon.humidity.propertiesValues=envMonName
-report.servertech.sentry3.envmon.humidity.type=stSentry3EnvMon
-report.servertech.sentry3.envmon.humidity.command=--title="ServerTech Sentry {envMonName} Humidity (3rd Gen)" \
- --lower-limit=0 --upper-limit=100 \
- --vertical-label="Percent" \
- DEF:humidity={rrd1}:envMonHumid:AVERAGE \
- AREA:humidity#0000ff:"Humidity" \
- GPRINT:humidity:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:humidity:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:humidity:MAX:"Max  \\: %8.2lf %s\\n" \
- COMMENT:" \\n" \
- COMMENT:"Note\\: A negative value indicates humidity could not be measured"
-
-report.servertech.sentry3.tower.status.name=ServerTech Sentry Tower Status (3rd Gen)
-report.servertech.sentry3.tower.status.columns=towerStatus,towerInfeedCount
-report.servertech.sentry3.tower.status.propertiesValues=towerName
-report.servertech.sentry3.tower.status.type=stSentry3Tower
-report.servertech.sentry3.tower.status.command=--title="ServerTech Sentry - Tower {towerName}" \
- --lower-limit=0 \
- --vertical-label="Input Feeds" \
- DEF:status={rrd1}:towerStatus:AVERAGE \
- DEF:infeeds={rrd2}:towerInfeedCount:AVERAGE \
- CDEF:infeedsNormal=status,0,EQ,infeeds,0,IF \
- CDEF:infeedsNoComm=status,0,GT,infeeds,0,IF \
- CDEF:infeedsFanFail=status,1,GT,infeeds,0,IF \
- CDEF:infeedsOverTemp=status,2,GT,infeeds,0,IF \
- CDEF:infeedsUnknown=status,3,GT,infeeds,0,IF \
- COMMENT:"  Tower Status\\:" \
- COMMENT:"\\n" \
- AREA:infeedsNormal#00ff00:"Normal" \
- COMMENT:"\\n" \
- AREA:infeedsNoComm#0080ff:"No Communication" \
- COMMENT:"\\n" \
- AREA:infeedsFanFail#800080:"Fan Failure" \
- COMMENT:"\\n" \
- AREA:infeedsOverTemp#ff0000:"Over Temperature" \
- COMMENT:"\\n" \
- AREA:infeedsUnknown#c0c0c0:"Unknown / Other" \
- COMMENT:"\\n" \
- COMMENT:" \\n" \
- COMMENT:"  Input Feed Count\\n" \
- GPRINT:infeeds:MIN:"  Min  \\: %8.2lf" \
- GPRINT:infeeds:MAX:"  Max  \\: %8.2lf"
-
-report.servertech.sentry3.infeed.loadCapacity.name=ServerTech Sentry Load / Capacity (3rd Gen)
-report.servertech.sentry3.infeed.loadCapacity.columns=infeedLoadStatus,infeedLoadValue,infeedLoadHighThrsh,infeedCapacity
-report.servertech.sentry3.infeed.loadCapacity.propertiesValues=infeedName
-report.servertech.sentry3.infeed.loadCapacity.type=stSentry3Infeed
-report.servertech.sentry3.infeed.loadCapacity.command=--title="ServerTech Sentry Load / Capacity (3rd Gen)" \
- --lower-limit=0 \
- --vertical-label="Amps" \
- DEF:loadStatus={rrd1}:infeedLoadStatus:AVERAGE \
- DEF:loadCentiAmps={rrd2}:infeedLoadValue:AVERAGE \
- CDEF:load=loadCentiAmps,100,/ \
- CDEF:loadNormal=loadStatus,0,EQ,load,0,IF \
- CDEF:loadNotOn=loadStatus,0,GT,load,0,IF \
- CDEF:loadReading=loadStatus,1,GT,load,0,IF \
- CDEF:loadLow=loadStatus,2,GT,load,0,IF \
- CDEF:loadHigh=loadStatus,3,GT,load,0,IF \
- CDEF:loadOverLoad=loadStatus,4,GT,load,0,IF \
- CDEF:loadReadError=loadStatus,5,GT,load,0,IF \
- CDEF:loadNoComm=loadStatus,6,GT,load,0,IF \
- DEF:threshAmps={rrd3}:infeedLoadHighThrsh:AVERAGE \
- DEF:capacityAmps={rrd4}:infeedCapacity:AVERAGE \
- COMMENT:"Input Feed {infeedName}\\n" \
- COMMENT:"\\n" \
- COMMENT:"Load (solid area height)\\:" \
- COMMENT:"\\n" \
- GPRINT:load:AVERAGE:"  Avg  \\: %8.2lf %s" \
- GPRINT:load:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:load:MAX:"Max  \\: %8.2lf %s\\n" \
- COMMENT:"Load Status (solid area color)\\:" \
- COMMENT:"\\n" \
- AREA:loadNormal#00ff00:"Normal" \
- COMMENT:"\\n" \
- AREA:loadNotOn#0000ff:"Not On" \
- COMMENT:"\\n" \
- AREA:loadReading#9966ff:"Reading" \
- COMMENT:"\\n" \
- AREA:loadLow#99ff66:"Load Low" \
- COMMENT:"\\n" \
- AREA:loadHigh#ffff00:"Load High" \
- COMMENT:"\\n" \
- AREA:loadOverLoad#ff0000:"Over Load" \
- COMMENT:"\\n" \
- AREA:loadReadError#cccccc:"Read Error" \
- COMMENT:"\\n" \
- AREA:loadNoComm#404040:"No Communication" \
- COMMENT:"\\n" \
- COMMENT:" \\n" \
- COMMENT:"Capacity and Threshold (solid lines)\\:" \
- COMMENT:"\\n" \
- LINE2:capacityAmps#ff0000:"Capacity " \
- GPRINT:capacityAmps:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:capacityAmps:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:capacityAmps:MAX:"Max  \\: %8.2lf %s\\n" \
- LINE2:threshAmps#000000:"Threshold" \
- GPRINT:threshAmps:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:threshAmps:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:threshAmps:MAX:"Max  \\: %8.2lf %s"
-
-report.servertech.sentry3.infeed.outlets.name=ServerTech Sentry Outlets (3rd Gen)
-report.servertech.sentry3.infeed.outlets.columns=infeedOutletCount
-report.servertech.sentry3.infeed.outlets.propertiesValues=infeedName
-report.servertech.sentry3.infeed.outlets.type=stSentry3Infeed
-report.servertech.sentry3.infeed.outlets.command=--title="ServerTech Sentry Outlets (3rd Gen)" \
- --lower-limit=0 \
- --vertical-label="Outlets" \
- DEF:outlets={rrd1}:infeedOutletCount:AVERAGE \
- COMMENT:"Input Feed {infeedName}\\n" \
- COMMENT:"\\n" \
- AREA:outlets#0000ff:"Outlet Count" \
- GPRINT:outlets:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:outlets:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:outlets:MAX:"Max  \\: %8.2lf %s\\n"
-
-report.servertech.sentry3.infeed.voltage.name=ServerTech Sentry Voltage (3rd Gen)
-report.servertech.sentry3.infeed.voltage.columns=infeedVoltage
-report.servertech.sentry3.infeed.voltage.propertiesValues=infeedName
-report.servertech.sentry3.infeed.voltage.type=stSentry3Infeed
-report.servertech.sentry3.infeed.voltage.command=--title="ServerTech Sentry Voltage (3rd Gen)" \
- --lower-limit=0 \
- --vertical-label="Volts" \
- DEF:deciVolts={rrd1}:infeedVoltage:AVERAGE \
- CDEF:volts=deciVolts,10,/ \
- COMMENT:"Input Feed {infeedName}\\n" \
- COMMENT:"\\n" \
- AREA:volts#0000ff:"Voltage" \
- GPRINT:volts:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:volts:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:volts:MAX:"Max  \\: %8.2lf %s\\n"
-
-report.servertech.sentry3.infeed.power.name=ServerTech Sentry Power Consumption (3rd Gen)
-report.servertech.sentry3.infeed.power.columns=infeedPower
-report.servertech.sentry3.infeed.power.propertiesValues=infeedName
-report.servertech.sentry3.infeed.power.type=stSentry3Infeed
-report.servertech.sentry3.infeed.power.command=--title="ServerTech Sentry Power Consumption (3rd Gen)" \
- --lower-limit=0 \
- --vertical-label="Watts" \
- DEF:watts={rrd1}:infeedPower:AVERAGE \
- COMMENT:"Input Feed {infeedName}\\n" \
- COMMENT:"\\n" \
- AREA:watts#0000ff:"Power Consumption" \
- GPRINT:watts:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:watts:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:watts:MAX:"Max  \\: %8.2lf %s\\n"
-
-###########################################
-# BEGIN Inveneo in-house graph definitions
-###########################################
-
 # Memory statistics for hosts using frogfoot resources
 report.frogfoot.memory.name=FrogfootMemory
 report.frogfoot.memory.columns=frogMemFree
@@ -12680,171 +11594,26 @@ report.lmsensors.volt.command=--title="Voltage on {lms-voltdevice}" \
  GPRINT:bvolt:MIN:"Min  \\: %8.2lf %s" \
  GPRINT:bvolt:MAX:"Max  \\: %8.2lf %s\\n" \
 
-report.mib2.sysUpTime.name=Agent Uptime (MIB-2)
-report.mib2.sysUpTime.columns=sysUpTime
-report.mib2.sysUpTime.type=nodeSnmp
-report.mib2.sysUpTime.command=--title="Agent Uptime (MIB-2)" \
- --vertical-label Days \
- --units-exponent=0 --lower-limit=0 \
- DEF:time={rrd1}:sysUpTime:AVERAGE \
- CDEF:days=time,8640000,/ \
- LINE2:days#0000ff:"Uptime (Days)" \
- GPRINT:days:AVERAGE:"Avg  \\: %8.1lf" \
- GPRINT:days:MIN:"Min  \\: %8.1lf" \
- GPRINT:days:MAX:"Max  \\: %8.1lf\\n"
+report.bwusage.siteAB.name=Bandwidth Usage site minus B
+report.bwusage.siteAB.columns=ifInOctets_siteA,ifInOctets_siteB,ifOutOctets_siteA,ifOutOctets_siteB
+report.bwusage.siteAB.type=nodeSnmp
+report.bwusage.siteAB.command=--title="Bandwidth usage - Site A minus B" \
+    --vertical-label Bits \
+    DEF:inA={rrd1}:ifInOctets_siteA:AVERAGE \
+    DEF:inB={rrd2}:ifInOctets_siteB:AVERAGE \
+    DEF:outA={rrd4}:ifOutOctets_siteA:AVERAGE \
+    DEF:outB={rrd5}:ifOutOctets_siteB:AVERAGE \
+    CDEF:inAdjABits=inA,inB,-,8,* \
+    CDEF:outAdjABits=outA,outB,-,8,* \
+    CDEF:outAdjABitsInv=outAdjABits,-1,* \
+    AREA:inAdjABits#00ff00:"Inbound " \
+    GPRINT:inAdjABits:MIN:"Min  \\: %8.2lf %s" \
+    GPRINT:inAdjABits:AVERAGE:"Avg  \\: %8.2lf %s" \
+    GPRINT:inAdjABits:MAX:"Max  \\: %8.2lf %s\\n" \
+    AREA:outAdjABitsInv#0000ff:"Outbound" \
+    GPRINT:outAdjABits:MIN:"Min  \\: %8.2lf %s" \
+    GPRINT:outAdjABits:AVERAGE:"Avg  \\: %8.2lf %s" \
+    GPRINT:outAdjABits:MAX:"Max  \\: %8.2lf %s\\n" \
 
-report.ubnt.web.sysUpTime.name=Radio Uptime (Ubiquiti web UI)
-report.ubnt.web.sysUpTime.columns=ubntSysUpTime
-report.ubnt.web.sysUpTime.type=nodeSnmp
-report.ubnt.web.sysUpTime.command=--title="Radio Uptime (Ubiquiti web UI)" \
- --vertical-label Days \
- --units-exponent=0 --lower-limit=0 \
- DEF:time={rrd1}:ubntSysUpTime:AVERAGE \
- CDEF:days=time,86400,/ \
- LINE2:days#0000ff:"Uptime (Days)" \
- GPRINT:days:AVERAGE:"Avg  \\: %8.1lf" \
- GPRINT:days:MIN:"Min  \\: %8.1lf" \
- GPRINT:days:MAX:"Max  \\: %8.1lf\\n"
-
-report.ubnt.web.bits.lan.name=LAN Bits In/Out (Ubiquiti web UI)
-report.ubnt.web.bits.lan.columns=ubntLanRxBytes,ubntLanTxBytes
-report.ubnt.web.bits.lan.type=nodeSnmp
-report.ubnt.web.bits.lan.command=--title="LAN Bits In/Out (Ubiquiti web UI)" \
- --vertical-label="Bits per second" \
- DEF:octIn={rrd1}:ubntLanRxBytes:AVERAGE \
- DEF:minOctIn={rrd1}:ubntLanRxBytes:MIN \
- DEF:maxOctIn={rrd1}:ubntLanRxBytes:MAX \
- DEF:octOut={rrd2}:ubntLanTxBytes:AVERAGE \
- DEF:minOctOut={rrd2}:ubntLanTxBytes:MIN \
- DEF:maxOctOut={rrd2}:ubntLanTxBytes:MAX \
- CDEF:rawbitsIn=octIn,8,* \
- CDEF:minRawbitsIn=minOctIn,8,* \
- CDEF:maxRawbitsIn=maxOctIn,8,* \
- CDEF:rawbitsOut=octOut,8,* \
- CDEF:minRawbitsOut=minOctOut,8,* \
- CDEF:maxRawbitsOut=maxOctOut,8,* \
- CDEF:rawbitsOutNeg=0,rawbitsOut,- \
- CDEF:rawtotBits=octIn,octOut,+,8,* \
- CDEF:bitsIn=rawbitsIn,UN,0,rawbitsIn,IF \
- CDEF:bitsOut=rawbitsOut,UN,0,rawbitsOut,IF \
- CDEF:totBits=rawtotBits,UN,0,rawtotBits,IF \
- CDEF:outSum=bitsOut,{diffTime},* \
- CDEF:inSum=bitsIn,{diffTime},* \
- CDEF:totSum=totBits,{diffTime},* \
- AREA:rawbitsIn#00ff00:"In " \
- GPRINT:rawbitsIn:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:rawbitsIn:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:rawbitsIn:MAX:"Max  \\: %8.2lf %s\\n" \
- AREA:rawbitsOutNeg#0000ff:"Out" \
- GPRINT:rawbitsOut:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:rawbitsOut:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:rawbitsOut:MAX:"Max  \\: %8.2lf %s\\n" \
- GPRINT:inSum:AVERAGE:"  Tot In  \\: %8.2lf %s" \
- GPRINT:outSum:AVERAGE:" Tot Out  \\: %8.2lf %s" \
- GPRINT:totSum:AVERAGE:" Tot  \\: %8.2lf %s\\n"
-
-report.ubnt.web.bits.wlan.name=WLAN Bits In/Out (Ubiquiti web UI)
-report.ubnt.web.bits.wlan.columns=ubntWlanRxBytes,ubntWlanTxBytes
-report.ubnt.web.bits.wlan.type=nodeSnmp
-report.ubnt.web.bits.wlan.command=--title="WLAN Bits In/Out (Ubiquiti web UI)" \
- --vertical-label="Bits per second" \
- DEF:octIn={rrd1}:ubntWlanRxBytes:AVERAGE \
- DEF:minOctIn={rrd1}:ubntWlanRxBytes:MIN \
- DEF:maxOctIn={rrd1}:ubntWlanRxBytes:MAX \
- DEF:octOut={rrd2}:ubntWlanTxBytes:AVERAGE \
- DEF:minOctOut={rrd2}:ubntWlanTxBytes:MIN \
- DEF:maxOctOut={rrd2}:ubntWlanTxBytes:MAX \
- CDEF:rawbitsIn=octIn,8,* \
- CDEF:minRawbitsIn=minOctIn,8,* \
- CDEF:maxRawbitsIn=maxOctIn,8,* \
- CDEF:rawbitsOut=octOut,8,* \
- CDEF:minRawbitsOut=minOctOut,8,* \
- CDEF:maxRawbitsOut=maxOctOut,8,* \
- CDEF:rawbitsOutNeg=0,rawbitsOut,- \
- CDEF:rawtotBits=octIn,octOut,+,8,* \
- CDEF:bitsIn=rawbitsIn,UN,0,rawbitsIn,IF \
- CDEF:bitsOut=rawbitsOut,UN,0,rawbitsOut,IF \
- CDEF:totBits=rawtotBits,UN,0,rawtotBits,IF \
- CDEF:outSum=bitsOut,{diffTime},* \
- CDEF:inSum=bitsIn,{diffTime},* \
- CDEF:totSum=totBits,{diffTime},* \
- AREA:rawbitsIn#00ff00:"In " \
- GPRINT:rawbitsIn:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:rawbitsIn:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:rawbitsIn:MAX:"Max  \\: %8.2lf %s\\n" \
- AREA:rawbitsOutNeg#0000ff:"Out" \
- GPRINT:rawbitsOut:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:rawbitsOut:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:rawbitsOut:MAX:"Max  \\: %8.2lf %s\\n" \
- GPRINT:inSum:AVERAGE:"  Tot In  \\: %8.2lf %s" \
- GPRINT:outSum:AVERAGE:" Tot Out  \\: %8.2lf %s" \
- GPRINT:totSum:AVERAGE:" Tot  \\: %8.2lf %s\\n"
-
-report.ubnt.web.pkts.lan.name=LAN Packets In/Out (Ubiquiti web UI)
-report.ubnt.web.pkts.lan.columns=ubntLanRxPkts,ubntLanTxPkts
-report.ubnt.web.pkts.lan.type=nodeSnmp
-report.ubnt.web.pkts.lan.command=--title="LAN Packets In/Out (Ubiquiti web UI)" \
- --vertical-label="Packets per second" \
- DEF:pktIn={rrd1}:ubntLanRxPkts:AVERAGE \
- DEF:pktOut={rrd2}:ubntLanTxPkts:AVERAGE \
- CDEF:pktOutNeg=0,pktOut,- \
- AREA:pktIn#00ff00:"In " \
- GPRINT:pktIn:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:pktIn:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:pktIn:MAX:"Max  \\: %8.2lf %s\\n" \
- AREA:pktOutNeg#0000ff:"Out" \
- GPRINT:pktOut:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:pktOut:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:pktOut:MAX:"Max  \\: %8.2lf %s\\n"
-
-report.ubnt.web.pkts.wlan.name=WLAN Packets In/Out (Ubiquiti web UI)
-report.ubnt.web.pkts.wlan.columns=ubntWlanRxPkts,ubntWlanTxPkts
-report.ubnt.web.pkts.wlan.type=nodeSnmp
-report.ubnt.web.pkts.wlan.command=--title="WLAN Packets In/Out (Ubiquiti web UI)" \
- --vertical-label="Packets per second" \
- DEF:pktIn={rrd1}:ubntWlanRxPkts:AVERAGE \
- DEF:pktOut={rrd2}:ubntWlanTxPkts:AVERAGE \
- CDEF:pktOutNeg=0,pktOut,- \
- AREA:pktIn#00ff00:"In " \
- GPRINT:pktIn:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:pktIn:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:pktIn:MAX:"Max  \\: %8.2lf %s\\n" \
- AREA:pktOutNeg#0000ff:"Out" \
- GPRINT:pktOut:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:pktOut:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:pktOut:MAX:"Max  \\: %8.2lf %s\\n"
-
-report.mib2.bitsFast.name=Bits In/Out (aggressive)
-report.mib2.bitsFast.columns=ifInOctetsFast,ifOutOctetsFast
-report.mib2.bitsFast.type=interfaceSnmp
-report.mib2.bitsFast.command=--title="Bits In/Out (aggressive)" \
- --vertical-label="Bits per second" \
- DEF:octIn={rrd1}:ifInOctetsFast:AVERAGE \
- DEF:octOut={rrd2}:ifOutOctetsFast:AVERAGE \
- CDEF:rawbitsIn=octIn,8,* \
- CDEF:rawbitsOut=octOut,8,* \
- CDEF:rawbitsOutNeg=0,rawbitsOut,- \
- CDEF:rawtotBits=octIn,octOut,+,8,* \
- CDEF:bitsIn=rawbitsIn,UN,0,rawbitsIn,IF \
- CDEF:bitsOut=rawbitsOut,UN,0,rawbitsOut,IF \
- CDEF:totBits=rawtotBits,UN,0,rawtotBits,IF \
- CDEF:outSum=bitsOut,{diffTime},* \
- CDEF:inSum=bitsIn,{diffTime},* \
- CDEF:totSum=totBits,{diffTime},* \
- AREA:rawbitsIn#00ff00:"In " \
- GPRINT:rawbitsIn:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:rawbitsIn:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:rawbitsIn:MAX:"Max  \\: %8.2lf %s\\n" \
- AREA:rawbitsOutNeg#0000ff:"Out" \
- GPRINT:rawbitsOut:AVERAGE:"Avg  \\: %8.2lf %s" \
- GPRINT:rawbitsOut:MIN:"Min  \\: %8.2lf %s" \
- GPRINT:rawbitsOut:MAX:"Max  \\: %8.2lf %s\\n" \
- GPRINT:inSum:AVERAGE:"  Tot In  \\: %8.2lf %s" \
- GPRINT:outSum:AVERAGE:" Tot Out  \\: %8.2lf %s" \
- GPRINT:totSum:AVERAGE:" Tot  \\: %8.2lf %s\\n"
-
-###########################################
-# END Inveneo in-house graph definitions
-###########################################
 
 ## EOF

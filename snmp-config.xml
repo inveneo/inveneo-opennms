@@ -1,2 +1,26 @@
-<?xml version="1.0"?>
-<snmp-config read-community="public" retry="1" timeout="1800" version="v2c" />
+<?xml version="1.0" encoding="UTF-8"?>
+<snmp-config xmlns="http://xmlns.opennms.org/xsd/config/snmp" retry="1"
+    timeout="1800" read-community="public" version="v2c">
+    <definition read-community="" version="v2c">
+        <specific xmlns="">200.2.128.10</specific>
+        <specific xmlns="">200.2.129.10</specific>
+        <specific xmlns="">200.2.134.185</specific>
+        <specific xmlns="">200.80.96.100</specific>
+        <specific xmlns="">200.80.101.41</specific>
+        <specific xmlns="">202.80.96.217</specific>
+        <specific xmlns="">10.255.253.200</specific>
+    </definition>
+    <definition read-community="multilink" version="v2c">
+        <specific xmlns="">10.98.2.1</specific>
+    </definition>
+    <definition retry="1" timeout="8000" read-community="1nvene0" version="v1">
+        <ns1:range xmlns:ns1="http://xmlns.opennms.org/xsd/types"
+            begin="200.80.101.44" end="200.80.101.45"/>
+        <ns2:range xmlns:ns2="http://xmlns.opennms.org/xsd/types"
+            begin="10.0.3.1" end="10.0.3.254"/>
+    </definition>
+    <definition retry="1" timeout="8000" read-community="1nvene0" version="v1">
+        <ns3:range xmlns:ns3="http://xmlns.opennms.org/xsd/types"
+            begin="10.0.1.1" end="10.0.1.254"/>
+    </definition>
+</snmp-config>

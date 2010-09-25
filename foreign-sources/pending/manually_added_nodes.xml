@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<foreign-source date-stamp="2010-09-23T15:55:03.947-04:00" name="manually_added_nodes" xmlns="http://xmlns.opennms.org/xsd/config/foreign-source">
+    <scan-interval>1d</scan-interval>
+    <detectors>
+        <detector class="org.opennms.netmgt.provision.detector.datagram.DnsDetector" name="DNS"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.FtpDetector" name="FTP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.HttpDetector" name="HTTP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.HttpsDetector" name="HTTPS"/>
+        <detector class="org.opennms.netmgt.provision.detector.icmp.IcmpDetector" name="ICMP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.ImapDetector" name="IMAP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.LdapDetector" name="LDAP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.NrpeDetector" name="NRPE"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.Pop3Detector" name="POP3"/>
+        <detector class="org.opennms.netmgt.provision.detector.radius.RadiusAuthDetector" name="Radius"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.SmtpDetector" name="SMTP"/>
+        <detector class="org.opennms.netmgt.provision.detector.snmp.SnmpDetector" name="SNMP"/>
+        <detector class="org.opennms.netmgt.provision.detector.ssh.SshDetector" name="SSH"/>
+    </detectors>
+    <policies/>
+</foreign-source>

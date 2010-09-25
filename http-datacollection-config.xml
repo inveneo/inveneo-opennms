@@ -26,4 +26,39 @@
     </uris>
   </http-collection>
   -->
+  <!--Temporarily disabling because ubnt auth method has changed
+  <http-collection name="ubnt-rocket-radio">
+    <rrd step="300">
+      <rra>RRA:AVERAGE:0.5:1:8928</rra>
+      <rra>RRA:AVERAGE:0.5:12:8784</rra>
+      <rra>RRA:MIN:0.5:12:8784</rra>
+      <rra>RRA:MAX:0.5:12:8784</rra>
+    </rrd>
+    <uris>
+      <uri name="ubiquiti-status-cgi-json">
+        <url path="/status.cgi"
+             user-agent="Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/412 (KHTML, like Gecko) Safari/412" 
+             response-range="100-399"
+             matches="(?s).*.host.\s*:.*?.uptime.\s*:\s*([0-9]+).*?.lan..*?.rx..*?bytes.\s*:\s*([0-9]+),\s*.packets.\s*:\s*([0-9]+),\s*.errors.\s*:\s*([0-9]+).*?.tx..*?bytes.\s*:\s*([0-9]+),\s*.packets.\s*:\s*([0-9]+),\s*.errors.\s*:\s*([0-9]+).*?.wlan.\s*:.*?.rx..*?bytes.\s*:\s*([0-9]+),\s*.packets.\s*:\s*([0-9]+),\s*.errors.\s*:\s*([0-9]+).*?.tx..*?bytes.\s*:\s*([0-9]+),\s*.packets.\s*:\s*([0-9]+),\s*.errors.\s*:\s*([0-9]+).*"
+             user-info="ubnt:n3th0p3-inv" >
+        </url>
+        <attributes>
+          <attrib alias="ubntSysUpTime" match-group="1" type="gauge32"/>
+          <attrib alias="ubntLanRxBytes" match-group="2" type="counter32"/>
+          <attrib alias="ubntLanRxPkts" match-group="3" type="counter32"/>
+          <attrib alias="ubntLanRxErrors" match-group="4" type="counter32"/>
+          <attrib alias="ubntLanTxBytes" match-group="5" type="counter32"/>
+          <attrib alias="ubntLanTxPkts" match-group="6" type="counter32"/>
+          <attrib alias="ubntLanTxErrors" match-group="7" type="counter32"/>
+          <attrib alias="ubntWlanRxBytes" match-group="8" type="counter32"/>
+          <attrib alias="ubntWlanRxPkts" match-group="9" type="counter32"/>
+          <attrib alias="ubntWlanRxErrors" match-group="10" type="counter32"/>
+          <attrib alias="ubntWlanTxBytes" match-group="11" type="counter32"/>
+          <attrib alias="ubntWlanTxPkts" match-group="12" type="counter32"/>
+          <attrib alias="ubntWlanTxErrors" match-group="13" type="counter32"/>
+        </attributes>
+      </uri>
+    </uris>
+  </http-collection>
+-->
 </http-datacollection-config>

@@ -1,20 +1,38 @@
-<?xml version="1.0"?>
-<groupinfo  xmlns="http://xmlns.opennms.org/xsd/groups">
-	<header>
-		<rev>1.3</rev>
-		<created>Wednesday, February 6, 2002 10:10:00 AM EST</created>
-		<mstation>dhcp-219.internal.opennms.org</mstation>
-	</header>
-	<groups>
-		<group>
-			<name>Admin</name>
-			<comments>The administrators</comments>
-			<user>admin</user>
-		</group>
-		<group>
-			<name>Remoting Users</name>
-			<comments>Users with access for submitting remote poller management data.</comments>
-			<user>remoting</user>
-		</group>
-	</groups>
+<?xml version="1.0" encoding="UTF-8"?>
+<groupinfo xmlns="http://xmlns.opennms.org/xsd/groups">
+    <ns1:header xmlns:ns1="http://xmlns.opennms.org/xsd/types">
+        <rev xmlns="">1.3</rev>
+        <created xmlns="">Thursday, July 15, 2010 7:06:37 PM GMT</created>
+        <mstation xmlns="">dhcp-219.internal.opennms.org</mstation>
+    </ns1:header>
+    <groups>
+        <group>
+            <name xmlns="">Admin</name>
+            <comments xmlns="">The administrators</comments>
+            <user xmlns="">admin</user>
+            <user xmlns="">andris</user>
+            <user xmlns="">mark</user>
+            <user xmlns="">rohan</user>
+        </group>
+        <group>
+            <name xmlns="">Haiti_Wifi_Net</name>
+            <default-map xmlns="">April2010_PaPNet</default-map>
+            <comments xmlns=""></comments>
+            <user xmlns="">andris</user>
+            <user xmlns="">fran</user>
+            <user xmlns="">mark</user>
+            <user xmlns="">admin</user>
+            <user xmlns="">public</user>
+            <user xmlns="">reygue</user>
+            <user xmlns="">picking</user>
+        </group>
+        <group>
+            <name xmlns="">SupportStaff</name>
+            <comments xmlns="">All Support Staff</comments>
+            <user xmlns="">mark</user>
+            <user xmlns="">reygue</user>
+            <user xmlns="">andris</user>
+            <user xmlns="">rohan</user>
+        </group>
+    </groups>
 </groupinfo>

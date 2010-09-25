@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportsList>
+    <Report id="1" title="Station Signal Strength"
+        show_timespan_button="true" show_graphtype_button="false" graphs_per_line="0">
+        <Graph title="" resourceId="node[11].mtxrWlStatIndex[16]"
+            timespan="12_hour" graphtype="mikrotik.wlstatrssi"/>
+        <Graph title="" resourceId="node[13].mtxrWlStatIndex[15]"
+            timespan="12_hour" graphtype="mikrotik.wlstatrssi"/>
+        <Graph title="" resourceId="node[3].mtxrWlStatIndex[15]"
+            timespan="12_hour" graphtype="mikrotik.wlstatrssi"/>
+        <Graph title="" resourceId="node[8].mtxrWlStatIndex[15]"
+            timespan="12_hour" graphtype="mikrotik.wlstatrssi"/>
+        <Graph title="" resourceId="node[7].mtxrWlStatIndex[19]"
+            timespan="12_hour" graphtype="mikrotik.wlstatrssi"/>
+    </Report>
+    <Report id="0" title="Traffic for all infacing radios"
+        show_timespan_button="true" show_graphtype_button="false" graphs_per_line="0">
+        <Graph title=""
+            resourceId="node[13].interfaceSnmp[ath0-00156de8ac93]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[11].interfaceSnmp[ath0-00156dd89829]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[3].interfaceSnmp[ath0-00156de42952]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[8].interfaceSnmp[ath0-00156de8ac36]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[7].interfaceSnmp[ath0-00156de8ad94]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[27].interfaceSnmp[ath0-00156dec307d]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[28].interfaceSnmp[ath0-00156dec302a]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[41].interfaceSnmp[ath0-00156de8ac34]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[42].interfaceSnmp[ath0-00156de4294f]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[49].interfaceSnmp[ath0-00156df0266b]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[36].interfaceSnmp[ath0-00156dec3136]"
+            timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title="" resourceId="node[56].interfaceSnmp[Fa0_0_0]"
+            timespan="1_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[56].interfaceSnmp[Fa0_0_1]"
+            timespan="1_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[56].interfaceSnmp[Gi0_0]"
+            timespan="1_day" graphtype="mib2.HCbits"/>
+    </Report>
+    <Report id="2" title="Traffic on all APs"
+        show_timespan_button="true" show_graphtype_button="false" graphs_per_line="0">
+        <Graph title=""
+            resourceId="node[2].interfaceSnmp[ath0-00156ddacea2]"
+            timespan="12_hour" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[5].interfaceSnmp[ath0-00156dee812d]"
+            timespan="12_hour" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[23].interfaceSnmp[ath0-00156ddad08b]"
+            timespan="12_hour" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[15].interfaceSnmp[ath0-00156ddaecb9]"
+            timespan="12_hour" graphtype="mib2.bits"/>
+        <Graph title=""
+            resourceId="node[10].interfaceSnmp[ath0-00156ddaed02]"
+            timespan="12_hour" graphtype="mib2.bits"/>
+    </Report>
+</ReportsList>

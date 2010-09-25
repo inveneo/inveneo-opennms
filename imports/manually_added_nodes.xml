@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model-import last-import="2010-05-01T14:00:37.306-04:00" foreign-source="manually_added_nodes" date-stamp="2010-05-01T14:00:35.159-04:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
+    <node node-label="ISP_Access Haiti Gateway" foreign-id="1265154245783" building="">
+        <interface status="1" snmp-primary="P" managed="true" ip-addr="200.2.134.185" descr="">
+            <monitored-service service-name="ICMP"/>
+        </interface>
+        <category name="ISP Gateways"/>
+        <asset value="" name="username"/>
+        <asset value="" name="password"/>
+        <asset value="" name="enable"/>
+        <asset value="telnet" name="connection"/>
+        <asset value="" name="autoenable"/>
+    </node>
+    <node node-label="ISP_Multilink Gateway" foreign-id="1265154271820" building="">
+        <interface status="1" snmp-primary="P" managed="true" ip-addr="200.80.101.41" descr="">
+            <monitored-service service-name="ICMP"/>
+        </interface>
+        <category name="ISP Gateways"/>
+        <asset value="" name="username"/>
+        <asset value="" name="password"/>
+        <asset value="" name="enable"/>
+        <asset value="telnet" name="connection"/>
+        <asset value="" name="autoenable"/>
+    </node>
+    <node node-label="ISP_ITC Global VSAT Gateway" foreign-id="1265154314376" building="">
+        <interface status="1" snmp-primary="P" managed="true" ip-addr="10.70.46.1" descr="">
+            <monitored-service service-name="ICMP"/>
+        </interface>
+        <category name="ISP Gateways"/>
+        <asset value="" name="username"/>
+        <asset value="" name="password"/>
+        <asset value="" name="enable"/>
+        <asset value="telnet" name="connection"/>
+        <asset value="" name="autoenable"/>
+    </node>
+    <node node-label="ISP_Access Haiti DNS1" foreign-id="1265154385517" building="">
+        <interface status="1" snmp-primary="P" managed="true" ip-addr="200.2.128.10" descr="">
+            <monitored-service service-name="ICMP"/>
+        </interface>
+        <category name="DNS Servers"/>
+        <asset value="" name="username"/>
+        <asset value="" name="password"/>
+        <asset value="" name="enable"/>
+        <asset value="telnet" name="connection"/>
+        <asset value="" name="autoenable"/>
+    </node>
+    <node node-label="ISP_Access Haiti DNS2" foreign-id="1265154413381" building="">
+        <interface status="1" snmp-primary="P" managed="true" ip-addr="200.2.129.10" descr="">
+            <monitored-service service-name="ICMP"/>
+        </interface>
+        <category name="DNS Servers"/>
+        <asset value="" name="username"/>
+        <asset value="" name="password"/>
+        <asset value="" name="enable"/>
+        <asset value="telnet" name="connection"/>
+        <asset value="" name="autoenable"/>
+    </node>
+    <node node-label="ISP_Multilink DNS1" foreign-id="1265156427859" building="">
+        <interface status="1" snmp-primary="P" managed="true" ip-addr="200.80.96.100" descr="">
+            <monitored-service service-name="ICMP"/>
+        </interface>
+        <category name="DNS Servers"/>
+        <asset value="" name="username"/>
+        <asset value="" name="password"/>
+        <asset value="" name="enable"/>
+        <asset value="telnet" name="connection"/>
+        <asset value="" name="autoenable"/>
+    </node>
+    <node node-label="ISP_Multilink DNS2" foreign-id="1265156570465" building="">
+        <interface status="1" snmp-primary="P" managed="true" ip-addr="202.80.96.217" descr="">
+            <monitored-service service-name="ICMP"/>
+        </interface>
+        <category name="DNS Servers"/>
+        <asset value="" name="username"/>
+        <asset value="" name="password"/>
+        <asset value="" name="enable"/>
+        <asset value="telnet" name="connection"/>
+        <asset value="" name="autoenable"/>
+    </node>
+    <node node-label="CHFhqs Cisco 3845" foreign-id="1265167805842" building="">
+        <interface status="1" snmp-primary="P" managed="true" ip-addr="10.98.2.1" descr="">
+            <monitored-service service-name="ICMP"/>
+            <monitored-service service-name="SNMP"/>
+        </interface>
+        <category name="Routers"/>
+        <asset value="" name="username"/>
+        <asset value="" name="password"/>
+        <asset value="" name="enable"/>
+        <asset value="telnet" name="connection"/>
+        <asset value="" name="autoenable"/>
+    </node>
+    <node node-label="AccessHaiti ping target" foreign-id="1265393457870" building="">
+        <interface status="1" snmp-primary="P" managed="true" ip-addr="216.207.58.218" descr="">
+            <monitored-service service-name="StrafePing"/>
+        </interface>
+        <category name="Backbone Radios"/>
+        <asset value="" name="username"/>
+        <asset value="" name="password"/>
+        <asset value="" name="enable"/>
+        <asset value="telnet" name="connection"/>
+        <asset value="" name="autoenable"/>
+    </node>
+    <node node-label="MultiLink Ping Target" foreign-id="1265393554177" building="">
+        <interface status="1" snmp-primary="P" managed="true" ip-addr="199.181.132.250" descr="">
+            <monitored-service service-name="StrafePing"/>
+        </interface>
+        <category name="Backbone Radios"/>
+        <asset value="" name="username"/>
+        <asset value="" name="password"/>
+        <asset value="" name="enable"/>
+        <asset value="telnet" name="connection"/>
+        <asset value="" name="autoenable"/>
+    </node>
+    <node node-label="ISP_ITC Ping Target" foreign-id="1265393717119" building="">
+        <interface status="1" snmp-primary="P" managed="true" ip-addr="63.151.12.22" descr="">
+            <monitored-service service-name="StrafePing"/>
+        </interface>
+        <category name="Backbone Radios"/>
+        <asset value="" name="username"/>
+        <asset value="" name="password"/>
+        <asset value="" name="enable"/>
+        <asset value="telnet" name="connection"/>
+        <asset value="" name="autoenable"/>
+    </node>
+    <node node-label="Cisco GK" foreign-id="1265508251610">
+        <interface status="1" snmp-primary="P" managed="true" ip-addr="10.255.253.200">
+            <monitored-service service-name="ICMP"/>
+            <monitored-service service-name="SNMP"/>
+        </interface>
+        <category name="Internet Servers"/>
+        <asset value="" name="username"/>
+        <asset value="" name="password"/>
+        <asset value="" name="enable"/>
+        <asset value="telnet" name="connection"/>
+        <asset value="" name="autoenable"/>
+    </node>
+</model-import>

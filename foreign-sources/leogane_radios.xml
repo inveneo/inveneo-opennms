@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<foreign-source date-stamp="2010-09-23T19:27:25.399-04:00" name="leogane_radios" xmlns="http://xmlns.opennms.org/xsd/config/foreign-source">
+    <scan-interval>1d</scan-interval>
+    <detectors>
+        <detector class="org.opennms.netmgt.provision.detector.icmp.IcmpDetector" name="ICMP"/>
+        <detector class="org.opennms.netmgt.provision.detector.snmp.SnmpDetector" name="SNMP"/>
+    </detectors>
+    <policies>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingSnmpInterfacePolicy" name="Collect ath0">
+            <parameter value="ENABLE_COLLECTION" key="action"/>
+            <parameter value="ALL_PARAMETERS" key="matchBehavior"/>
+            <parameter value="ath0" key="ifDescr"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingSnmpInterfacePolicy" name="Collect eth0">
+            <parameter value="ENABLE_COLLECTION" key="action"/>
+            <parameter value="ALL_PARAMETERS" key="matchBehavior"/>
+            <parameter value="eth0$" key="ifDescr"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingSnmpInterfacePolicy" name="Do not persist wifi0, ethX_real, br0, gre0, lo">
+            <parameter value="DISABLE_COLLECTION" key="action"/>
+            <parameter value="ALL_PARAMETERS" key="matchBehavior"/>
+            <parameter value="^(wifi0)|(eth._real)|(br0)|(gre0)|(lo)$" key="ifDescr"/>
+        </policy>
+    </policies>
+</foreign-source>
