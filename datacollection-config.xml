@@ -206,23 +206,23 @@
 
     <!-- BEGIN Inveneo resource type additions -->
     <!-- 802.11 Resource Types -->
-    <resourceType name="dot11smt" label="802dot11smt (802dot11)" resourceLabel="dot11smt ${index}">
+    <resourceType name="dot11smt" label="Station Management Data (802dot11)" resourceLabel="802.11 station managment (${index})">
        <persistenceSelectorStrategy class="org.opennms.netmgt.collectd.PersistAllSelectorStrategy"/>
        <storageStrategy class="org.opennms.netmgt.dao.support.IndexStorageStrategy"/>
     </resourceType>
-    <resourceType name="dot11mac" label="802dot11mac (802dot11)" resourceLabel="dot11mac ${index}">
+    <resourceType name="dot11mac" label="MAC Operation Data (802dot11)" resourceLabel="802.11 mac (${index})">
        <persistenceSelectorStrategy class="org.opennms.netmgt.collectd.PersistAllSelectorStrategy"/>
        <storageStrategy class="org.opennms.netmgt.dao.support.IndexStorageStrategy"/>
     </resourceType>
-    <resourceType name="dot11macCount" label="802dot11macCount (802dot11)" resourceLabel="dot11macCount ${index}">
+    <resourceType name="dot11macCount" label="MAC Counter Data (802dot11)" resourceLabel="802.11 mac counters (${index})">
        <persistenceSelectorStrategy class="org.opennms.netmgt.collectd.PersistAllSelectorStrategy"/>
        <storageStrategy class="org.opennms.netmgt.dao.support.IndexStorageStrategy"/>
     </resourceType>
-    <resourceType name="dot11res" label="802dot11res (802dot11)" resourceLabel="dot11res ${index}">
+    <resourceType name="dot11res" label="Resource Data (802dot11)" resourceLabel="802.11 resource data (${index})">
        <persistenceSelectorStrategy class="org.opennms.netmgt.collectd.PersistAllSelectorStrategy"/>
        <storageStrategy class="org.opennms.netmgt.dao.support.IndexStorageStrategy"/>
     </resourceType>
-    <resourceType name="dot11phy" label="802dot11phy (802dot11)" resourceLabel="dot11phy ${index}">
+    <resourceType name="dot11phy" label="Physical Layer Data (802dot11)" resourceLabel="802.11 physical data (${index})">
        <persistenceSelectorStrategy class="org.opennms.netmgt.collectd.PersistAllSelectorStrategy"/>
        <storageStrategy class="org.opennms.netmgt.dao.support.IndexStorageStrategy"/>
     </resourceType>
@@ -3984,7 +3984,8 @@
           <includeGroup>mtxrWlStatIndex</includeGroup>
           <!--includeGroup>mtxrWlRtabAddr</includeGroup -->
           <includeGroup>dot11smt</includeGroup>
-          <includeGroup>dot11mac</includeGroup>
+          <!-- This doesnt supply anything helpful
+	  <includeGroup>dot11mac</includeGroup> -->
           <includeGroup>dot11macCount</includeGroup>
           <includeGroup>dot11res</includeGroup>
           <includeGroup>dot11phy</includeGroup>
