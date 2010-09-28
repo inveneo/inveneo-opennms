@@ -41,11 +41,10 @@
 		<service name="SNMP" interval="300000" user-defined="false" status="on">
 			<parameter key="collection" value="ubiquiti-optimized" />
 		</service>
-<!--
+
 		<service name="HTTP" interval="300000" user-defined="false" status="on">
 			<parameter key="collection" value="ubnt-rocket-radio" />
 		</service>
--->
 	</package>
 
 <!--

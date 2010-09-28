@@ -61,7 +61,7 @@
     </uris>
   </http-collection>
 -->
-<!--
+
   <http-collection name="ubnt-rocket-radio">
     <rrd step="300">
       <rra>RRA:AVERAGE:0.5:1:8928</rra>
@@ -71,16 +71,16 @@
     </rrd>
     <uris>
       <uri name="ubiquiti-status-cgi-json">
-        <url path="/login.cgi?uri=/status.cgi"
+        <url method="POST"
+             path="/login.cgi?uri=/status.cgi"
              user-agent="OpenNMS 1.8 HttpCollector"
              response-range="100-399"
-             method="POST"
              matches="(?s).*.host.\s*:.*?.uptime.\s*:\s*([0-9]+).*?.lan..*?.rx..*?bytes.\s*:\s*([0-9]+),\s*.packets.\s*:\s*([0-9]+),\s*.errors.\s*:\s*([0-9]+).*?.tx..*?bytes.\s*:\s*([0-9]+),\s*.packets.\s*:\s*([0-9]+),\s*.errors.\s*:\s*([0-9]+).*?.wlan.\s*:.*?.rx..*?bytes.\s*:\s*([0-9]+),\s*.packets.\s*:\s*([0-9]+),\s*.errors.\s*:\s*([0-9]+).*?.tx..*?bytes.\s*:\s*([0-9]+),\s*.packets.\s*:\s*([0-9]+),\s*.errors.\s*:\s*([0-9]+).*">
           <parameters>
-	    <parameter key="username" value="ubnt" />
-  	    <parameter key="password" value="n3th0p3-inv" />
-	    <parameter key="Submit" value="Login" />		  
-	  </parameters>
+            <parameter key="username" value="ubnt" />
+            <parameter key="password" value="n3th0p3-inv" />
+            <parameter key="Submit" value="Login" />
+          </parameters>
         </url>
         <attributes>
           <attrib alias="ubntSysUpTime" match-group="1" type="gauge32"/>
@@ -100,6 +100,4 @@
       </uri>
     </uris>
   </http-collection>
--->
-
 </http-datacollection-config>
