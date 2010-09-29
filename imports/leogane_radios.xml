@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model-import last-import="2010-09-23T19:27:29.306-04:00" foreign-source="leogane_radios" date-stamp="2010-09-23T19:27:28.626-04:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
+<model-import last-import="2010-09-28T20:40:27.414-04:00" foreign-source="leogane_radios" date-stamp="2010-09-28T20:40:26.731-04:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
     <node node-label="HODR-LEO" foreign-id="1283202595245" building="leogane_radios">
         <interface status="1" snmp-primary="S" ip-addr="10.0.3.1" descr=""/>
         <interface status="1" snmp-primary="P" ip-addr="10.0.1.17" descr="">
