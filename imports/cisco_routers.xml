@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model-import last-import="2010-10-05T05:43:45.514-04:00" foreign-source="cisco_routers" date-stamp="2010-10-05T05:43:44.928-04:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
+    <node node-label="RuralNet_BTL_Cisco" foreign-id="1286271467026" building="cisco_routers">
+        <interface status="1" snmp-primary="S" ip-addr="200.80.112.122" descr="Multilink"/>
+        <interface status="1" snmp-primary="P" ip-addr="10.0.4.1" descr="Internal"/>
+    </node>
+</model-import>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model-import last-import="2010-09-29T14:48:20.742-04:00" foreign-source="leogane_radios" date-stamp="2010-09-29T14:48:19.948-04:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
+<model-import last-import="2010-10-12T18:05:21.376-04:00" foreign-source="leogane_radios" date-stamp="2010-10-12T18:05:20.836-04:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
     <node node-label="HODR-LEO" foreign-id="1283202595245" building="leogane_radios">
         <interface status="1" snmp-primary="S" ip-addr="10.0.3.1" descr=""/>
-        <interface status="1" snmp-primary="P" ip-addr="10.0.1.17" descr="">
+        <interface status="1" snmp-primary="P" ip-addr="10.0.2.11" descr="">
             <monitored-service service-name="StrafePing"/>
         </interface>
     </node>

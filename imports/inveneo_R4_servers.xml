@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model-import last-import="2010-10-05T06:24:19.895-04:00" foreign-source="inveneo_R4_servers" date-stamp="2010-10-05T06:24:19.284-04:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
+    <node node-label="RuralNet_R4_Server" foreign-id="1286274165901" building="inveneo_R4_servers">
+        <interface status="1" snmp-primary="S" ip-addr="10.0.2.1" descr="RuralNet"/>
+        <interface status="1" snmp-primary="S" ip-addr="10.0.4.2" descr="Multilink"/>
+        <interface status="1" snmp-primary="P" ip-addr="10.0.1.21" descr="PaPNet"/>
+    </node>
+</model-import>

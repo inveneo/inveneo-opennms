@@ -11,6 +11,10 @@
         <begin xmlns="">10.0.3.1</begin>
         <end xmlns="">10.0.3.254</end>
     </include-range>
+    <include-range retries="1" timeout="2000">
+        <begin xmlns="">10.0.2.1</begin>
+        <end xmlns="">10.0.2.254</end>
+    </include-range>
     <exclude-range>
         <begin xmlns="">10.0.3.17</begin>
         <end xmlns="">10.0.3.17</end>
@@ -22,5 +26,9 @@
     <exclude-range>
         <begin xmlns="">10.0.1.17</begin>
         <end xmlns="">10.0.1.17</end>
+    </exclude-range>
+    <exclude-range>
+        <begin xmlns="">10.0.2.11</begin>
+        <end xmlns="">10.0.2.11</end>
     </exclude-range>
 </discovery-configuration>

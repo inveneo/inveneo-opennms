@@ -21,6 +21,16 @@
     </definition>
     <definition retry="1" timeout="8000" read-community="1nvene0" version="v1">
         <ns3:range xmlns:ns3="http://xmlns.opennms.org/xsd/types"
-            begin="10.0.1.1" end="10.0.1.254"/>
+            begin="10.0.1.1" end="10.0.1.20"/>
+        <ns4:range xmlns:ns4="http://xmlns.opennms.org/xsd/types"
+            begin="10.0.1.22" end="10.0.1.254"/>
+    </definition>
+    <definition read-community="1nvene0" version="v2c">
+        <specific xmlns="">10.0.1.21</specific>
+        <specific xmlns="">10.0.4.1</specific>
+    </definition>
+    <definition read-community="1nvene0" version="v1">
+        <ns5:range xmlns:ns5="http://xmlns.opennms.org/xsd/types"
+            begin="10.0.2.1" end="10.0.2.254"/>
     </definition>
 </snmp-config>
